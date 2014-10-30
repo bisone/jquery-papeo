@@ -1,0 +1,22 @@
+{
+  "name": "Papeo",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bisone/jquery-papeo",
+  "authors": [
+    "Will <changwei.cn@gmail.com>"
+  ],
+  "description": "jQuery + Menu",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "https://github.com/jquery/jquery.git#1.11.0",
+    "jquery-ui": "~1.11.2"
+  }
+}

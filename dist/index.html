@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>菜单</title>
+
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+     var Green3  = {
+       _init: function() { this.setLevel(15); },
+       greenlevels: ['#000','#010','#020','#030','#040','#050','#060','#070','#080','#090','#0a0','#0b0','#0c0','#0d0','#0e0','#0f0', '#fff'],
+       level: 0,
+       getLevel: function() { return this.level; },
+       setLevel: function(x) {
+         this.level = Math.floor(Math.min(this.greenlevels.length-1, Math.max(0,x)));
+         this.element.css({background: this.greenlevels[this.level]});
+       },
+       darker: function() { this.setLevel(this.getLevel()-1); },
+       lighter: function() { this.setLevel(this.getLevel()+1); },
+       off: function() {
+         this.element.css({background: 'none'});
+         this.destroy(); // use the predefined function
+       }
+     };
+     $.widget("ui.green3", Green3); // create the widget
+     $('.target').green3()
+    </script>
+
+  </head>
+  <body>
+    <div id="papeo_menu">loading ...</div>
+
+    <div id="test3">
+
+      <p class="target" style="border: 1px solid red;">This is a test paragraph.</p>
+      <input type="button" value="on">
+      <input type="button" value="darker">
+      <input type="button" value="lighter">
+      <input type="button" value="off">
+    </div>
+
+
+  </body>
+</html>

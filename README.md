@@ -1,3 +1,12 @@
+# 开始
+
+
+ 1. npm install
+ 2. node_modules/.bin/gulp build
+ 3. node_modules/.bin/gulp 
+
+
+
 # PAPEO jQuery plugin
 ========================
 
