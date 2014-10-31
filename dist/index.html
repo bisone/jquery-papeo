@@ -1,25 +1,51 @@
 <html>
   <head>
     <title>菜单</title>
+
+    <link rel="stylesheet" href="css/dashboard/dashboard.css"/>
+
     <!-- SCRIPTS -->
     <script src="lib/jquery/jquery.js"></script>
 
     <script src="lib/jquery-ui/jquery-ui.js"></script>
     <script src="lib/underscore/underscore.js"></script>
 
-    <script src="js/dashboard.js"></script>
+
+    <!-- SCRIPTS -->
   </head>
   <body>
-    <div id="papeo_menu">loading ...</div>
-    <script type="text/javascript">
+    <div class="wrap">
+      <div class="sone-left-menu">
+        <div id="market" class="item item-1">
+          <div class="itm-lv1">
+            <div class="tit">
+              <b></b>
+              <span>市场</span>
+              <s>3</s>
+            </div>
+            <div class="con">
+              <div class="info">
+                <span><b id="marketQuotationOrganization">0</b>部门</span>
+                <span><b id="marketQuotationCategory">0</b>品类</span>
+              </div>
+              <div class="price" id="marketQuotationPV">
+                <strong>1200</strong>万元
+              </div>
+            </div>
+          </div>
+          <div class="itm-lv2">
+            <ul>
+              <li><a id="marketQuotationMenu" href="#">市场行情</a></li>
+              <li><a href="#">市场集中度</a></li>
+              <li><a id="marketAnalysisMenu" href="#">市场竞争强度</a></li>
+              <li><a href="#">市场需求度</a></li>
+            </ul>
+          </div>
+        </div>
 
-     $('#papeo_menu').progressbar(
-       {value:1,
-        complate: function(){
-          console.log('complete event has been triggered!');
-          //you can return false or true ;
-        }
-       });
-    </script>
+        <div class="resizer"><b></b></div>
+      </div>
+    </div>
+    <script src="js/dashboard.js"></script>
   </body>
 </html>

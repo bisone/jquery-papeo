@@ -1,4 +1,4 @@
-($.widget("bisone.progressbar", {
+$.widget("bisone.progressbar", {
     options: {
         value: 0
     },
@@ -29,5 +29,6 @@
         $.Widget.prototype.destroy.call(this);
 
     }
-})
-)(jQuery);
+});
+
+
