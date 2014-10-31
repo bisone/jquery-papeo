@@ -1,10 +1,9 @@
-# 开始
+c# 执行下列命令后，访问本地8080端口
 
-
- 1. npm install
+ 1. git config --global url.https://.insteadOf git://
+ 2. npm install
  2. node_modules/.bin/gulp build
  3. node_modules/.bin/gulp 
-
 
 
 # PAPEO jQuery plugin
@@ -17,7 +16,6 @@ A jQuery Plugin for embedding a PAPEO menu into your site.
 ## REQUIREMENTS
 
 * jQuery has to be included in your site
-
 
 
 ## USAGE

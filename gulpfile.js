@@ -28,17 +28,13 @@ gulp.task('usemin', function() {
 /**
  * Copy assets
  */
-gulp.task('copy-assets', ['copy-images', 'copy-fonts', 'copy-js', 'copy-bower_fonts', 'copy-bower_components']);
+gulp.task('copy-assets', ['copy-images', 'copy-fonts',  'copy-bower_fonts']);
 
 gulp.task('copy-images', function(){
     return gulp.src(paths.images)
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('copy-js', function(){
-    return gulp.src(paths.js)
-        .pipe(gulp.dest('dist/js'));
-});
 
 
 gulp.task('copy-fonts', function(){
@@ -51,10 +47,6 @@ gulp.task('copy-bower_fonts', function(){
         .pipe(gulp.dest('dist/lib'));
 });
 
-gulp.task('copy-bower_components', function(){
-    return gulp.src(paths.bower_components)
-        .pipe(gulp.dest('dist/lib'));
-});
 
 /**
  * Watch src

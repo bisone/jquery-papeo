@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "jquery": "https://github.com/jquery/jquery.git#1.11.0",
-    "jquery-ui": "~1.11.2"
+    "jquery-ui": "~1.11.2",
+    "underscore": "https://github.com/jashkenas/underscore.git#~1.7.0"
   }
 }
