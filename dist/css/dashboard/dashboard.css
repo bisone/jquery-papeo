@@ -148,14 +148,7 @@ body {
   float: left;
   width: 53px;
 }
-.sone-left-menu .item .itm-lv1 .tit b {
-  display: inline-block;
-  width: 50px;
-  height: 34px;
-  background: url(/img/icons.png) no-repeat;
-}
 .sone-left-menu .item .itm-lv1 .tit span {
-  text-align: center;
   color: #54ade5;
   font: 14px "Microsoft Yahei";
   display: block;
@@ -233,24 +226,6 @@ body {
 .sone-left-menu .item-open .itm-lv2 {
   display: block;
 }
-.sone-left-menu .item-2 .itm-lv1 .tit b {
-  background-position: 0 -34px;
-}
-.sone-left-menu .item-3 .itm-lv1 .tit b {
-  background-position: 0 -68px;
-}
-.sone-left-menu .item-4 .itm-lv1 .tit b {
-  background-position: 0 -102px;
-}
-.sone-left-menu .item-5 .itm-lv1 .tit b {
-  background-position: 0 -136px;
-}
-.sone-left-menu .item-6 .itm-lv1 .tit b {
-  background-position: 0 -170px;
-}
-.sone-left-menu .item-7 .itm-lv1 .tit b {
-  background-position: 0 -204px;
-}
 .sone-left-menu .resizer {
   height: 34px;
   line-height: 34px;
@@ -317,48 +292,6 @@ body {
 }
 .narrow-wrap .sone-left-menu .resizer b {
   background: url(/img/icons.png) no-repeat -42px -245px;
-}
-.narrow-wrap .sone-left-menu .item-1 .itm-lv1 .tit b {
-  background-position: -50px 0;
-}
-.narrow-wrap .sone-left-menu .item-2 .itm-lv1 .tit b {
-  background-position: -50px -34px;
-}
-.narrow-wrap .sone-left-menu .item-3 .itm-lv1 .tit b {
-  background-position: -50px -68px;
-}
-.narrow-wrap .sone-left-menu .item-4 .itm-lv1 .tit b {
-  background-position: -50px -102px;
-}
-.narrow-wrap .sone-left-menu .item-5 .itm-lv1 .tit b {
-  background-position: -50px -136px;
-}
-.narrow-wrap .sone-left-menu .item-6 .itm-lv1 .tit b {
-  background-position: -50px -170px;
-}
-.narrow-wrap .sone-left-menu .item-7 .itm-lv1 .tit b {
-  background-position: -50px -204px;
-}
-.narrow-wrap .sone-left-menu .item-1.item-open .itm-lv1 .tit b {
-  background-position: 0 -34px;
-}
-.narrow-wrap .sone-left-menu .item-2.item-open .itm-lv1 .tit b {
-  background-position: 0 -34px;
-}
-.narrow-wrap .sone-left-menu .item-3.item-open .itm-lv1 .tit b {
-  background-position: 0 -68px;
-}
-.narrow-wrap .sone-left-menu .item-4.item-open .itm-lv1 .tit b {
-  background-position: 0 -102px;
-}
-.narrow-wrap .sone-left-menu .item-5.item-open .itm-lv1 .tit b {
-  background-position: 0 -136px;
-}
-.narrow-wrap .sone-left-menu .item-6.item-open .itm-lv1 .tit b {
-  background-position: 0 -170px;
-}
-.narrow-wrap .sone-left-menu .item-7.item-open .itm-lv1 .tit b {
-  background-position: 0 -204px;
 }
 .narrow-wrap #main {
   margin-left: 70px;

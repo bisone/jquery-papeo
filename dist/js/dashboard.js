@@ -1,3 +1,4 @@
+(function(){ 
 // 左边菜单功能
 $(".resizer").click(function(){
     $(".wrap").toggleClass("narrow-wrap");
@@ -82,3 +83,5 @@ $.widget("bisone.progressbar", {
 });
 
 
+
+})();
