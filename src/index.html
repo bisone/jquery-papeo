@@ -1,8 +1,9 @@
 <html>
   <head>
     <title>菜单</title>
-
+    <link href="/img/sprites/css-sprite/sprite-navigation-black.css" rel="stylesheet">
     <link href="/img/sprites/css-sprite/sprite-av-black.css" rel="stylesheet">
+
 
     <!-- build:less css/dashboard/dashboard.css -->
     <link rel="stylesheet" type="text/css" href="less/reset.less">
@@ -20,46 +21,18 @@
     <!-- build:js lib/underscore/underscore.js -->
     <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
     <!-- endbuild -->
-
-
     <!-- SCRIPTS -->
+
   </head>
   <body>
-    <div class="wrap">
-      <div class="sone-left-menu">
-        <div id="market" class="item item-1">
-          <div class="itm-lv1">
-            <div class="tit">
-              <span class="icon icon-ic_play_circle_outline_black_24dp"></span>
-              <span>市场</span>
-              <s>3</s>
-            </div>
-            <div class="con">
-              <div class="info">
-                <span><b id="marketQuotationOrganization">0</b>部门</span>
-                <span><b id="marketQuotationCategory">0</b>品类</span>
-              </div>
-              <div class="price" id="marketQuotationPV">
-                <strong>1200</strong>万元
-              </div>
-            </div>
-          </div>
-          <div class="itm-lv2">
-            <ul>
-              <li><a id="marketQuotationMenu" href="#">市场行情</a></li>
-              <li><a href="#">市场集中度</a></li>
-              <li><a id="marketAnalysisMenu" href="#">市场竞争强度</a></li>
-              <li><a href="#">市场需求度</a></li>
-            </ul>
-          </div>
-        </div>
+    <div id="left-menu">  </div>
 
-        <div class="resizer"><b></b></div>
-      </div>
-    </div>
+
+
     <!-- build:js js/dashboard.js -->
-    <script type="text/javascript" src="js/jquery.sone.menu.js"></script>
     <script type="text/javascript" src="js/jquery.papeo.js"></script>
+    <script type="text/javascript" src="js/jquery.sone.menu.js"></script>
     <!-- endbuild -->
+
   </body>
 </html>
