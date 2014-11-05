@@ -1,0 +1,17 @@
+[
+    {
+        "iconClass": "icon icon-ic_play_circle_outline_black_24dp",
+        "name": "市场",
+        "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
+        "price": {"lable":"万元","value":1200},
+        "children": [{"name":"市场行情","url":"#"},{"name":"市场集中度","url":"#"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
+    },
+
+    {
+        "iconClass": "icon icon-ic_play_circle_outline_black_24dp",
+        "name": "市场2",
+        "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
+        "price": {"lable":"万元","value":1200},
+        "children": [{"name":"市场行情","url":"#"},{"name":"市场集中度","url":"#"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
+    }
+]
