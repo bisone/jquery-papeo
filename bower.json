@@ -18,6 +18,8 @@
   "dependencies": {
     "jquery": "https://github.com/jquery/jquery.git#1.11.0",
     "jquery-ui": "~1.11.2",
-    "underscore": "https://github.com/jashkenas/underscore.git#~1.7.0"
+    "underscore": "https://github.com/jashkenas/underscore.git#~1.7.0",
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0"
   }
 }
