@@ -17,9 +17,3 @@
  1. https://windows.github.com/ 下载安装包
  2. 登陆，安装好后打开GitHub，用你的GitHub账号登陆。
  3. 点击上面的 “+Add” ,在弹出窗口中左侧选中bisone 库，点击右侧上边"clone"标签，在项目列表中选择jquey-papeo 点击clone 按钮。
-   
- 
-   
-   
- 
-   
