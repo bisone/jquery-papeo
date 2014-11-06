@@ -13,11 +13,13 @@
 	修改如下即可：
 	prefix = D:\nodejs\node_global
 	cache = D:\nodejs\node_global
- 3. node_modules/.bin/gulp 
-#  安装Github for window
-   1. https://windows.github.com/ 下载安装包
-   2. 登陆，安装好后打开GitHub，用你的GitHub账号登陆。
-   3. 点击上面的 “+Add” ,在弹出窗口中左侧选中bisone 库，点击右侧上边"clone"标签，在项目列表中选择jquey-papeo 点击clone 按钮。
+#安装Github for window
+ 1. https://windows.github.com/ 下载安装包
+ 2. 登陆，安装好后打开GitHub，用你的GitHub账号登陆。
+ 3. 点击上面的 “+Add” ,在弹出窗口中左侧选中bisone 库，点击右侧上边"clone"标签，在项目列表中选择jquey-papeo 点击clone 按钮。
+   
+ 
+   
    
  
    
