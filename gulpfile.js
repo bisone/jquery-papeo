@@ -13,7 +13,7 @@ var paths = {
     styles: 'src/less/**/*.less',
     index: 'src/index.html',
     bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg}',
-    bower_components: 'src/bower_components/**/*.*'
+    bower_json: 'src/bower_components/**/*.json'
 };
 
 
@@ -29,7 +29,7 @@ gulp.task('usemin', function() {
 /**
  * Copy assets
  */
-gulp.task('copy-assets', ['copy-images', 'copy-fonts',  'copy-bower_fonts','copy-json']);
+gulp.task('copy-assets', ['copy-images', 'copy-fonts',  'copy-bower_fonts','copy-json','copy-bower-json']);
 
 gulp.task('copy-images', function(){
     return gulp.src(paths.images)
@@ -39,6 +39,11 @@ gulp.task('copy-images', function(){
 gulp.task('copy-json', function(){
     return gulp.src(paths.json)
         .pipe(gulp.dest('dist/json'));
+});
+
+gulp.task('copy-bower-json', function(){
+    return gulp.src(paths.bower_json)
+        .pipe(gulp.dest('dist/lib'));
 });
 
 
