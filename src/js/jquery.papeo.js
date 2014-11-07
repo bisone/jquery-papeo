@@ -41,7 +41,7 @@ $.widget("ui.soneLeftMenu", {
                         '</div>'+
                         '</div>'; });
 
-                tpl += '<div class="resizer"><div class="icon icon-ic_arrow_forward_black_24dp "></div></div>'+
+                tpl += '<div class="resizer"><b></b></div>'+
                     '</div>';
 
                 scope.element.html(tpl);
@@ -56,10 +56,7 @@ $.widget("ui.soneLeftMenu", {
     },
 
     _update: function(data) {
-        console.log(data);
-
-
-
+        
         this._initEvents();
     },
 
@@ -68,6 +65,7 @@ $.widget("ui.soneLeftMenu", {
 
         $(".resizer", _ele).click(function(){
             $(".wrap").toggleClass("narrow-wrap");
+            $("#page-wrapper").toggleClass("narrow-content");
             $(".item", _ele).find(".itm-lv2").removeAttr("style");
         });
 

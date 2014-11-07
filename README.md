@@ -1,11 +1,11 @@
-c# 执行下列命令后，访问本地8080端口
+# 执行下列命令后，访问本地8888端口
 
  1. git config --global url.https://.insteadOf git://
  2. npm install
  2. node_modules/.bin/gulp build
  3. node_modules/.bin/gulp 
 
-
+========================
 # PAPEO jQuery plugin
 ========================
 
