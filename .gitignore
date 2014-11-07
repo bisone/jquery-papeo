@@ -45,3 +45,4 @@ Icon
 npm-debug.log
 
 /dist
+*.bak
