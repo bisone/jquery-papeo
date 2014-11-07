@@ -68,6 +68,7 @@ $.widget("ui.soneLeftMenu", {
 
         $(".resizer", _ele).click(function(){
             $(".wrap").toggleClass("narrow-wrap");
+            $("#page-wrapper").toggleClass("narrow-content");
             $(".item", _ele).find(".itm-lv2").removeAttr("style");
         });
 

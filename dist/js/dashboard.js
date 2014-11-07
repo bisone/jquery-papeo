@@ -69,6 +69,7 @@ $.widget("ui.soneLeftMenu", {
 
         $(".resizer", _ele).click(function(){
             $(".wrap").toggleClass("narrow-wrap");
+            $("#page-wrapper").toggleClass("narrow-content");
             $(".item", _ele).find(".itm-lv2").removeAttr("style");
         });
 
@@ -582,19 +583,6 @@ $(function() {
         ,
         onExpand: function (event) {
             $('#'+event.box_id).html('<div style="padding: 10px">Expanded content</div>').animate({ 'height': 100 }, 100);
-        },
-        buttons: {
-            'reload'   : { type: 'button', id: 'w2ui-reload', icon: 'w2ui-icon-reload', hint: w2utils.lang('重新加载数据') },
-            'columns'  : { type: 'drop', id: 'w2ui-column-on-off', icon: 'w2ui-icon-columns', hint: w2utils.lang('显示/隐藏 字段'), arrow: false, html: '' },
-            'search'   : { type: 'html',   id: 'w2ui-search',
-                           html: '<div class="w2ui-icon icon-search-down w2ui-search-down" title="'+ '选择查询字段' +'" '+
-                           'onclick="var obj = w2ui[$(this).parents(\'div.w2ui-grid\').attr(\'name\')]; obj.searchShowFields();"></div>'
-                         },
-            'search-go': { type: 'check',  id: 'w2ui-search-advanced', caption: w2utils.lang('查询...'), hint: w2utils.lang('打开查询字段') },
-            'add'      : { type: 'button', id: 'w2ui-add', caption: w2utils.lang('新增'), hint: w2utils.lang('添加新纪录'), icon: 'w2ui-icon-plus' },
-            'edit'     : { type: 'button', id: 'w2ui-edit', caption: w2utils.lang('编辑'), hint: w2utils.lang('编辑记录'), icon: 'w2ui-icon-pencil', disabled: true },
-            'delete'   : { type: 'button', id: 'w2ui-delete', caption: w2utils.lang('删除'), hint: w2utils.lang('删除选择记录'), icon: 'w2ui-icon-cross', disabled: true },
-            'save'     : { type: 'button', id: 'w2ui-save', caption: w2utils.lang('保存'), hint: w2utils.lang('保存修改'), icon: 'w2ui-icon-check' }
         }
     });
 });
