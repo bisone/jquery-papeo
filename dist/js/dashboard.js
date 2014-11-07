@@ -143,6 +143,56 @@ $(window).bind("load resize", function() {
     }
 });
 
+$(".messages dl").click(function(event){
+		event.stopPropagation();
+		if($(this).find("dd").css("display")=="none"){
+			$(".messages").find("dd").hide();
+			$(this).find("dd").show()
+		}
+		else{
+			$(this).find("dd").hide()
+		}
+	});
+	$(".messages dd").click(function(event){
+		event.stopPropagation();
+	});
+	$(document).click(function(){
+		$(".messages").find("dd").hide();
+	});
+	window.onload=window.onresize=function(){
+		var w=$(window).width();
+		var n=$(".nav").find("li").length;
+		var num=parseInt((w-766)/110);
+		var step=0;
+		var isClick=false;
+		if(n<=num){
+			num=n;
+			$(".nav-option").hide();
+		}
+		else if(n>num){
+			$(".nav-option").show();
+		}
+		$(".nav").css("width",110*num+"px");
+		$(".nav ul").css("width",110*n+"px");
+		$(".nav-option .next").css("left",(110*num+255)+"px");
+
+		$(".nav-option .next").click(function(){
+			if(step<(n-num)&&!isClick){
+				step++;
+				isClick=true;
+				$(".nav ul").animate({"left":-step*110+"px"},1000);
+				setTimeout(function(){isClick=false;},1000);
+			}
+		});
+		$(".nav-option .prev").click(function(){
+			if(step!=0&&!isClick){
+				step--;
+				isClick=true;
+				$(".nav ul").animate({"left":-step*110+"px"},1000);
+				setTimeout(function(){isClick=false;},1000);
+			}
+		});
+	};    
 //w2ui
 $(function() {
     $('#grid').w2grid({

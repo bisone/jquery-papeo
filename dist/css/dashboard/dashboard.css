@@ -1029,3 +1029,296 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
   color: #df8a13;
 }
+#header {
+  height: 64px;
+  width: 100%;
+  min-width: 900px;
+  background: #54ade5;
+}
+#header .header-main {
+  padding: 0 17px;
+}
+#header .header-main .logo {
+  width: 184px;
+  height: 37px;
+  margin-top: 14px;
+  background: url(/img/sale-logo.png) no-repeat;
+  float: left;
+  margin-right: 40px;
+}
+#header .header-main .nav {
+  float: left;
+  margin-right: 50px;
+  width: 220px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+}
+#header .header-main .nav ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#header .header-main .nav ul li {
+  float: left;
+  width: 110px;
+  height: 64px;
+}
+#header .header-main .nav ul li a {
+  display: block;
+  height: 64px;
+  text-align: center;
+  color: #fff;
+  font: 16px/64px "Microsoft Yahei";
+  text-decoration: none;
+}
+#header .header-main .nav ul .curr a,
+#header .header-main .nav ul li a:hover {
+  background: #2d94d5;
+}
+#header .header-main .nav-option a {
+  position: absolute;
+  width: 9px;
+  height: 17px;
+  background: url(/img/top-icons.png) no-repeat;
+  line-height: 9999px;
+  overflow: hidden;
+  top: 24px;
+}
+#header .header-main .nav-option .prev {
+  left: 218px;
+  background-position: -30px 0;
+}
+#header .header-main .nav-option .next {
+  left: 475px;
+  background-position: -40px 0;
+}
+#header .header-main .search-bar {
+  float: left;
+  width: 153px;
+  height: 29px;
+  margin-top: 17px;
+  border: 1px solid #2d94d5;
+  border-radius: 3px;
+  overflow: hidden;
+}
+#header .header-main .search-bar input {
+  float: left;
+  width: 113px;
+  height: 21px;
+  line-height: 20px;
+  padding: 4px 5px;
+  border: 0 none;
+}
+#header .header-main .search-bar a {
+  float: right;
+  width: 30px;
+  height: 29px;
+  background: url(/img/top-icons.png) no-repeat #eaeae8;
+}
+#header .header-main .user {
+  padding-top: 13px;
+  height: 36px;
+  line-height: 36px;
+  float: right;
+  width: 162px;
+}
+#header .header-main .user a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+#header .header-main .user img {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 18px;
+}
+#header .header-main .messages {
+  float: right;
+  width: 113px;
+  height: 36px;
+  position: relative;
+  margin-top: 13px;
+  margin-right: 20px;
+  padding-left: 6px;
+  border-left: 1px solid #6cb8e8;
+  border-right: 1px solid #6cb8e8;
+}
+#header .header-main .messages dl {
+  float: left;
+  width: 50px;
+}
+#header .header-main .messages dl dt {
+  width: 20px;
+  height: 15px;
+  background: url(/img/top-icons.png) no-repeat;
+  margin: 14px 10px 0 20px;
+  position: relative;
+  cursor: pointer;
+}
+#header .header-main .messages dl dt b {
+  position: absolute;
+  border-radius: 9px;
+  padding: 0 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: #54ade5;
+  top: -12px;
+  right: 14px;
+  text-decoration: none;
+}
+#header .header-main .messages dl dd {
+  display: none;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 278px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+#header .header-main .messages dl dd .line {
+  display: block;
+  height: 40px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #dcdbd9;
+  text-decoration: none;
+}
+#header .header-main .messages dl dd .line span {
+  display: block;
+}
+#header .header-main .messages .fore1 {
+  z-index: 10000;
+}
+#header .header-main .messages .fore1 dt {
+  background-position: -50px 0;
+}
+#header .header-main .messages .fore1 dd {
+  width: 238px;
+  padding: 6px 20px;
+}
+#header .header-main .messages .fore1 .line {
+  position: relative;
+}
+#header .header-main .messages .fore1 .line .u-img {
+  float: left;
+  width: 39px;
+  height: 39px;
+}
+#header .header-main .messages .fore1 .line .u-name {
+  margin-left: 50px;
+  color: #333333;
+}
+#header .header-main .messages .fore1 .line .u-info {
+  margin: 3px 0 0 50px;
+  color: #999;
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#header .header-main .messages .fore1 .line .u-time {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: #54ade5;
+}
+#header .header-main .messages .fore2 {
+  color: #666666;
+}
+#header .header-main .messages .fore2 dt {
+  background-position: -50px -16px;
+}
+#header .header-main .messages .fore2 h4 {
+  height: 36px;
+  line-height: 36px;
+  background: #f8f8f8;
+  padding-left: 20px;
+  font-weight: bold;
+}
+#header .header-main .messages .fore2 ul {
+  padding: 0 20px 16px;
+}
+#header .header-main .messages .fore2 li a {
+  display: block;
+  height: 42px;
+  margin-bottom: 10px;
+  color: #666;
+  text-decoration: none;
+}
+#header .header-main .messages .fore2 li a .txt {
+  margin-bottom: 8px;
+  padding-top: 10px;
+  line-height: 20px;
+  height: 20px;
+  display: block;
+}
+#header .header-main .messages .fore2 li a .txt .tit {
+  float: left;
+  width: 190px;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#header .header-main .messages .fore2 li a .txt .pct {
+  float: right;
+  color: #999999;
+}
+#header .header-main .messages .fore2 li a .progress {
+  width: 234px;
+  height: 6px;
+  position: relative;
+  display: block;
+}
+#header .header-main .messages .fore2 li a .progress b,
+#header .header-main .messages .fore2 li a .progress s {
+  height: 6px;
+  display: block;
+  border-radius: 3px;
+}
+#header .header-main .messages .fore2 li a .progress b {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+#header .header-main .messages .fore2 li a .progress s {
+  background: #f8f8f8;
+  width: 234px;
+}
+#header .header-main .messages .fore2 li a .p-type1 b {
+  background: #21b3a0;
+}
+#header .header-main .messages .fore2 li a .p-type2 b {
+  background: #e65c7a;
+}
+#header .header-main .messages .fore2 li a .p-type3 b {
+  background: #f6a869;
+}
+#sub-nav {
+  padding-left: 260px;
+  height: 44px;
+  background: #f8f8f8;
+}
+#sub-nav li {
+  float: left;
+  margin-right: 25px;
+}
+#sub-nav li a {
+  color: #666;
+  display: block;
+  padding: 0 5px;
+  height: 44px;
+  line-height: 44px;
+  text-decoration: none;
+}
+#sub-nav .curr a,
+#sub-nav li a:hover {
+  font-weight: bold;
+  height: 42px;
+  border-bottom: 2px solid #54ade5;
+}
