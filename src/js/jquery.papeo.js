@@ -56,10 +56,7 @@ $.widget("ui.soneLeftMenu", {
     },
 
     _update: function(data) {
-        console.log(data);
-
-
-
+        
         this._initEvents();
     },
 

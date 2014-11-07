@@ -21,7 +21,7 @@ gulp.task('usemin', function() {
     return gulp.src(paths.index)
         .pipe(usemin({
             less: ['concat', less()],
-            js: ['concat', wrap('(function(){ \n<%= contents %>\n})();')]
+            js: ['concat']
         }))
         .pipe(gulp.dest('dist/'));
 });
