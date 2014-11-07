@@ -293,6 +293,13 @@ body {
 .narrow-wrap .sone-left-menu .resizer b {
   background: url(/img/icons.png) no-repeat -42px -245px;
 }
+.sone-left-menu-icons {
+  background: url(/img/icons.png) no-repeat;
+}
+.sone-market {
+  width: 50px;
+  height: 34px;
+}
 .narrow-wrap #main {
   margin-left: 70px;
 }

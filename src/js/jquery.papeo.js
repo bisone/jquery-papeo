@@ -41,7 +41,7 @@ $.widget("ui.soneLeftMenu", {
                         '</div>'+
                         '</div>'; });
 
-                tpl += '<div class="resizer"><div class="icon icon-ic_arrow_forward_black_24dp "></div></div>'+
+                tpl += '<div class="resizer"><b></b></div>'+
                     '</div>';
 
                 scope.element.html(tpl);
