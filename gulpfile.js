@@ -63,6 +63,7 @@ gulp.task('copy-bower_fonts', function(){
  * Watch src
  */
 gulp.task('watch', function () {
+
     gulp.watch([paths.styles, paths.index, paths.js], ['usemin']);
     gulp.watch([paths.images], ['copy-images']);
     gulp.watch([paths.json], ['copy-json']);
@@ -80,7 +81,7 @@ gulp.task('webserver', function() {
 
 gulp.task('livereload', function() {
     gulp.src(['dist/**/*.*'])
-        .pipe(watch())
+        .pipe(watch('src/**/*.*'))
         .pipe(connect.reload());
 });
 
