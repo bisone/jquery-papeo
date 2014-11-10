@@ -4,6 +4,10 @@
     <link href="/img/sprites/css-sprite/sprite-navigation-black.css" rel="stylesheet">
     <link href="/img/sprites/css-sprite/sprite-av-black.css" rel="stylesheet">
 
+	<!-- build:css lib/w2ui/w2ui-1.4.2.css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/w2ui/w2ui-1.4.2.css">
+    <!-- endbuild -->
+	
     <!-- build:less lib/bootstrap/css/bootstrap.css -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <!-- endbuild -->
@@ -16,9 +20,6 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css">
     <!-- endbuild -->
 
-    <!-- build:css lib/w2ui/w2ui-1.4.2.css -->
-    <link rel="stylesheet" type="text/css" href="bower_components/w2ui/w2ui-1.4.2.css">
-    <!-- endbuild -->
 
     <!-- build:less css/dashboard/dashboard.css -->
     <link rel="stylesheet" type="text/css" href="less/reset.less">
@@ -35,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="less/dashboard/hamburg.less">
     <link rel="stylesheet" type="text/css" href="less/sb-admin-2.less">
     <link rel="stylesheet" type="text/css" href="less/top.less">
+	<link rel="stylesheet" type="text/css" href="less/combo.less">
     <!-- endbuild -->
 
     <!-- SCRIPTS -->
@@ -55,9 +57,25 @@
     <!-- build:js lib/w2ui/w2ui-1.4.2.js -->
     <script type="text/javascript" src="bower_components/w2ui/w2ui-1.4.2.js"></script>
     <!-- endbuild -->
-
-    <!-- build:js lib/bootstrap-daterangepicker/daterangepicker.js -->
+	
+	<!-- build:js lib/bootstrap-daterangepicker/daterangepicker.js -->
     <script type="text/javascript" src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js lib/moment/moment.js -->
+    <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+    <!-- endbuild -->
+	
+	<!-- build:js lib/bootstrap-daterangepicker/daterangepicker.js -->
+    <script type="text/javascript" src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- endbuild -->
+	
+	<!-- build:js lib/highcharts/js/highcharts-all.js -->
+    <script type="text/javascript" src="bower_components/highcharts/js/highcharts-all.js"></script>
+    <!-- endbuild -->
+	
+	<!-- build:js lib/echarts/build/echarts-plain-map.js -->
+    <script type="text/javascript" src="bower_components/echarts/build/echarts-plain-map.js "></script>
     <!-- endbuild -->
 
     <!-- SCRIPTS -->
@@ -169,7 +187,7 @@
       <div id="page-wrapper">
 
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 rightcontent">
 
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
@@ -179,132 +197,64 @@
                        href="#collapseOne">查询</a>
                   </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+			 
+              <div id="collapseOne" class="panel-collapse collapse in">
                   <div class="panel-body">
                     <div class="row">
-                      <div class="col-lg-12">
-
-                        <div class="form-group">
                           <div class="row">
-                            <div class="col-md-4">
+                            
                               <label class="checkbox-inline"> <label>范围：</label>
                               </label> <label class="checkbox-inline"> <input
                                 type="checkbox">自营
                               </label> <label class="checkbox-inline"> <input
                                 type="checkbox">POP
                               </label>
-                            </div>
-                            <div class="col-md-7">
+                            
+                            
                               <label class="checkbox-inline"><b>日期:</b></label> <label
                                 class="checkbox-inline">
-                                <div id="reportrange"
+                                <div id="rangePicker"
                                      style="background: #fff; cursor: pointer; padding: 5px 10px;">
                                   <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                                   <span></span> <b class="caret"></b>
                                 </div>
                               </label>
-                            </div>
 
-                            <div class="col-md-1">
-                              <button id="myButton" type="submit" class="btn btn-primary">查询</button>
-                            </div>
+                              <button id="myButton" type="submit" class="btn btn-primary pull-right">查询</button>
+                            
                           </div>
-                        </div>
 
-                        <div class="form-group">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <label class="checkbox-inline"> <label>组织:</label></label>
-                              <!-- Menu -->
-                              <label class="checkbox-inline"><div class="clearfix">
-                                <ul id="menuDept">
-                                  <li><a href="#">请选择机构： </a>
-                                    <ul>
-                                      <li><a href="#">Delphi</a>
-                                        <ul>
-                                          <li><a href="#">Ada</a></li>
-                                          <li><a href="#">Saarland</a></li>
-                                          <li><a href="#">Salzburg</a></li>
-                                        </ul></li>
-                                      <li><a href="?Delphi">Delphi</a>
-                                        <ul>
-                                          <li><a href="#">Ada</a></li>
-                                          <li><a href="#">Saarland</a></li>
-                                          <li><a href="#">Salzburg</a></li>
-                                        </ul></li>
-                                      <li><a href="#">Perch</a></li>
-                                    </ul></li>
-                                </ul>
-                              </div></label>
-                              <!-- end Menu -->
-                            </div>
-                            <div class="col-md-4">
-                              <label class="checkbox-inline"> <label>区域：</label>
-                              </label>
-                              <!-- Menu -->
-                              <label class="checkbox-inline">
-                                <div class="clearfix">
-                                  <ul id="menuArea">
-                                    <li><a href="#">请选择地区： </a>
-                                      <ul>
-                                        <li><a href="#">Delphi</a>
-                                          <ul>
-                                            <li><a href="#">Ada</a></li>
-                                            <li><a href="#">Saarland</a></li>
-                                            <li><a href="#">Salzburg</a></li>
-                                          </ul></li>
-                                        <li><a href="?Delphi">Delphi</a>
-                                          <ul>
-                                            <li><a href="#">Ada</a></li>
-                                            <li><a href="#">Saarland</a></li>
-                                            <li><a href="#">Salzburg</a></li>
-                                          </ul></li>
-                                        <li><a href="#">Perch</a></li>
-                                      </ul></li>
-                                  </ul>
-                                </div>
-                              </label>
-                              <!-- end Menu -->
-                            </div>
-                            <div class="col-md-4">
+                         <div class="row">
+                           
+							<label class="checkbox-inline"> <label>品类:</label></label>
+							 <!-- Menu -->
+							 <label class="checkbox-inline">
+								 <div id="cmbDiv1"></div>
+							 </label>
+							 <!-- end Menu -->
+                            
+							  <label class="checkbox-inline"> <label>品牌：</label>
+							  </label>
+							  <!-- Menu -->
+							  <label class="checkbox-inline">
+								 <div id="cmbDiv2"></div>
+							  </label>
+							  <!-- end Menu -->
+                    
                               <label class="checkbox-inline"> <label>商品:</label>
                               </label>
-                              <!-- Menu -->
-                              <label class="checkbox-inline">
-                                <div class="clearfix">
-                                  <ul id="menuProd">
-                                    <li><a href="#">请选择商品分类： </a>
-                                      <ul>
-                                        <li><a href="#">Delphi</a>
-                                          <ul>
-                                            <li><a href="#">Ada</a></li>
-                                            <li><a href="#">Saarland</a></li>
-                                            <li><a href="#">Salzburg</a></li>
-                                          </ul></li>
-                                        <li><a href="?Delphi">Delphi</a>
-                                          <ul>
-                                            <li><a href="#">Ada</a></li>
-                                            <li><a href="#">Saarland</a></li>
-                                            <li><a href="#">Salzburg</a></li>
-                                          </ul></li>
-                                        <li><a href="#">Perch</a></li>
-                                      </ul></li>
-                                  </ul>
-                                </div>
-                              </label>
-                              <!-- end Menu -->
-                            </div>
-
-                          </div>
+							  <!-- Menu -->
+							  <label class="checkbox-inline">
+								 <div id="cmbDiv3"></div>
+							  </label>
+							  <!-- end Menu -->
+                          
                         </div>
-
-                      </div>
-                    </div>
-                    <!-- /.row (nested) -->
 
                   </div>
                 </div>
-              </div>
+               </div>
+			  </div>
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
@@ -335,26 +285,71 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseThree">分析</a>
+                    <a data-toggle="collapse" 
+                       href="#collapseThree">w2ui全能表格</a>
                   </h4>
                 </div>
 
                 <div class="panel-body">
-                  <div class="table-responsive">
-                    <div id="grid" style="height: 400px;"/>
-                    </div>
-                  </div>
+                  
+                    <div id="grid" style="height: 400px;"></div>
+                    
+                 </div>
+				
                 </div>
-              </div>
+				
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" 
+					   href="#collapseThree">echarts地图</a>
+				  </h4>
+				</div>
+				<div class="panel-body">
+				  
+					<div id="echartsmap" style="height: 400px;"></div>
+					
+				 </div>
+			
+			  </div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">
+					  <h4 class="panel-title">
+						<a data-toggle="collapse" 
+						   href="#collapseThree">highcharts3D柱状图</a>
+					  </h4>
+					</div>
+					 <div class="panel-body">
+						
+						<div id="highcharts3dcolumn" style="height: 400px;"></div>
+						
+						<div id="sliders" style="height: 200px;">
+							<table>
+								<tr><td>Alpha Angle</td><td><input id="R0" type="range" min="0" max="180" value="15"/> <span id="R0-value" class="value"></span></td></tr>
+								<tr><td>Beta Angle</td><td><input id="R1" type="range" min="0" max="180 value="15"/> <span id="R1-value" class="value"></span></td></tr>
+							</table>
+						</div>
+					 </div>
+				
+				</div> 
 
             </div>
+         </div>
+	   </div> 
 
-            <!-- build:js js/dashboard.js -->
-            <script type="text/javascript" src="js/jquery.papeo.js"></script>
-            <script type="text/javascript" src="js/jquery.sone.menu.js"></script>
-            <script type="text/javascript" src="js/w2ui-init.js"></script>
-            <!-- endbuild -->
+     </div>
+ </div>
+	<!-- build:js js/dashboard.js -->
+	<script type="text/javascript" src="js/comboMenu.js"></script>
+	<script type="text/javascript" src="js/jquery.papeo.js"></script>
+	<script type="text/javascript" src="js/jquery.sone.menu.js"></script>
+	<script type="text/javascript" src="js/w2ui-init.js"></script>
+	<script type="text/javascript" src="js/comboMenu-init.js"></script>
+	<script type="text/javascript" src="js/daterangepicker-init.js"></script>
+	<script type="text/javascript" src="js/echarts-init.js"></script>
+	<script type="text/javascript" src="js/highcharts-init.js"></script>
+	<!-- endbuild -->
 
   </body>
 </html>

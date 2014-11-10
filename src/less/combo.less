@@ -1,0 +1,223 @@
+.comboMenu {
+	position: relative;
+	border: 1px solid #d9d9d9;
+	margin-right: 5px;
+	background: white;
+	min-height: 27px;
+	min-width: 120px;
+	max-width: 240px;
+}
+
+.comboMenu .popuplist a.hasLeaf,.comboMenu .popuplist a.showRoot {
+	background-image: url("../img/arrow_right_noselect.gif");
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.comboMenu .popuplist .bread {
+	border-bottom: 1px solid #ebebeb;
+}
+
+.comboMenu .popuplist a.hasLeaf:hover,.comboMenu .popuplist a.hasLeaf.selected,.comboMenu .popuplist a.showRoot:hover {
+	background-image: url("../img/arrow_right_select.gif");
+}
+
+.comboMenu .popuplist a.current.hasLeaf {
+	background-image: url("../img/arrow_right_current.gif");
+}
+
+.comboMenu .popup.popup_1,.comboMenu .popup.popup_2,.comboMenu .popup.popup_3,.comboMenu .popup.popup_4 {
+	border-left-color: #e6e6e6;
+}
+
+.comboMenu .popup .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	background: transparent;
+}
+
+.comboMenu .popup .cover .cover_content {
+	background: #fffdfa;
+	opacity: .8;
+	//filter: Alpha(opacity = 80);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border: 1px solid #ff710d;
+	z-index: 1;
+}
+
+.comboMenu .popup .cover span.cover_tip {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	background: url("../img/hand.gif") no-repeat 10px top;
+	padding: 10px 15px;
+	color: #ff710d;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	top: 50%;
+	margin-top: -25px;
+}
+
+.cover_arrow {
+	width: 0;
+	height: 0;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent #ff720d transparent transparent;
+	position: absolute;
+	top: 0;
+	left: -29px;
+	z-index: 2;
+}
+
+.cover_arrow span {
+	width: 0;
+	height: 0;
+	border-width: 14px;
+	border-style: solid;
+	border-color: transparent white transparent transparent;
+	position: absolute;
+	top: -14px;
+	right: -15px;
+}
+
+.comboMenu .prefix {
+	line-height: 20px;
+	height: 21px;
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+}
+
+.comboMenu.in {
+	border-color: #bfbfbf;
+}
+
+.comboMenu .comboMenu_text,.comboMenu .comboMenu_search input {
+	border: 0;
+	line-height: 20px;
+	padding: 3px 0;
+	outline: 0;
+	color: #666;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	*float: left;
+	overflow: hidden;
+}
+
+.comboMenu .comboMenu_text {
+	float: left;
+	white-space: nowrap;
+}
+
+.comboMenu .comboMenu_text:hover {
+	text-decoration: none;
+}
+
+.comboMenu .comboMenu_search {
+	color: #b2b2b2;
+	border: 1px solid #bfbfbf;
+	background: url("../img/search.png") #fffdfa no-repeat center right -4px;
+}
+
+.comboMenu .search-bottom {
+	width: 100%;
+	height: 5px;
+}
+
+.comboMenu .comboMenu_search:hover {
+	border: 1px solid #ff710d;
+}
+
+.comboMenu .comboMenu_search input {
+	cursor: text;
+	min-width: 54px;
+}
+
+.comboMenu span.prefix {
+	float: left;
+}
+
+.comboMenu input.disable {
+	color: #999;
+}
+
+.comboMenu .popup {
+	position: absolute;
+	left: -1px;
+	padding: 4px;
+	z-index: 999;
+	border: 1px solid #bfbfbf;
+	display: none;
+	background: white;
+}
+
+.comboMenu .popup.popup_0 {
+	border-top-color: #e6e6e6;
+	min-width: 120px;
+	max-width: 240px;
+}
+
+.comboMenu .popup_wrap {
+	width: 100px;
+	overflow: hidden;
+	max-height: 400px;
+}
+
+.comboMenu .popuplist {
+	width: 100%;
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.comboMenu .popuplist a,.comboMenu .hisList a {
+	display: block;
+	padding: 3px 10px;
+	line-height: 20px;
+	border-color: 1px solid white;
+}
+
+.comboMenu .popuplist a:hover,.comboMenu .popuplist a.selected,.comboMenu .hisList a.selected,.comboMenu .hisList a:hover {
+	color: #ff710d;
+	border-color: #ebebeb;
+}
+
+.comboMenu .popuplist a.current,.comboMenu .hisList a.current {
+	background-color: #26a8ff;
+	color: white;
+	border-color: #09f;
+}
+
+.comboMenu .arrow {
+	width: 15px;
+	margin-right: 4px;
+	background: url("../img/arrow_down.gif") white no-repeat 4px 12px;
+	height: 25px;
+	line-height: 27px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	float: right;
+	*float: left;
+}
+
+.comboMenu:hover .arrow {
+	background-position: 4px -13px;
+	cursor: pointer;
+}
+
+.comboMenu .arrow.in {
+	background-position: 4px -38px;
+}
