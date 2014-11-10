@@ -8,7 +8,7 @@
     },
 
     {
-        "iconClass": "icon icon-ic_play_circle_outline_black_24dp",
+        "iconClass": "fa-play-circle fa-2x",
         "name": "市场2",
         "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
         "price": {"lable":"万元","value":1200},

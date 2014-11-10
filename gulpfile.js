@@ -15,6 +15,9 @@ var vendors = [
     'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
     'src/bower_components/w2ui/w2ui-1.4.2.js',
+    'src/bower_components/moment/moment.js',
+    'src/bower_components/highcharts/highcharts-all.js',
+    'src/bower_components/echarts/build/echarts-plain-map.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js'
 ];
 
@@ -35,7 +38,8 @@ var styles = [
     'src/less/reset.less',
     'src/less/index.less',
     'src/less/sb-admin-2.less',
-    'src/less/top.less'
+    'src/less/top.less',
+    'src/less/combo.less'
 ];
 
 var fonts = [
@@ -70,7 +74,7 @@ gulp.task('copy-scripts', function() {
     return gulp.src(paths.js)
         .pipe(uglify())
         .pipe(concat('dashboard.min.js'))
-        .pipe(insert.prepend('\'use strict\';'))
+        //.pipe(insert.prepend('\'use strict\';'))
         .pipe(gulp.dest('dist/js'));
 });
 

@@ -23,6 +23,8 @@
     "font-awesome": "~4.2.0",
     "w2ui": "~1.4.2",
     "bootstrap-material-design": "~0.1.5",
-    "bootstrap-daterangepicker": "https://github.com/bisone/bootstrap-daterangepicker.git#master"
+    "bootstrap-daterangepicker": "https://github.com/bisone/bootstrap-daterangepicker.git#master",
+    "echarts": "https://github.com/ecomfe/echarts.git#~2.0.4",
+    "highcharts": "~4.0.4"
   }
 }
