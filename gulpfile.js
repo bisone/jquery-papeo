@@ -10,9 +10,15 @@ var gulp    = require('gulp'),
     templates = require('gulp-angular-templates');
 
 var vendors = [
+    'src/bower_components/angular/angular.js',
+    'src/bower_components/angular-cookies/angular-cookies.js',
+    'src/bower_components/angular-bootstrap/ui-bootstrap.js',
+    'src/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+    'src/bower_components/angular-ui-router/release/angular-ui-router.js',
+
     'src/bower_components/jquery/dist/jquery.js',
     'src/bower_components/jquery-ui/jquery-ui.js',
-    'src/bower_components/underscore/underscore.js',
+    // 'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
     'src/bower_components/w2ui/w2ui-1.4.2.js',
     'src/bower_components/moment/moment.js',
@@ -50,7 +56,8 @@ var fonts = [
 
 var paths = {
     js: ['src/js/**/*.*', 'dist/js/templates.js'],
-    files: ['src/index.html','src/json/**/*.*'],
+    json: ['src/json/**/*.*'],
+    files: ['src/index.html'],
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     fonts: fonts,
@@ -74,7 +81,7 @@ gulp.task('copy-scripts', function() {
     return gulp.src(paths.js)
         .pipe(uglify())
         .pipe(concat('dashboard.min.js'))
-        //.pipe(insert.prepend('\'use strict\';'))
+    //.pipe(insert.prepend('\'use strict\';'))
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -90,6 +97,9 @@ gulp.task('copy-templates', function() {
 
 // Copy all static/HTML files to output directory
 gulp.task('copy-files', function(){
+    gulp.src(paths.json)
+        .pipe(gulp.dest('dist/json'));
+
     return gulp.src(paths.files)
         .pipe(gulp.dest('dist'));
 });

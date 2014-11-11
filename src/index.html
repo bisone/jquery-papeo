@@ -1,4 +1,6 @@
-<html>
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -111,24 +113,28 @@
 
       <div id="page-wrapper">
 
+
+        <!-- Main Content -->
+        <section data-ui-view></section>
+        
         <div class="row">
           <div class="col-lg-12 rightcontent">
 
-            <div class="panel-group" id="accordion">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion"
                        href="#collapseOne">查询</a>
-                  </h4>
+                      </h4>
                 </div>
 
                 <div id="collapseOne" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <div class="row">
+                    <div class="panel-body">
                       <div class="row">
+                        <div class="row">
 
-                        <label class="checkbox-inline">  范围: </label>
+                          <label class="checkbox-inline">  范围: </label>
                         <button type="button" name="scope" class="btn btn-primary"
                                 value="">全部</button>
                         <button type="button" name="scope" class="btn btn-default"
@@ -137,10 +143,10 @@
                                 value="3">国外</button>
 
                         <label class="checkbox-inline"><b>日期:</b></label> <label
-                          class="checkbox-inline">
-                          <div id="rangePicker"
+                            class="checkbox-inline">
+                            <div id="rangePicker"
                                style="background: #fff; cursor: pointer; padding: 5px 10px;">
-                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                              <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                             <span></span> <b class="caret"></b>
                           </div>
                         </label>
@@ -151,10 +157,10 @@
 
                       <div class="row">
 
-                        <label class="checkbox-inline"> <label>品类:</label></label>
+                          <label class="checkbox-inline"> <label>品类:</label></label>
                         <!-- Menu -->
                         <label class="checkbox-inline">
-                          <div id="cmbDiv1"></div>
+                            <div id="cmbDiv1"></div>
                         </label>
                         <!-- end Menu -->
 
@@ -162,7 +168,7 @@
                         </label>
                         <!-- Menu -->
                         <label class="checkbox-inline">
-                          <div id="cmbDiv2"></div>
+                            <div id="cmbDiv2"></div>
                         </label>
                         <!-- end Menu -->
 
@@ -170,7 +176,7 @@
                         </label>
                         <!-- Menu -->
                         <label class="checkbox-inline">
-                          <div id="cmbDiv3"></div>
+                            <div id="cmbDiv3"></div>
                         </label>
                         <!-- end Menu -->
 
@@ -181,17 +187,17 @@
                 </div>
               </div>
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion"
                        href="#collapseTwo">引言</a>
-                  </h4>
+                      </h4>
                 </div>
 
                 <div class="panel-body">
 
-                  <div class="alert alert-success alert-dismissable">
-                    <i class="fa fa-check"></i>
+                    <div class="alert alert-success alert-dismissable">
+                      <i class="fa fa-check"></i>
                     <button type="button" class="close" data-dismiss="alert"
                             aria-hidden="true">×</button>
                     截止 2014-10-01，根据自营范围内来自的数据显示，在全国域内家电部门 大家电
@@ -199,7 +205,7 @@
                   </div>
 
                   <div class="alert alert-info alert-dismissable">
-                    <i class="fa fa-info"></i>
+                      <i class="fa fa-info"></i>
                     <button type="button" class="close" data-dismiss="alert"
                             aria-hidden="true">×</button>
                     <b>Alert!</b> Info alert preview. This alert is dismissable.
@@ -208,50 +214,50 @@
 
               </div>
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse"
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse"
                        href="#collapseThree">w2ui全能表格</a>
-                  </h4>
+                      </h4>
                 </div>
 
                 <div class="panel-body">
 
-                  <div id="grid" style="height: 400px;"></div>
+                    <div id="grid" style="height: 400px;"></div>
 
                 </div>
 
               </div>
 
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse"
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse"
                        href="#collapseThree">echarts地图</a>
-                  </h4>
+                      </h4>
                 </div>
                 <div class="panel-body">
 
-                  <div id="echartsmap" style="height: 400px;"></div>
+                    <div id="echartsmap" style="height: 400px;"></div>
 
                 </div>
 
               </div>
 
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse"
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse"
                        href="#collapseThree">highcharts3D柱状图</a>
-                  </h4>
+                      </h4>
                 </div>
                 <div class="panel-body">
 
-                  <div id="highcharts3dcolumn" style="height: 400px;"></div>
+                    <div id="highcharts3dcolumn" style="height: 400px;"></div>
 
                   <div id="sliders" style="height: 200px;">
-                    <table>
-                      <tr><td>Alpha Angle</td><td><input id="R0" type="range" min="0" max="180" value="15"/> <span id="R0-value" class="value"></span></td></tr>
+                      <table>
+                        <tr><td>Alpha Angle</td><td><input id="R0" type="range" min="0" max="180" value="15"/> <span id="R0-value" class="value"></span></td></tr>
                       <tr><td>Beta Angle</td><td><input id="R1" type="range" min="0" max="180 value="15"/> <span id="R1-value" class="value"></span></td></tr>
                     </table>
                   </div>
@@ -271,7 +277,7 @@
     </div>
     <script type="text/javascript" src="js/vendors.min.js"></script>
     <script type="text/javascript" src="js/dashboard.min.js"></script>
-
+    <script type="text/javascript" src="js/templates.min.js"></script>
 
   </body>
 </html>
