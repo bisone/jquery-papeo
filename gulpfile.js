@@ -18,7 +18,8 @@ var vendors = [
     'src/bower_components/moment/moment.js',
     'src/bower_components/highcharts/highcharts-all.js',
     'src/bower_components/echarts/build/echarts-plain-map.js',
-    'src/bower_components/bootstrap-daterangepicker/daterangepicker.js'
+    'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+	'src/bower_components/raphael/raphael.js'
 ];
 
 var styles = [
@@ -65,16 +66,16 @@ var moduleName = 'Dashboard';
 gulp.task('copy-vendors', function() {
     return gulp.src(paths.vendors)
         .pipe(uglify())
-        .pipe(concat('vendors.min.js'))
+        .pipe(concat('vendors.js'))
         .pipe(gulp.dest('dist/js'));
 });
 
 // Minify and copy all dashboard script files to dashboard.min.js
 gulp.task('copy-scripts', function() {
     return gulp.src(paths.js)
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat('dashboard.min.js'))
-        //.pipe(insert.prepend('\'use strict\';'))
+        .pipe(insert.prepend('\'use strict\';'))
         .pipe(gulp.dest('dist/js'));
 });
 
