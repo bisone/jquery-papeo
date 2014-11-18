@@ -2,7 +2,7 @@
 $(function() {
        //--- 地图 ---
 	var myChart = echarts.init(document.getElementById('echartsmap'));
-	option = {
+	var option = {
 		title : {
 			text: 'iphone销量',
 			subtext: '纯属虚构',

@@ -7,100 +7,21 @@
     <meta name="author" content="">
     <title>UI标准化模版</title>
     <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+    
   </head>
   <body>
     <div id="wrapper">
 
-      <div id="header">
-        <div class="header-main">
-          <div class="logo">UI标准化模版</div>
-          <div class="nav">
-            <ul>
-              <li class="curr"><a href="">零售系统</a></li>
-              <li><a href="">供应商系统</a></li>
-              <li><a href="">零售罗盘</a></li>
-              <li><a href="">供应商罗盘</a></li>
-
-            </ul>
-          </div>
-          <div class="nav-option">
-            <a href="javascript:;" class="prev">&lt;</a>
-            <a href="javascript:;" class="next">&gt;</a>
-          </div>
-          <div class="search-bar">
-            <input type="text"><a href="javascript:;"></a>
-          </div>
-          <div class="user">
-            <a href=""><img src="http://placeholder.qiniudn.com/36x36/ee0/fff" width="36" height="36" alt="">David Stevenson</a>
-          </div>
-          <div class="messages">
-            <dl class="item fore1">
-              <dt><b>5</b></dt>
-              <dd>
-                <a href="" class="line">
-                  <span class="u-img"><img src="http://placeholder.qiniudn.com/39x39/f60/fff" alt=""></span>
-                  <span class="u-name">DIvyia</span>
-                  <span class="u-info">刚才看见你的数据，有些想法刚才看见你的数据，有些想法</span>
-                  <span class="u-time">2分钟前</span>
-                </a>
-                <a href="" class="line">
-                  <span class="u-img"><img src="http://placeholder.qiniudn.com/39x39/fc0/fff" alt=""></span>
-                  <span class="u-name">DIvyia</span>
-                  <span class="u-info">刚才看见你的数据，有些想法刚才看见你的数据，有些想法</span>
-                  <span class="u-time">2分钟前</span>
-                </a>
-                <a href="" class="line">
-                  <span class="u-img"><img src="http://placeholder.qiniudn.com/39x39/f60/fff" alt=""></span>
-                  <span class="u-name">DIvyia</span>
-                  <span class="u-info">刚才看见你的数据，有些想法刚才看见你的数据，有些想法</span>
-                  <span class="u-time">2分钟前</span>
-                </a>
-              </dd>
-            </dl>
-            <dl class="item fore2">
-              <dt><b>4</b></dt>
-              <dd>
-                <h4>4个项目正在进行</h4>
-                <ul>
-                  <li>
-                    <a href="">
-                      <span class="txt">
-                        <span class="tit">A项目</span>
-                        <span class="pct">80%</span>
-                      </span>
-                      <span class="progress p-type1"><b style="width:80%"></b><s></s></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="txt">
-                        <span class="tit">A项目</span>
-                        <span class="pct">85%</span>
-                      </span>
-                      <span class="progress p-type2"><b style="width:85%"></b><s></s></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="txt">
-                        <span class="tit">A项目</span>
-                        <span class="pct">70%</span>
-                      </span>
-                      <span class="progress p-type3"><b style="width:70%"></b><s></s></span>
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </div>
+      <div id="header"></div>
       <div id="sub-nav">
         <ul>
           <li class="curr"><a href="">基础分析</a></li>
           <li><a href="">专题分析</a></li>
           <li><a href="">多维分析</a></li>
         </ul>
+		<div  style="cursor:pointer;" class="collapseNav"><i class="fa fa-sort-up fa-2x"></i></div>
       </div>
 
 
@@ -117,68 +38,63 @@
 
             <div class="panel-group" id="accordion">
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseOne">查询</a>
-                  </h4>
+                <div style="height:50px;" class="panel-heading">
+                  <div class="form-group">
+						<div class="col-md-2" style="margin-right:40px;">
+						<!-- 	<label class="checkbox-inline">
+								范围：</label> -->
+							<button type="button" name="scope" class="btn btn-primary btn-sm"
+								value="1">全部</button>
+							<button type="button" name="scope" class="btn btn-default btn-sm"
+								value="2">自营</button>
+							<button type="button" name="scope" class="btn btn-default btn-sm"
+								value="3">POP</button>
+						</div>
+						
+						<div class="col-md-3">
+							<!-- <label class="checkbox-inline" style="margin-top: 5px;">日期：</label>-->
+							<label class="checkbox-inline">
+								<div id="dateRangePicker"
+									style="border: 1px solid #bfbfbf; cursor: pointer;width:190px;height:32px;padding:5px 10px;background:white; ">
+									<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+									<span id="dateRange"></span> <b class="caret"></b>
+								</div>
+							</label>
+
+						</div>
+						<div class="col-md-3">
+							<!-- <label  class="checkbox-inline"> 商品：-->
+							</label> <label style="margin-left:0px;" class="checkbox-inline">
+								<div  class="clearfix">
+									<div style="position:relative;" id="cmbDiv"></div>
+								</div>
+							</label>
+						</div>
+						<div class="col-md-2">
+							<!-- <label  class="checkbox-inline">区域：</label>-->
+							<div style="border:1px solid #bfbfbf;background:white;padding-left:10px;height:32px;width:180px;" >
+							   
+								<span style="line-height:30px;vertical-align: top;">地区:</span>
+								
+								 <input id="district_cn" type="text" 
+									style="background:white;cursor: pointer; width: 100px; height: 30px;padding-bottom:2px;box-shadow:none;border:none;overflow:hidden;"
+									name="district_cn" value="全部数据" readonly="true"> <input
+									name="citycategory" id="citycategory" style="display: none"
+									value="" />
+								
+							</div>
+						</div>
+						
+						<div class="col-md-1 navbar-right" style="padding-left:40px;">
+							<button id="searchButton" type="button"
+								class="btn btn-primary btn-sm">查询</button>
+						</div>
+							
+					</div>
                 </div>
 
                 <div id="collapseOne" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="row">
-
-                        <label class="checkbox-inline">  范围: </label>
-                        <button type="button" name="scope" class="btn btn-primary"
-                                value="">全部</button>
-                        <button type="button" name="scope" class="btn btn-default"
-                                value="1">国内</button>
-                        <button type="button" name="scope" class="btn btn-default"
-                                value="3">国外</button>
-
-                        <label class="checkbox-inline"><b>日期:</b></label> <label
-                          class="checkbox-inline">
-                          <div id="rangePicker"
-                               style="background: #fff; cursor: pointer; padding: 5px 10px;">
-                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                            <span></span> <b class="caret"></b>
-                          </div>
-                        </label>
-
-                        <button id="myButton" type="submit" class="btn btn-primary pull-right">查询</button>
-
-                      </div>
-
-                      <div class="row">
-
-                        <label class="checkbox-inline"> <label>品类:</label></label>
-                        <!-- Menu -->
-                        <label class="checkbox-inline">
-                          <div id="cmbDiv1"></div>
-                        </label>
-                        <!-- end Menu -->
-
-                        <label class="checkbox-inline"> <label>品牌：</label>
-                        </label>
-                        <!-- Menu -->
-                        <label class="checkbox-inline">
-                          <div id="cmbDiv2"></div>
-                        </label>
-                        <!-- end Menu -->
-
-                        <label class="checkbox-inline"> <label>商品:</label>
-                        </label>
-                        <!-- Menu -->
-                        <label class="checkbox-inline">
-                          <div id="cmbDiv3"></div>
-                        </label>
-                        <!-- end Menu -->
-
-                      </div>
-
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
               <div class="panel panel-default">
@@ -259,6 +175,29 @@
                 </div>
 
               </div>
+			  
+			  <div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#">市场需求图谱</a>
+						</h4>
+					</div>
+
+					<div id="demandGraphPanelBody" class="panel-body">
+						<div class="row">
+							<div class="col-lg-8" style="height: 500px; width: 1000px;">
+								<div id="raphael"
+									style="width: 1100px; height: 500px; margin-top: 00px;">
+
+									<div id="popover" style="display: block; position: ralative;">
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
 
             </div>
 
@@ -271,6 +210,7 @@
       </div>
     </div>
     <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script src="http://cdn.bootcss.com/highcharts/4.0.4/highcharts-all.js"></script>
     <script type="text/javascript" src="js/dashboard.min.js"></script>
 
 
