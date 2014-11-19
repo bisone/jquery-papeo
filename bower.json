@@ -1,4 +1,5 @@
 {
+
     "name": "Papeo",
     "version": "0.0.1",
     "homepage": "https://github.com/bisone/jquery-papeo",
@@ -32,8 +33,6 @@
         "font-awesome": "~4.2.0",
 
         "w2ui": "~1.4.2",
+        "raphael": "~2.1.2"
 
-        "echarts": "https://github.com/ecomfe/echarts.git#~2.0.4",
-        "highcharts": "~4.0.4"
     }
-}

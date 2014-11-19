@@ -58,8 +58,8 @@ $(function() {
 			"text" : "Your Documents"
 		} ];
 
-		$("#cmbDiv1").comboMenu({
-			height : 35,
+		$("#cmbDiv").comboMenu({
+			height : 32,
 			width : 180,
 			popWidth : 120,
 			useSearch : true,
@@ -78,7 +78,7 @@ $(function() {
 				// alert("onChanged：old=" + (!oldValue ? "" : oldValue.value) + "new=" + (!newValue ? "" : newValue.value));
 			}
 		});
-		$("#cmbDiv2").comboMenu({
+		/*$("#cmbDiv2").comboMenu({
 			height : 35,
 			width : 180,
 			popWidth : 120,
@@ -117,11 +117,11 @@ $(function() {
 			onChanged : function(oldValue, newValue) {
 				// alert("onChanged：old=" + (!oldValue ? "" : oldValue.value) + "new=" + (!newValue ? "" : newValue.value));
 			}
-		});
+		});*/
 
-		$("#cmbDiv1").comboMenu("setValue", "113");
-		$("#cmbDiv2").comboMenu("setValue", "112");
-		$("#cmbDiv3").comboMenu("setValue", "111");
+		$("#cmbDiv").comboMenu("setValue", "113");
+		/*$("#cmbDiv2").comboMenu("setValue", "112");
+		$("#cmbDiv3").comboMenu("setValue", "111");*/
 		
 		
     

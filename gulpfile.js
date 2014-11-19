@@ -22,12 +22,12 @@ var vendors = [
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
     'src/bower_components/w2ui/w2ui-1.4.2.js',
     'src/bower_components/moment/moment.js',
-    'src/bower_components/highcharts/highcharts-all.js',
-    'src/bower_components/echarts/build/echarts-plain-map.js',
-    'src/bower_components/bootstrap-daterangepicker/daterangepicker.js'
+    'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+    'src/bower_components/raphael/raphael.js'
 ];
 
 var styles = [
+    'src/bower_components/w2ui/w2ui-1.4.2.css',
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
     'src/less/dashboard/variables.less',
@@ -40,7 +40,7 @@ var styles = [
     'src/less/dashboard/widgets.less',
     'src/less/dashboard/hamburg.less',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
-    'src/bower_components/w2ui/w2ui-1.4.2.css',
+
     'src/less/reset.less',
     'src/less/index.less',
     'src/less/sb-admin-2.less',
@@ -79,9 +79,11 @@ gulp.task('copy-vendors', function() {
 // Minify and copy all dashboard script files to dashboard.min.js
 gulp.task('copy-scripts', function() {
     return gulp.src(paths.js)
-        .pipe(uglify())
+    //.pipe(uglify())
         .pipe(concat('dashboard.min.js'))
-    //.pipe(insert.prepend('\'use strict\';'))
+
+    // .pipe(insert.prepend('\'use strict\';'))
+
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -91,7 +93,7 @@ gulp.task('copy-templates', function() {
         .pipe(templates({module: moduleName}))
         .pipe(uglify())
         .pipe(concat('templates.min.js'))
-        .pipe(insert.prepend('\'use strict\';'))
+    //.pipe(insert.prepend('\'use strict\';'))
         .pipe(gulp.dest('dist/js'));
 });
 

@@ -1,7 +1,7 @@
 //daterangepicker
 $(function() {
 	var cb = function(start, end, label) {
-					$('#rangePicker span').html(
+					$('#dateRangePicker span').html(
 							start.format('YYYY-MM-D') + ' - '
 									+ end.format('YYYY-MM-D'));
 				};
@@ -56,12 +56,12 @@ $(function() {
 		}
 	};
 
-	$('#rangePicker span').html(
+	$('#dateRangePicker span').html(
 			moment().subtract(29, 'days').format(
 					'YYYY-MM-D')
 					+ ' - ' + moment().format('YYYY-MM-D'));
 
-	$('#rangePicker').daterangepicker(optionSet1, cb);
+	$('#dateRangePicker').daterangepicker(optionSet1, cb);
 		
 		
     
