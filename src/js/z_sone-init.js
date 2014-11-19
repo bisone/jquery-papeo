@@ -10,19 +10,46 @@ var panel=$("#raphael").demandGraph({divID : "raphael"});
 	panel.drawBg("#ffb049");
 	panel.drawCircle("#4284e2");
 	
-   $("#sub-nav .collapseNav i").click(function(){
+   /*$("#sub-nav .collapseNav i").click(function(){
 	   $("#sub-nav ul").toggle(function(){
 
-		 //$("#sub-nav ul").css("height",0);
+		   $("#sub-nav").css("height","10px");
 			 $("#sub-nav .collapseNav i").removeClass("fa-sort-up");	 
 			 $("#sub-nav .collapseNav i").addClass("fa-sort-desc");	
 		},function(){
-			 //$("#sub-nav ul").css("height",44);
+			 $("#sub-nav ul").css("height","44px");
 			 $("#sub-nav .collapseNav i").removeClass("fa-sort-desc");	 
 			 $("#sub-nav .collapseNav i").addClass("fa-sort-up");	
 		});
    
-   });
+   });*/
+   var numflag=0;
+    $("#sub-nav div").click(function(){
+           if(numflag==0){
+		     $("#sub-nav").css("height","10px");
+			 $("#sub-nav ul").css("display","none");
+			 $("#sub-nav .collapseNav i").removeClass("fa-sort-up");	 
+			 $("#sub-nav .collapseNav i").addClass("fa-sort-desc");	
+			 numflag=1;
+		   
+		   }else{
+		     $("#sub-nav").css("height","44px");
+			 $("#sub-nav ul").css("display","block");
+			 $("#sub-nav .collapseNav i").removeClass("fa-sort-desc");	 
+			 $("#sub-nav .collapseNav i").addClass("fa-sort-up");	
+		     numflag=0;
+		   } 
+			 
+	});
+	
+	$("#district_cn").provincepicker({
+		objid:"#district_cn", showid:"#sel_district", input_cn:"#district_cn", input:"#citycategory",
+		input_cn2:"#district_cn2",
+		input2:"#citycategory2", QSarr:new Array(), strlen:100
+	});
+	$("#district_cn").click(function(event) {
+				$('#contactUsModal').modal('show');
+			});
 
 
 /*$(window).bind("load resize", function() {
