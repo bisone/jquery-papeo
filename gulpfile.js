@@ -15,7 +15,7 @@ var vendors = [
     'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
     'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
-    'src/bower_components/w2ui/w2ui-1.4.2.js',
+    'src/bower_components/w2ui/dist/w2ui.min.js',
     'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
     'src/bower_components/raphael/raphael.js'
@@ -23,7 +23,7 @@ var vendors = [
 ];
 
 var styles = [
-    'src/bower_components/w2ui/w2ui-1.4.2.css',
+    'src/bower_components/w2ui/dist/w2ui.min.css',
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
     'src/less/dashboard/variables.less',
