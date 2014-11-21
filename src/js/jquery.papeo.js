@@ -12,7 +12,12 @@ $.widget("ui.soneLeftMenu", {
             type: "GET",
             success: function(mydata) {
 
-                var tpl = '<div class="left-side"> <ul class="sone-left-menu">';
+                try{
+                    mydata = $.parseJSON(mydata);
+                }catch(e){
+                }
+               var tpl = '<div class="left-side"> <ul class="sone-left-menu">';
+
                 $.each(mydata, function(n, item){
                     tpl += '<li id="market" class="sidebar-menu item item-1">'+
                         '<div class="itm-lv1">'+
