@@ -14,6 +14,7 @@ var vendors = [
     'src/bower_components/jquery-ui/jquery-ui.js',
     'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
+    'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
     'src/bower_components/w2ui/w2ui-1.4.2.js',
     'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
