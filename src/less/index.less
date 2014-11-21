@@ -1,31 +1,57 @@
+
+/* ----------left样式---------- */
+
+
 .wrap {
-    padding: 10px;
+   // padding: 10px;
 }
+.left-side{
+  	background: none repeat scroll 0 0 #f4f4f4;
+    box-shadow: -3px 0 8px -4px rgba(0, 0, 0, 0.07) inset;
+	  position: absolute;
+	  display:block;
+
+}
+.sone-left-menu .item  > div:first-of-type {
+    //border-top: 1px solid #dbdbdb;
+}
+.sone-left-menu .item  > div {
+    border-bottom: 1px solid #dbdbdb;
+	   border-top: 1px solid #fff;
+	   width:100%;
+	   display:block;
+	clear:both;
+	   
+	   
+	   
+	}
+
+
 .sone-left-menu {
-    width: 182px;
-    border: 1px solid #e2e2e0;
-    background: #fff;
     float: left;
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
     margin-top:10px;
+	 display: block;
+	 border-bottom: 1px solid #fff;
     .item {
         background: #f8f8f8;
         position: relative;
-        border-bottom: 1px solid #dcdbd9;
+       	width:auto;
         cursor: pointer;
+	
         .itm-lv1 {
-            padding: 18px 0 19px 0;
-            /* height: 65px; */
-            border-left: 5px solid #f8f8f8;
+            padding:10px;
+          
             .tit {
                 float: left;
                 width: 53px;
                 span {
                     color: #54ade5;
                     font-family: fontawesome;
-                    display: block
+                    display: block;
+					
                 }
 
                 s {
@@ -44,7 +70,7 @@
                 }
             }
             .con {
-                height: 56px;
+          
                 border-left: 1px solid #eaeae8;
                 padding: 4px 0 0 12px;
                 margin-left: 53px;
@@ -53,7 +79,7 @@
                 .info{
                     span {
                         display: inline-block;
-                        width: 50px;
+                    	
                         font: 14px "Microsoft Yahei";
                         b {
                             color: #54ade5;
@@ -131,7 +157,14 @@
         }
     }
 }
-
+.img-circle{
+ 	border: 8px solid rgba(255, 255, 255, 0.2);
+    height: 90px;
+    width: 90px;
+    z-index: 5;
+	margin:0 auto;
+	
+	}
 .narrow-wrap {
     #main {
         margin-left: 70px;

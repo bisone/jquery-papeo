@@ -18,6 +18,7 @@ var vendors = [
     'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
     'src/bower_components/raphael/raphael.js'
+
 ];
 
 var styles = [
