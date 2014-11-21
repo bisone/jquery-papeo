@@ -12,13 +12,13 @@ $.widget("ui.soneLeftMenu", {
             type: "GET",
             success: function(mydata) {
 
-                var tpl = ' <div class="sone-left-menu">';
+                var tpl = '<div class="left-side"> <ul class="sone-left-menu">';
                 $.each(mydata, function(n, item){
-                    tpl += '<div id="market" class="item item-1">'+
+                    tpl += '<li id="market" class="sidebar-menu item item-1">'+
                         '<div class="itm-lv1">'+
                         '<div class="tit">'+
-                        '<span class="'+item.iconClass+'"></span>'+
-                        '<span>'+item.name+'</span>'+
+                        '<span class="'+item.iconClass+' text-center"></span>'+
+                        '<span class="text-center">'+item.name+'</span>'+
                         '<s>3</s>'+
                         '</div>'+
                         '<div class="con">'+
@@ -39,10 +39,10 @@ $.widget("ui.soneLeftMenu", {
                     });
                     tpl +='</ul>'+
                         '</div>'+
-                        '</div>'; });
+                        '</li>'; });
 
                 tpl += '<div class="resizer"><b></b></div>'+
-                    '</div>';
+                    '</ul></div>';
 
                 scope.element.html(tpl);
 
