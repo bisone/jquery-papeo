@@ -66,7 +66,7 @@ $.widget("ui.soneHeader", {
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore2 " role="menu"><li class="header"> <h4>4个项目正在进行</h4></li></ul>'
 				+ ' </li>'
 				+ ' <li class="dropdown user-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i>李某某</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
+				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>李某某</a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
 				+ ' </li>'
 				+ ' </ul>'
 				+ '</div> </div>');
@@ -105,7 +105,7 @@ $.widget("ui.soneHeader", {
 				});
 				$.each(this.options.user, function(k, v) {
 
-					var item= '<li  class="text-center user-header ">'+
+					var item= '<li  class="text-center">'+
 								' <img src="'+v.userImg+'" class="img-circle" alt="">'+
 								'<h4 class="text-center">'+v.userName+'</h4>'+
 								'<p class="text-center">'+v.usermes+'</p>'+
@@ -135,11 +135,11 @@ $.widget("ui.soneHeader", {
 			var width = (this.window.innerWidth > 0)
 					? this.window.innerWidth
 					: this.screen.width;
-			if (width < 1024) {
-				$('#wrapper', _ele).addClass('container');
+			if (width < 768) {
+				$('div.navbar-collapse', _ele).addClass('collapse');
 				topOffset = 100; // 2-row-menu
 			} else {
-				$('#wrapper', _ele).removeClass('container');
+				$('div.navbar-collapse', _ele).removeClass('collapse');
 			}
 
 			var height = (this.window.innerHeight > 0)
