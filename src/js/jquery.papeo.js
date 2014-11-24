@@ -29,7 +29,7 @@ $.widget("ui.soneLeftMenu", {
                         '<div class="con">'+
                         '<div class="info">';
                     $.each(item.info, function (n,i) {
-                        tpl +='<span><b>'+i.value+'</b>'+i.lable+'</span>';
+                        tpl +='<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;&nbsp;&nbsp;';
                     });
                     tpl +='</div>'+
                         '<div class="price">'+
