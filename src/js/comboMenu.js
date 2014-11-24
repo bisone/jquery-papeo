@@ -163,6 +163,10 @@
 			addMenuItem($target, $popArr[0].find(".popuplist"), data);
 			selectValueByLevel($target, 0);
 			$popArr[0].show();
+
+			$(document.body).unbind("click", comboMenuOuterClick);
+			$(document.body).bind("click", comboMenuOuterClick);
+
 		} else {
 			$popArr[0].find("[log=search_cate]").val("");
 			hideSubPopFrom($target, 0);
@@ -442,6 +446,23 @@
 			});
 		}
 		return processData.concat(copyJsonArray(data));
+	}
+
+	/**
+	 * 点击comboMenu外的事件，以关闭comboMenu
+	 */
+	function comboMenuOuterClick(e) {
+		if ($(e.target).parents(".comboMenu").length == 0) {
+			$(".comboMenu").each(function() {
+				$(this).comboMenu("hideCombo");
+			});
+		} else {
+			$(".comboMenu").each(function() {
+				if ($(e.target).parents(".comboMenu").attr("id") != $(this).attr("id")) {
+					$(this).comboMenu("hideCombo");
+				}
+			});
+		}
 	}
 
 	/**
