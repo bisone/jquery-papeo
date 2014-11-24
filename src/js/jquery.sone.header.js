@@ -76,7 +76,7 @@ $.widget("ui.soneHeader", {
 					if (k == 0) {
 						tmp = 'class="curr"';
 					}
-					tpl.find(".nav ul").append('<li ' + tmp + ' ><a href="">'
+					tpl.find(".nav ul").append('<li ' + tmp + ' ><a data-toggle="collapse" data-parent="#accordion" href="#sub-nav" aria-expanded="true" aria-controls="sub-nav">'
 							+ v + '</a></li>');
 				});
 		$.each(this.options.messages, function(k, v) {

@@ -324,10 +324,11 @@ li.user-header {
   display: inline!important;
 }
 #sub-nav .collapseNav {
-  margin: 0 auto;
+  margin:0 auto ;
   width: 60px;
   height: 25px;
   text-align: center;
+  
 }
 #sub-nav {
   padding: 0px!important;
