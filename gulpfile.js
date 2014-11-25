@@ -41,7 +41,8 @@ var styles = [
     'src/less/index.less',
     'src/less/sb-admin-2.less',
     'src/less/top.less',
-    'src/less/combo.less'
+    'src/less/combo.less',
+	'src/less/w2ui.less'
 ];
 
 var fonts = [

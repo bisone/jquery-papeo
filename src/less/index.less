@@ -25,17 +25,16 @@ a:hover, a:focus {
 	 border-bottom: 1px solid #dbdbdb;
 	 	 .item >div {
     	border-bottom: 1px solid #dbdbdb;
-	   border-top: 1px solid #fff;
-	 -webkit-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-	   width:100%;
-	   display:block;
-	   clear:both;
-   
+	    border-top: 1px solid #fff;
+	 	-webkit-transition: all .2s ease-out;
+    	-o-transition: all .2s ease-out;
+    	transition: all .2s ease-out;
+	    width:100%;
+	    display:block;
+	    clear:both;
 	}
     .item {
-       // background: #f8f8f8;
+      
         position: relative;
        	width:auto;
         cursor: pointer;
@@ -48,10 +47,19 @@ a:hover, a:focus {
             .tit {
                 float: left;
                 width: 60px;
+				text-align:center;
+				
                 span {
+				
                     color: #54ade5;
+					text-align:center;
                     font-family: fontawesome;
-                    display: block;				
+                    display: block;	
+								
+                }
+				 span.fa {
+					 font-size:24px;
+								
                 }
                 s {
                     position: absolute;
@@ -71,10 +79,9 @@ a:hover, a:focus {
             .con {
           
                 border-left: 1px solid #eaeae8;
-                padding: 4px 0 0 12px;
+                padding: 0px 0 0 12px;
                 margin-left:60px;
-                /* width: 107px; */
-                margin-top: 4px;
+              
                 .info{
                     span {
                         display: inline-block;
@@ -91,10 +98,10 @@ a:hover, a:focus {
 
                 .price {
                     font: 18px "Microsoft Yahei";
-                    color: #999;
-                    padding-top: 5px;
+                   // padding-top: 5px;
                     strong {
-                        font-size: 23px;
+						color:#54ade5;
+                        //font-size: 23px;
                         font-weight: bold
                     }
                 }
@@ -169,7 +176,7 @@ a:hover, a:focus {
         margin-left: 70px;
     }
     .sone-left-menu {
-        width: 58px;
+        width:70px;
         .item {
             background: #54ade5;
             z-index: 10;
@@ -190,11 +197,14 @@ a:hover, a:focus {
             }
         }
         .item-open {
-            background: #fff;
+			background-color:#2d94d5;		
+			
             .itm-lv1 {
+				 background: url("../img/menu-active.png") no-repeat scroll right center;
+				 transition:none;
                 .tit {
                     span {
-                        color: #333;
+                        color: #fff;
                     }
                 }
             }
@@ -202,7 +212,7 @@ a:hover, a:focus {
         .itm-lv2 {
             display: none;
             position: absolute;
-            left: 58px;
+            left:70px;
             top: 0;
             width: 180px;
             border: 1px solid #dcdbd9;

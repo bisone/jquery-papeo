@@ -76,7 +76,7 @@ $.widget("ui.soneHeader", {
 					if (k == 0) {
 						tmp = 'class="curr"';
 					}
-					tpl.find(".nav ul").append('<li ' + tmp + ' ><a data-toggle="collapse" data-parent="#accordion" href="#sub-nav" aria-expanded="true" aria-controls="sub-nav">'
+					tpl.find(".nav ul").append('<li ' + tmp + ' ><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#sub-nav" aria-expanded="true" aria-controls="sub-nav" >'
 							+ v + '</a></li>');
 				});
 		$.each(this.options.messages, function(k, v) {
@@ -109,7 +109,7 @@ $.widget("ui.soneHeader", {
 								' <img src="'+v.userImg+'" class="img-circle" alt="">'+
 								'<h4 class="text-center">'+v.userName+'</h4>'+
 								'<p class="text-center">'+v.usermes+'</p>'+
-							  '</li>';
+							  '</li>'+'<li class="user-footer"><div class="pull-left"><a class="btn btn-default btn-flat" href="#">Profile</a></div><div class="pull-right"><a class="btn btn-default btn-flat" href="#">Sign out</a></div></li>';
 					tpl.find(".navbar-right  .fore3").append(item);
 				});
 

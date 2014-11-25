@@ -160,7 +160,12 @@
 												'<table class="table table-condensed" border="0"> '+	
                                                 '</table> '+
 											'</div> '+
-											'<div class="txt"> '+
+										
+											
+										'</div> '+									
+									'</div> '+
+									' <div class="modal-footer">'+
+        									'<div class="txt"> '+
 												'<div class="selecteditem"></div> '+
 											'</div> '+
 											'<div class="txt"> '+
@@ -168,9 +173,8 @@
 													'<button id="confirmName" type="button" data-dismiss="modal" '+
 														'name="confirmName" class="btn btn-primary">确定</button> '+
 												'</div> '+
-											'</div> '+
-										'</div> '+
-									'</div> '+
+											'</div> '+       
+      									'</div>'+	
 								'</div> '+
 							'</div> '+
 						'</div> '+
