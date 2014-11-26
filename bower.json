@@ -21,7 +21,7 @@
     "underscore": "https://github.com/jashkenas/underscore.git#~1.7.0",
     "bootstrap": "~3.3.0",
     "font-awesome": "~4.2.0",
-    "w2ui": "~1.4.2",
+    "w2ui": "https://github.com/bisone/w2ui.git#master",
     "bootstrap-material-design": "~0.1.5",
     "bootstrap-daterangepicker": "https://github.com/bisone/bootstrap-daterangepicker.git#master",
     "echarts": "https://github.com/ecomfe/echarts.git#~2.0.4",

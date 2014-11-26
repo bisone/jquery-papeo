@@ -14,14 +14,14 @@ var vendors = [
     'src/bower_components/jquery-ui/jquery-ui.js',
     'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
-    'src/bower_components/w2ui/w2ui-1.4.2.js',
+    'src/bower_components/w2ui/dist/w2ui.js',
     'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
     'src/bower_components/raphael/raphael.js'
 ];
 
 var styles = [
-    'src/bower_components/w2ui/w2ui-1.4.2.css',
+    'src/bower_components/w2ui/dist/w2ui.css',
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
     'src/less/dashboard/variables.less',
@@ -49,13 +49,15 @@ var fonts = [
 ];
 
 var paths = {
-    js: ['src/js/**/*.*', 'dist/js/templates.js'],
-    files: ['src/index.html','src/json/**/*.*'],
+    js: ['src/js/common-init.js','src/js/center-init.js', 'dist/js/templates.js'],
+	widget:['src/widget/**/*.*'],
+    files: ['src/index.html','src/index-debug.html','src/json/**/*.*'],
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     fonts: fonts,
     styles: styles,
-    vendors: vendors
+    vendors: vendors,
+	docs:['src/docs/**/*.*']
 };
 
 // The name of the Angular module which will be injected into the templates.
@@ -69,11 +71,20 @@ gulp.task('copy-vendors', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-// Minify and copy all dashboard script files to dashboard.min.js
+// Minify and copy all dashboard widget files to dashboard-widget.min.js
+gulp.task('copy-widget', function() {
+    return gulp.src(paths.widget)
+        //.pipe(uglify())
+        .pipe(concat('dashboard-widget.min.js'))
+    // .pipe(insert.prepend('\'use strict\';'))
+        .pipe(gulp.dest('dist/widget'));
+});
+
+// Minify and copy all dashboard example script files to dashboard-init.min.js
 gulp.task('copy-scripts', function() {
     return gulp.src(paths.js)
-    //.pipe(uglify())
-        .pipe(concat('dashboard.min.js'))
+        //.pipe(uglify())
+      //  .pipe(concat('dashboard-init.min.js'))
     // .pipe(insert.prepend('\'use strict\';'))
         .pipe(gulp.dest('dist/js'));
 });
@@ -115,6 +126,13 @@ gulp.task('compile-less', function(){
         .pipe(gulp.dest('dist/css'));
 });
 
+//copy the help docs
+gulp.task('copy-docs', function(){
+    return gulp.src(paths.docs)
+        .pipe(gulp.dest('dist/docs'));
+});
+
+
 /**
  * Watch src
  */
@@ -126,6 +144,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.images, ['copy-images']);
     gulp.watch(paths.fonts, ['copy-fonts']);
     gulp.watch(paths.styles, ['compile-less']);
+	gulp.watch(paths.docs, ['copy-docs']);
 });
 
 gulp.task('webserver', function() {
@@ -142,5 +161,15 @@ gulp.task('livereload', function() {
         .pipe(connect.reload());
 });
 
-gulp.task('build', ['copy-vendors', 'copy-scripts', 'copy-templates', 'copy-files', 'copy-images', 'copy-fonts', 'compile-less']);
-gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
+gulp.task('webserver', function() {
+    connect.server({
+        root: 'dist',
+        livereload: true,
+        port: 8888
+    });
+});
+
+gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files', 'copy-images', 'copy-fonts', 'compile-less', 'copy-docs']);
+
+//gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
+gulp.task('default', ['build', 'webserver']);
