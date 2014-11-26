@@ -162,12 +162,13 @@
 											'</div> '+
 										
 											
-										'</div> '+									
+										'</div> '+
+										'<div class="txt"> '+
+												'<div class="selecteditem"></div> '+
+											'</div> '+									
 									'</div> '+
 									' <div class="modal-footer">'+
-        									'<div class="txt"> '+
-												'<div class="selecteditem"></div> '+
-											'</div> '+
+        									
 											'<div class="txt"> '+
 												'<div align="center"> '+
 													'<button id="confirmName" type="button" data-dismiss="modal" '+
