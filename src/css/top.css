@@ -131,16 +131,7 @@
   animation-iteration-count: 1;
   animation-name: fadeAnimation;
   animation-timing-function: ease;
-}
-@keyframes fadeAnimation {
-  0% {
-    opacity: 0;
-    top: 120%;
-  }
-  100% {
-    opacity: 1;
-    top: 100%;
-  }
+  transition: height 0.35s ease 0s;
 }
 /*#header .header-main .user {
 	height: 35px;
@@ -326,11 +317,6 @@
   padding: 10px;
   overflow: hidden;
 }
-.fore3 li h4 {
-  height: 25px;
-  line-height: 25px;
-  margin-top: 10px;
-}
 li.user-header {
   background: none repeat scroll 0 0 #54ade5;
   height: 175px;
@@ -342,9 +328,9 @@ li.user-header {
   padding: 0px!important;
   clear: both;
   background: none repeat scroll 0 0 #f8f8f8;
-  -moz-box-shadow: 0 -9px 7px -9px rgba(0, 0, 0, 0.1) inset;
-  -webkit-box-shadow: 0 -9px 7px -9px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 -9px 7px -9px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 -9px 7px -9px #bbbbbb inset;
+  -webkit-box-shadow: 0 -9px 7px -9px #bbbbbb inset;
+  box-shadow: 0 -9px 7px -9px #bbbbbb inset;
 }
 #sub-nav ul {
   padding: 10px 20px;
