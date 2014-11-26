@@ -164,8 +164,8 @@
 			selectValueByLevel($target, 0);
 			$popArr[0].show();
 
-			$(document).unbind("click", comboMenuOuterClick);
-			$(document).bind("click", comboMenuOuterClick);
+			$(document.body).unbind("click", comboMenuOuterClick);
+			$(document.body).bind("click", comboMenuOuterClick);
 
 		} else {
 			$popArr[0].find("[log=search_cate]").val("");

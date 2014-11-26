@@ -82,7 +82,7 @@ $.widget("ui.soneHeader", {
 		$.each(this.options.messages, function(k, v) {
 
 					var item='<li><a href="" class="line"> '+
-	                 ' <div class="u-img"><img src="'+v.uImg+'" alt=""></div>'+
+	                 ' <div class="u-img"><img src="'+v.uImg+'" alt="" class="img-responsive"></div>'+
 	                  '<h4 class="u-name">'+v.uName+'<small class="u-time">'+v.uTime+'</small></h4>'+
 	                 ' <div class="u-info">'+v.uInfo+'</div>'+
 	                 

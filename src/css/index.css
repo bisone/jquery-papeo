@@ -189,6 +189,7 @@ a:focus {
 }
 .narrow-wrap .sone-left-menu .itm-lv2 ul {
   border-left: 0 none;
+  transition: all 0.5s ease 0s;
 }
 .narrow-wrap .sone-left-menu .itm-lv2 ul li a {
   color: #666;

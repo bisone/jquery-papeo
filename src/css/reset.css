@@ -122,6 +122,9 @@ body {
   font: 12px/150% Arial, Verdana, "\5b8b\4f53";
 }
 /**************w2ui样式*********/
+.w2ui-grid {
+  border: 1px solid #cdcdcd  ;
+}
 .w2ui-grid .w2ui-grid-header {
   background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   border-bottom: 1px solid #cdcdcd!important;
@@ -140,6 +143,7 @@ body {
   margin: 0;
   padding: 5px 10px;
   background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
 }
 .w2ui-grid .w2ui-grid-toolbar .w2ui-toolbar-search {
   margin-right: 10px;
@@ -164,10 +168,14 @@ body {
 }
 .w2ui-grid .w2ui-grid-body .w2ui-grid-records table td {
   height: 35px;
+  border-bottom: 0 solid #ddd;
+  border-right: 1px solid #ddd;
 }
 .w2ui-grid .w2ui-grid-body table .w2ui-head {
   background-image: none;
   padding: 4px 0px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 button.w2ui-btn {
   background-color: #fff;
@@ -273,4 +281,30 @@ button.w2ui-btn-blue:hover {
 }
 #saleArea .table tbody tr:first-child td {
   border-top: none;
+}
+/**************highcharts3D柱状图*********/
+.highcharts-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.highcharts-subtitle {
+  margin-bottom: 20px;
+}
+#sliders {
+  padding: 20px;
+}
+#sliders table td {
+  padding: 8px;
+  text-align: right;
+}
+#sliders table td input {
+  width: 180px;
+  float: left;
+  border: none;
+}
+#sliders table td span {
+  margin-left: 10px;
+  display: inline-block;
+  float: right;
 }

@@ -18,7 +18,6 @@
 		 font-size: 20px;
 		 font-weight: 500;
 		 margin-right: 30px;
-		 background-color: #2a79ab;
 		 height: 50px;
 		 line-height: 50px;
 		 padding: 0 10px;
@@ -149,10 +148,19 @@
 	animation-iteration-count: 1;
 	animation-name: fadeAnimation;
 	animation-timing-function: ease;
-	transition: height 0.35s ease 0s;
+	
 }
 
-
+@keyframes fadeAnimation {
+0% {
+    opacity: 0;
+    top: 120%;
+}
+100% {
+    opacity: 1;
+    top: 100%;
+}
+}
 
 
 
@@ -352,14 +360,28 @@
 	clear:both;	
 }
 .fore3{
+	.img-circle{
+		 border: 8px solid rgba(255, 255, 255, 0.2);
+		height: 90px;
+		width: 90px;
+		}
 	li.user-footer:after{	
 		clear:both;
 		display:block;		
 		}
+	
+		
 	.user-footer{
 		padding:10px;
 		overflow:hidden;	
 		}
+		li{
+			h4{
+				height:25px;
+				line-height:25px;
+				margin-top:10px}
+			
+			}
 }
 li.user-header {
 	background: none repeat scroll 0 0 #54ade5;
@@ -371,13 +393,15 @@ li.user-header {
 #sub-nav {
 	padding: 0px!important;
 	//height: 45px;
-	clear: both;
-	background: none repeat scroll 0 0 #f8f8f8;
+	width:100%;
+	clear:both;
+	background: none repeat scroll 0 0 #fff;
+
 	
-    box-shadow: 0 -9px 7px -9px #bbb inset;
-	-moz-box-shadow:0 -9px 7px -9px #bbb inset;           
-	-webkit-box-shadow:0 -9px 7px -9px #bbb inset;         
-	box-shadow:0 -9px 7px -9px #bbb inset;   
+    box-shadow: 0 -9px 7px -9px rgba(0,0,0,.1) inset;
+	-moz-box-shadow:0 -9px 7px -9px rgba(0,0,0,.1) inset;           
+	-webkit-box-shadow:0 -9px 7px -9px rgba(0,0,0,.1) inset;         
+	box-shadow:0 -9px 7px -9px rgba(0,0,0,.1) inset;   
 	ul {
 	padding:10px 20px;
 	width:900px;
@@ -393,7 +417,7 @@ li.user-header {
 			clear: left;
 			padding: 5px 0 5px 8px;
 			a {
-				color: #666;
+				color: #333;
 				display: inline!important;
 				padding: 0 5px;
 				text-decoration: none;
