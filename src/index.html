@@ -20,7 +20,7 @@
 <body>
 <div id="wrapper">
     <div id="header"></div>
-    <div id="sub-nav"  role="tabpanel" aria-labelledby="sub-nav"  class="panel-collapse collapse">
+    <div id="sub-nav"  name="sub-nav-1" role="tabpanel" aria-labelledby="sub-navfirst"  class="panel-collapse collapse">
         <ul>
             <li class="curr"><a href="">基础分析</a></li>
             <li><a href="">专题分析</a></li>
@@ -342,6 +342,10 @@
 	<script type="text/javascript" src="widget/dashboard-widget.min.js"></script>
     <script type="text/javascript" src="js/common-init.js"></script>
 	<script type="text/javascript" src="js/center-init.js"></script>
+	<script>
+	   $("#header .collapsed").attr("href","#sub-nav-1");
+	
+	</script>
 
 
   </body>

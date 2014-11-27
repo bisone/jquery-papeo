@@ -16,14 +16,13 @@
     <div id="wrapper">
 
       <div id="header"></div>
-      <div id="sub-nav">
+      <div id="sub-nav" name="sub-nav-2">
         <ul>
           <li class="curr"><a href="javascript:;">UI标准化框架</a></li>
 		  <li><a href="javascript:;">Bootstrap</a></li>
           <li><a href="javascript:;">highchart</a></li>
           <li><a href="javascript:;">echarts</a></li>
         </ul>
-		<div  style="cursor:pointer;" class="collapseNav"><i class="fa fa-sort-up fa-2x"></i></div>
       </div>
 
 
@@ -40,6 +39,7 @@
 	 <script>
 	    $("#header .nav li").removeClass("curr");
 	    $("#header .nav li:eq(1)").addClass("curr");
+		 $("#header .collapsed").attr("href","#sub-nav-2");
 	</script>
 	<div id="page-wrapper">
 		<iframe  src ="bootstrap/bootstrap-3.2.0/docs/index.html"  frameborder="0" height="1000px" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%">

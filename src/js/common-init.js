@@ -206,6 +206,9 @@ $('#left-menu').soneLeftMenu({
 
 //header 点击 变色
 $("#header .nav li").click(function(o){
+     if($(o.target).parent().hasClass("curr")){
+	    return;
+	 }
      if(o.target.text=='UI标准化模板'){
 	      window.location.href="/index.html";
 	 }else if(o.target.text=='技术指南'){
