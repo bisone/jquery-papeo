@@ -159,7 +159,7 @@ $("#sub-nav li").click(function(o){
    var src='echarts/echarts-2.0.4/doc/doc.html';
    var data=bootstrapMenu;
    if(index==0){
-      src='bootstrap/bootstrap-3.2.0/docs/index.html';
+      src='stemplate/comboMenu/index.html';
       data=bootstrapMenu;
    }else if(index==1){
       src='bootstrap/bootstrap-3.2.0/docs/index.html';
