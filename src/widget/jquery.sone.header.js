@@ -43,20 +43,21 @@ $.widget("ui.soneHeader", {
 		var myData = this.options.modelNames;
 		var tpl = $('<div class="header-main"> '
 				+ '<div class="logo">UI标准化模版</div>'
-				+ '<div  class="nav">'
-				+ '<ul></ul>'
+				+ '<div  class="nav" id="navlist">'
+				+ '<ul id="navfouce"></ul>'
 				+ '</div>'
 				+ '<div class="nav-option">'
 				+ '<a href="javascript:;" class="prev">&lt;</a>'
 				+ ' <a href="javascript:;" class="next">&gt;</a>'
 				+ ' </div>'
+				
+				+ ' <div class="navbar-right">'
 				+ '<form class="navbar-form navbar-left search-bar " role="search">'
 				+ '	<div class="form-group">'
 				+ '	<input  id="search" class="form-control" type="text" placeholder="Search...">'
 				+ '	</div>'
 				+ '	<button class="btn btn-default" type="submit" data-original-title="Search"><span class="glyphicon glyphicon-search"></span></button>'
 				+ '</form>'
-				+ ' <div class="navbar-right">'
 				+ ' <ul class=" navbar-nav">'
 				+ ' <li class="dropdown  messages-menu">'
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-envelope"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore1 " role="menu"><li class="header"> <h4>4个项目正在进行</h4></li></ul>'
@@ -75,7 +76,7 @@ $.widget("ui.soneHeader", {
 					if (k == 0) {
 						tmp = 'class="curr"';
 					}
-					tpl.find(".nav ul").append('<li ' + tmp + ' ><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#sub-nav" aria-expanded="true" aria-controls="sub-nav" >'
+					tpl.find("#navlist ul").append('<li ' + tmp + ' ><a href="">'
 							+ v + '</a></li>');
 				});
 		$.each(this.options.messages, function(k, v) {

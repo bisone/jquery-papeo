@@ -183,7 +183,7 @@ $("#sub-nav li").click(function(o){
 
 var templateData=[
     {
-        "iconClass": "sone-left-menu-icons sone-market",
+        "iconClass": "fa fa-bar-chart-o ",
         "name": "市场",
         "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
         "price": {"lable":"万元","value":1200},
@@ -191,7 +191,7 @@ var templateData=[
     },
 
     {
-        "iconClass": "fa-play-circle fa-2x",
+        "iconClass": "fa fa-line-chart",
         "name": "市场2",
         "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
         "price": {"lable":"万元","value":1200},
