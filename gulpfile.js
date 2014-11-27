@@ -14,14 +14,19 @@ var vendors = [
     'src/bower_components/jquery-ui/jquery-ui.js',
     'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
-    'src/bower_components/w2ui/dist/w2ui.js',
+
+    'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
+    'src/bower_components/w2ui/dist/w2ui.min.js',
+
     'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
     'src/bower_components/raphael/raphael.js'
+
 ];
 
 var styles = [
-    'src/bower_components/w2ui/dist/w2ui.css',
+
+    'src/bower_components/w2ui/dist/w2ui.min.css',
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
     'src/less/dashboard/variables.less',
@@ -39,7 +44,8 @@ var styles = [
     'src/less/index.less',
     'src/less/sb-admin-2.less',
     'src/less/top.less',
-    'src/less/combo.less'
+    'src/less/combo.less',
+	'src/less/w2ui.less'
 ];
 
 var fonts = [
