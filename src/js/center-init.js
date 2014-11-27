@@ -868,7 +868,7 @@ $(document).ready(function() {
 	});
 
 	// iCheck for checkbox and radio inputs
-	$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+	/*$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
 				checkboxClass : 'icheckbox_minimal',
 				radioClass : 'iradio_minimal'
 			});
@@ -892,5 +892,9 @@ $(document).ready(function() {
 	// Timepicker
 	$(".timepicker").timepicker({
 				showInputs : false
-			});
+			});*/
+	$("#example1").dataTable();
 });
+
+//table
+
