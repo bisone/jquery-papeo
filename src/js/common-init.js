@@ -185,8 +185,8 @@ var templateData=[
     {
         "iconClass": "fa fa-bar-chart-o ",
         "name": "市场",
-        "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
-        "price": {"lable":"万元","value":1200},
+        "info": [[{"lable":"部门", "value": 100},{"lable":"品类","value":10}],[{"lable":"万元","value":1200}]],
+        //"price": {"lable":"万元","value":1200},
         "children": [{"name":"市场行情","url":"#"},{"name":"市场集中度","url":"#"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
     },
 
@@ -205,7 +205,7 @@ $('#left-menu').soneLeftMenu({
 });
 
 //header 点击 变色
-$("#header .nav li").click(function(o){
+/*$("#header .nav li").click(function(o){
      if($(o.target).parent().hasClass("curr")){
 	    return false;
 	 }
@@ -214,7 +214,7 @@ $("#header .nav li").click(function(o){
 	 }else if(o.target.text=='技术指南'){
 		  window.location.href="/docs/index.html";
 	 }
-});
+});*/
 
 
 
