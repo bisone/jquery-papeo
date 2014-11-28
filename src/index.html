@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>UI标准化模版</title>
+	<link rel="stylesheet" type="text/css" href="css/thirdpart.min.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
     <!-- ECharts单文件引入 -->
     <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
@@ -20,18 +21,27 @@
 <body>
 <div id="wrapper">
     <div id="header"></div>
-    <div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
-    <div class="cont" style="display:none;"> <ul>
-            <li class="curr"><a href="">基础分析</a></li>
-            <li><a href="">专题分析</a></li>
-            <li><a href="">多维分析</a></li>
-            <li><a href="">专题分析</a></li>
-            <li><a href="">多维分析</a></li>
-        </ul></div>
-			<div class="cont" style="display:none;">4<br />3<br />4</div>
+	
+   	<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
+		<div class="cont" style="display:none;"> 
+			<ul>
+				<li class="curr"><a href="">基础分析</a></li>
+				<li><a href="">专题分析</a></li>
+				<li><a href="">多维分析</a></li>
+				<li><a href="">专题分析</a></li>
+				<li><a href="">多维分析</a></li>
+			</ul>
+		</div>
+			<div class="cont" style="display:none;">
+			   <ul>
+				  <li ><a href="javascript:;">UI标准化框架</a></li>
+				  <li class="curr"><a href="javascript:;">Bootstrap</a></li>
+				  <li><a href="javascript:;">highchart</a></li>
+				  <li><a href="javascript:;">echarts</a></li>
+				</ul>
+			</div>
     
-        <!-- <div  style="cursor:pointer;" class="collapseNav" ><i class="fa fa-sort-up fa-2x"></i></div>--> 
-    </div>
+     </div>
     <div id="left-menu"> </div>
     <div id="page-wrapper">
         <div class="row">
@@ -785,7 +795,8 @@
     <script type="text/javascript" src="js/common-init.js"></script>
 	<script type="text/javascript" src="js/center-init.js"></script>
 	<script>
-	   $("#header .collapsed").attr("href","#sub-nav-1");
+	   $("#header .nav li").removeClass("curr");
+	   $("#header .nav li:eq(0)").addClass("curr");
 	
 	</script>
 <script type="text/javascript">

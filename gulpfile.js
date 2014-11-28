@@ -23,12 +23,14 @@ var vendors = [
     'src/bower_components/raphael/raphael.js'
 
 ];
-
-var styles = [
-
+var thirdparty_styles=[
     'src/bower_components/w2ui/dist/w2ui.min.css',
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
+	'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css'
+
+];
+var styles = [
     'src/less/dashboard/variables.less',
     'src/less/dashboard/mixins.less',
     'src/less/dashboard/main.less',
@@ -38,8 +40,6 @@ var styles = [
     'src/less/dashboard/sidebar.less',
     'src/less/dashboard/widgets.less',
     'src/less/dashboard/hamburg.less',
-    'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
-
     'src/less/reset.less',
     'src/less/index.less',
     'src/less/sb-admin-2.less',
@@ -61,6 +61,7 @@ var paths = {
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     fonts: fonts,
+	thirdparty_styles:thirdparty_styles,
     styles: styles,
     vendors: vendors,
 	docs:['src/docs/**/*.*']
@@ -123,6 +124,15 @@ gulp.task('copy-fonts', function(){
         .pipe(gulp.dest('dist/fonts'));
 });
 
+// Compile third party less styles into dashboard.css
+gulp.task('compile-thirdparty-less', function(){
+    return gulp.src(paths.thirdparty_styles)
+        .pipe(less())
+        .pipe(cssmin())
+        .pipe(concat('thirdpart.min.css'))
+        .pipe(gulp.dest('dist/css'));
+});
+
 // Compile less styles into dashboard.css
 gulp.task('compile-less', function(){
     return gulp.src(paths.styles)
@@ -175,7 +185,7 @@ gulp.task('webserver', function() {
     });
 });
 
-gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files', 'copy-images', 'copy-fonts', 'compile-less', 'copy-docs']);
+gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs']);
 
 //gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
 gulp.task('default', ['build', 'webserver']);
