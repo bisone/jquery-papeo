@@ -372,7 +372,10 @@ function btnSetCmb_5_click() {
 			<tr>
 				<td>onChanged</td>
 				<td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
-				<td>当选择的值变化时触发。如果两次选择的object的value值一样，则不会触发。该事件可以拦截，如果返回false，可以阻止该事件。</td>
+				<td>
+					当选择的值变化时触发。如果两次选择的object的value值一样，则不会触发。该事件可以拦截，如果返回false，可以阻止该事件。<br>
+					回调函数中有两个参数：onChange(oldValue, newValue)
+				</td>
 			</tr>
 		</tbody>
 	</table>
