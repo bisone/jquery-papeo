@@ -187,7 +187,7 @@ var templateData=[
         "name": "市场",
         "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
         "price": {"lable":"万元","value":1200},
-        "children": [{"name":"市场行情","url":"#"},{"name":"市场集中度","url":"#"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
+         "children": [{"name":"JavaScript 插件","url":"index.html"},{"name":" css 样式","url":"indexcss.html"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
     },
 
     {
