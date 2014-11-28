@@ -1,6 +1,6 @@
 $.widget("ui.soneHeader", {
 	options : {
-		modelNames : ['UI标准化模板', '技术指南'],
+		modelNames : ['UI标准化模板'],
 		messages : [{
 					uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
 					uName : 'DIvyia',

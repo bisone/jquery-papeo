@@ -154,6 +154,9 @@ var echartsMenu=[
     }
 ];	
 $("#sub-nav li").click(function(o){
+   //暂时不用二级菜单
+   return false;
+   
    $('#left-menu').soneLeftMenu('destroy');
    var index=$(this).parent().find("li").index(this);
    var src='echarts/echarts-2.0.4/doc/doc.html';
@@ -184,18 +187,18 @@ $("#sub-nav li").click(function(o){
 var templateData=[
     {
         "iconClass": "fa fa-bar-chart-o ",
-        "name": "市场",
-        "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
-        "price": {"lable":"万元","value":1200},
-         "children": [{"name":"JavaScript 插件","url":"index.html"},{"name":" css 样式","url":"indexcss.html"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
+        "name": "控件实例",
+        "info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
+        "price": {"lable":"**","value":1200},
+         "children": [{"name":"JavaScript 插件","url":"docs/stemplate/index/index.html"},{"name":" css 样式","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"example1","url":"#"},{"name":"example2","url":"#"}]
     },
 
     {
         "iconClass": "fa fa-line-chart",
-        "name": "市场2",
-        "info": [{"lable":"部门", "value": 100},{"lable":"品类","value":10}],
-        "price": {"lable":"万元","value":1200},
-        "children": [{"name":"市场行情","url":"#"},{"name":"市场集中度","url":"#"},{"name":"市场竞争强度","url":"#"},{"name":"市场需求度","url":"#"}]
+        "name": "帮助文档",
+        "info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
+        "price": {"lable":"**","value":1200},
+        "children": [{"name":"下拉框","url":"docs/stemplate/comboMenu/index.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
     }
 ];
 
@@ -205,7 +208,7 @@ $('#left-menu').soneLeftMenu({
 });
 
 //header 点击 变色
-/*$("#header .nav li").click(function(o){
+$("#header .nav li").click(function(o){
      if($(o.target).parent().hasClass("curr")){
 	    return false;
 	 }
@@ -214,7 +217,81 @@ $('#left-menu').soneLeftMenu({
 	 }else if(o.target.text=='技术指南'){
 		  window.location.href="/docs/index.html";
 	 }
-});*/
+});
+
+//二级菜单弹出
+(function(){
+
+	var time = null;
+	var list = $("#navlist");
+	var box = $("#navbox");
+	var lista = list.find("a");
+	
+	for(var i=0,j=lista.length;i<j;i++){
+		if(lista[i].className == "now"){
+			var olda = i;
+		}
+	}
+	
+	var box_show = function(hei){
+		box.stop().animate({
+			height:hei,
+			opacity:1
+		},400);
+	}
+	
+	var box_hide = function(){
+		box.stop().animate({
+			height:0,
+			opacity:0
+		},400);
+	}
+	
+	lista.hover(function(){
+		lista.removeClass("now");
+		$(this).addClass("now");
+		clearTimeout(time);
+		var index = list.find("a").index($(this));
+		box.find(".cont").hide().eq(index).show();
+		var _height = box.find(".cont").eq(index).height()+25;
+		box_show(_height)
+	},function(){
+		time = setTimeout(function(){	
+			box.find(".cont").hide();
+			box_hide();
+		},50);
+		lista.removeClass("now");
+		lista.eq(olda).addClass("now");
+	});
+	
+	box.find(".cont").hover(function(){
+		var _index = box.find(".cont").index($(this));
+		lista.removeClass("now");
+		lista.eq(_index).addClass("now");
+		clearTimeout(time);
+		$(this).show();
+		var _height = $(this).height()+25;
+		box_show(_height);
+	},function(){
+		time = setTimeout(function(){		
+			$(this).hide();
+			box_hide();
+		},50);
+		lista.removeClass("now");
+		lista.eq(olda).addClass("now");
+	});
+
+})();
+//为子菜单添加事件
+//为子菜单添加事件
+(function(){
+	 $("#left-menu a").click(function(o){
+      var link=$(this).attr("href");
+	  $("#ifm").attr('src',link);
+      return false;
+	 });
+   
+})();
 
 
 
