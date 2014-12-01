@@ -187,10 +187,17 @@ $("#sub-nav li").click(function(o){
 var templateData=[
     {
         "iconClass": "fa fa-bar-chart-o ",
-        "name": "控件实例",
+        "name": "JS 插件",
         "info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
         "price": {"lable":"**","value":1200},
-         "children": [{"name":"JavaScript 插件","url":"docs/stemplate/index/index.html"},{"name":" css 样式","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"example1","url":"#"},{"name":"example2","url":"#"}]
+         "children": [{"name":"Input插件 ","url":"docs/stemplate/index/input.html"},{"name":"table插件","url":"docs/stemplate/index/table.html"},{"name":" 统计插件","url":"docs/stemplate/index/statistics.html"},{"name":" 总插件","url":"docs/stemplate/index/indexjs.html"}]
+    },
+	  {
+        "iconClass": "fa fa-line-chart",
+        "name": " css 样式",
+        "info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
+        "price": {"lable":"**","value":1200},
+        "children": [{"name":"css样式","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
     },
 
     {
@@ -198,7 +205,7 @@ var templateData=[
         "name": "帮助文档",
         "info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
         "price": {"lable":"**","value":1200},
-        "children": [{"name":"下拉框","url":"docs/stemplate/comboMenu/index.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
+        "children": [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
     }
 ];
 
@@ -213,9 +220,9 @@ $("#header .nav li").click(function(o){
 	    return false;
 	 }
      if(o.target.text=='UI标准化模板'){
-	      window.location.href="/index.html";
+	      window.location.href="/indexjs.html";
 	 }else if(o.target.text=='技术指南'){
-		  window.location.href="/docs/index.html";
+		  window.location.href="/docs/indexjs.html";
 	 }
 });
 

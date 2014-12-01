@@ -14,12 +14,10 @@ pre {
 	margin: 5px;
 	font-size: 14px;
 }
-
 .divCon {
 	padding: 5px;
 	margin: 5px;
 }
-
 .apiTable tr td {
 	border: 1px solid #000000;
 	border-collapse: collapse;
@@ -27,16 +25,12 @@ pre {
 	padding: 3px;
 }
 </style>
-
 </head>
 <body>
-	<div class="iteye-blog-content-contain">
-		<p style="font-size: 16px;">&nbsp;</p>
-		<p style="font-size: 16px;">
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">本示例演示的json数据为：</span>
-		</p>
-		<p style="font-size: 16px;">&nbsp;</p>
-		<pre>[ {
+<div class="iteye-blog-content-contain">
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p style="font-size: 16px;"> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">本示例演示的json数据为：</span> </p>
+    <pre>[ {
     "value" : "ln",
     "text" : "辽宁",
     "children" : [ {
@@ -95,56 +89,48 @@ pre {
         "text" : "四平"
     } ]
 } ];</pre>
-		<p style="font-size: 16px;">&nbsp;</p>
-		<p style="font-size: 16px;">
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">1．一个最简单的comboMenu:</span>
-		</p>
-		<div class="divCon">
-			<div id="cmb_1"></div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_1"&gt;&lt;/div&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$(function() {
+    <p style="font-size: 16px;"> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">1．一个最简单的comboMenu:</span> </p>
+    <div class="divCon">
+        <div id="cmb_1"></div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_1"&gt;&lt;/div&gt;</pre>
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$(function() {
     $("#cmb_1").comboMenu({
         data : demoData
     });
 });</pre>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">2．添加说明标签：</span>
-		</p>
-		<div class="divCon">
-			<div id="cmb_2"></div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_2"&gt;&lt;/div&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$(function() {
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p style="font-size: 16px;"> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">2．添加说明标签：</span> </p>
+    <div class="divCon">
+        <div id="cmb_2"></div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_2"&gt;&lt;/div&gt;</pre>
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$(function() {
     $("#cmb_2").comboMenu({
         data : demoData,
                 title : "地区"
     });
 });</pre>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">3．异步取数后，给comboMenu设定值：</span>
-		</p>
-		<div class="divCon">
-			<div style="display: inline; float: left;">
-				<div id="cmb_3"></div>
-			</div>
-			<div style="display: inline;">
-				<input id="btnSetCmb_3" type="button" onclick="btnSetCmb_3_click()" value="设置data并设置默认值"></input>
-			</div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_3"&gt;&lt;/div&gt;
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p style="font-size: 16px;"> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">3．异步取数后，给comboMenu设定值：</span> </p>
+    <div class="divCon">
+        <div style="display: inline; float: left;">
+            <div id="cmb_3"></div>
+        </div>
+        <div style="display: inline;">
+            <input class="btn btn-primary"  id="btnSetCmb_3" type="button" onclick="btnSetCmb_3_click()" value="设置data并设置默认值">
+            </input>
+        </div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_3"&gt;&lt;/div&gt;
 &lt;input id="btnSetCmb_3" type="button" onclick="btnSetCmb_3_click()" value="设置data并设置默认值"&gt;&lt;/input&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$(function() {
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$(function() {
     $("#cmb_3").comboMenu({
         title : "地区"
     });
@@ -154,24 +140,22 @@ function btnSetCmb_3_click() {
     $("#cmb_3").comboMenu("setData", demoData);
     $("#cmb_3").comboMenu("setValue", "bj-hd");
 }</pre>
-		<p style="font-size: 16px;">&nbsp;</p>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">4．取得控件的选择值：</span>
-		</p>
-		<div class="divCon">
-			<div style="display: inline; float: left;">
-				<div id="cmb_4"></div>
-			</div>
-			<div style="display: inline;">
-				<input id="btnSetCmb_4" type="button" onclick="btnSetCmb_4_click()" value="取值（text属性）"></input>
-			</div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_4"&gt;&lt;/div&gt;
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p style="font-size: 16px;"> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">4．取得控件的选择值：</span> </p>
+    <div class="divCon">
+        <div style="display: inline; float: left;">
+            <div id="cmb_4"></div>
+        </div>
+        <div style="display: inline;">
+            <input class="btn btn-primary" id="btnSetCmb_4" type="button" onclick="btnSetCmb_4_click()" value="取值（text属性）">
+            </input>
+        </div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_4"&gt;&lt;/div&gt;
 &lt;input id="btnSetCmb_4" type="button" onclick="btnSetCmb_4_click()" value="取值"&gt;&lt;/input&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$(function() {
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$(function() {
     $("#cmb_4").comboMenu({
         data : demoData
     });
@@ -188,27 +172,23 @@ function btnSetCmb_4_click() {
     }
     alert(txtArr.reverse().join(" &gt; "));
 }</pre>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p>
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">5．设置comboMenu所有的级别都可以选择，并设置可以选择&ldquo;全部数据&rdquo;，从而达到全量选择的效果。</span>
-		</p>
-		<p>
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px; color: #ff0000;">注：这个alert的是控件值(json对象)里的value属性。</span>
-		</p>
-		<div class="divCon">
-			<div style="display: inline; float: left;">
-				<div id="cmb_5"></div>
-			</div>
-			<div style="display: inline;">
-				<input id="btnSetCmb_5" type="button" onclick="btnSetCmb_5_click()" value="取值（value属性）"></input>
-			</div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_5"&gt;&lt;/div&gt;
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">5．设置comboMenu所有的级别都可以选择，并设置可以选择&ldquo;全部数据&rdquo;，从而达到全量选择的效果。</span> </p>
+    <p> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px; color: #ff0000;">注：这个alert的是控件值(json对象)里的value属性。</span> </p>
+    <div class="divCon">
+        <div style="display: inline; float: left;">
+            <div id="cmb_5"></div>
+        </div>
+        <div style="display: inline;">
+            <input class="btn btn-primary" id="btnSetCmb_5" type="button" onclick="btnSetCmb_5_click()" value="取值（value属性）">
+            </input>
+        </div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_5"&gt;&lt;/div&gt;
 &lt;input id="btnSetCmb_5" type="button" onclick="btnSetCmb_5_click()" value="取值"&gt;&lt;/input&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$(function() {
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$(function() {
     $("#cmb_5").comboMenu({
         data : demoData,
         allLeafCanSelect : true,
@@ -227,36 +207,30 @@ function btnSetCmb_5_click() {
     }
     alert(txtArr.reverse().join(" &gt; "));
 }</pre>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p>
-			<span style="color: #000000; font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">6．样式演示(设置宽、高，以及poplist的宽，并隐藏搜索功能):</span>
-		</p>
-		<div class="divCon">
-			<div id="cmb_6"></div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_6"&gt;&lt;/div&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$("#cmb_6").comboMenu({
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p> <span style="color: #000000; font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">6．样式演示(设置宽、高，以及poplist的宽，并隐藏搜索功能):</span> </p>
+    <div class="divCon">
+        <div id="cmb_6"></div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_6"&gt;&lt;/div&gt;</pre>
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$("#cmb_6").comboMenu({
     data : demoData,
     height : 25,
     width : 160,
     popWidth : 120,
     useSearch : false
 });</pre>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p style="font-size: 16px;">&nbsp;&nbsp;</p>
-		<p>
-			<span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">7．事件演示(onclick,onShow,onChanged,onHide):</span>
-		</p>
-		<div class="divCon">
-			<div id="cmb_7"></div>
-		</div>
-		<p style="font-size: 16px; clear: both;">HTML代码：</p>
-		<pre name="code">&lt;div id="cmb_7"&gt;&lt;/div&gt;</pre>
-		<p style="font-size: 16px;">JS代码：</p>
-		<pre name="code">$("#cmb_7").comboMenu({
+    <p style="font-size: 16px;">&nbsp;&nbsp;</p>
+    <p> <span style="font-family: 'Microsoft YaHei', 微软雅黑, SimHei, tahoma, arial, helvetica, sans-serif; font-size: 18px;">7．事件演示(onclick,onShow,onChanged,onHide):</span> </p>
+    <div class="divCon">
+        <div id="cmb_7"></div>
+    </div>
+    <p style="font-size: 16px; clear: both;">HTML代码：</p>
+    <pre name="code">&lt;div id="cmb_7"&gt;&lt;/div&gt;</pre>
+    <p style="font-size: 16px;">JS代码：</p>
+    <pre name="code">$("#cmb_7").comboMenu({
     data : demoData,
     onShow : function() {
         alert("onShow!!");
@@ -273,155 +247,147 @@ function btnSetCmb_5_click() {
         alert("onChanged!! oldValue:" + oldText + ", newValue:" + newText);
     }
 });</pre>
-		<p>&nbsp;&nbsp;</p>
-		<p>&nbsp;</p>
-	</div>
-	<p>&nbsp;</p>
-	<p style="font-size: 20px; color: red;">ComboMenu API</p>
-	<p>&nbsp;</p>
-	<p style="font-size: 16px; font-weight: bold;">属性：</p>
-	<table class="apiTable" style="table-layout: fixed; min-width: 400px; width: 80%; margin-left: 5px;">
-		<tbody>
-			<tr>
-				<td style="width: 20%;">属性名</td>
-				<td style="width: 15%;">类型</td>
-				<td style="width: 50%;">说明</td>
-				<td style="width: 15%;">默认值</td>
-			</tr>
-			<tr>
-				<td>height</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; line-height: normal;">number</span></td>
-				<td>控件的高度（最小高度为27）</td>
-				<td>30</td>
-			</tr>
-			<tr>
-				<td>width</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; line-height: normal;">number</span></td>
-				<td>控件的宽度（最小宽度为120）</td>
-				<td>190</td>
-			</tr>
-			<tr>
-				<td>popWidth</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; line-height: normal;">number</span></td>
-				<td>除了第一级的下拉菜单，其它下拉菜单的宽。如果不设，会默认与width值相等</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>showSingleLevel</td>
-				<td>boolean</td>
-				<td>是否只显示选择值的单级值。如果是false,则显示其祖先到本级的值</td>
-				<td>true</td>
-			</tr>
-			<tr>
-				<td>hasAllData</td>
-				<td>boolean</td>
-				<td>是否添加所有数据可以选择的条目，如果设置为true，在下拉里的第一级的第一行会有一个&ldquo;全部数据&rdquo;的选项</td>
-				<td>false</td>
-			</tr>
-			<tr>
-				<td>joinStr</td>
-				<td>string</td>
-				<td>搜索功能后，父子级之间的连接字符</td>
-				<td>" &gt; "</td>
-			</tr>
-			<tr>
-				<td>title</td>
-				<td>string</td>
-				<td>左边标签内容</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>useSearch</td>
-				<td>boolean</td>
-				<td>是否用搜索功能</td>
-				<td>true</td>
-			</tr>
-			<tr>
-				<td>addParentAndLevel</td>
-				<td>boolean</td>
-				<td>是否需要控件来添加parent和level属性。默认为true。如果数据已经有parent和level属性了，可设置为false。（<span style="color: #ff0000;">除非调用函数中真的已经有parent和level属性的处理，否则，请设为false，该属性主要为了优化一点性能</span>）
-				</td>
-				<td>true</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p style="font-size: 16px; font-weight: bold;">事件：</p>
-	<table class="apiTable" style="table-layout: fixed; min-width: 400px; width: 80%; margin-left: 5px;">
-		<tbody>
-			<tr>
-				<td style="width: 20%;">事件名</td>
-				<td style="width: 20%;">参数</td>
-				<td style="width: 60%;">描述</td>
-			</tr>
-			<tr>
-				<td>onShow</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
-				<td>当下拉菜单poplist显示时触发。</td>
-			</tr>
-			<tr>
-				<td>onHide</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
-				<td><span style="font-size: 13.63636302948px; line-height: 19.0909080505371px;">当下拉菜单poplist隐藏时触发。</span></td>
-			</tr>
-			<tr>
-				<td>onClick</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
-				<td>点击时触发</td>
-			</tr>
-			<tr>
-				<td>onChanged</td>
-				<td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
-				<td>
-					当选择的值变化时触发。如果两次选择的object的value值一样，则不会触发。该事件可以拦截，如果返回false，可以阻止该事件。<br>
-					回调函数中有两个参数：onChange(oldValue, newValue)
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p style="font-size: 16px; font-weight: bold;">方法：</p>
-	<table class="apiTable" style="table-layout: fixed; min-width: 400px; width: 80%; margin-left: 5px;">
-		<tbody>
-			<tr>
-				<td style="width: 20%;">方法名</td>
-				<td style="width: 20%;">参数</td>
-				<td style="width: 60%;">描述</td>
-			</tr>
-			<tr>
-				<td>getValue</td>
-				<td>none</td>
-				<td>
-					取得当前控件的选择值。该值为一个json对象，有五个属性：<br>
-					value,text,children,level,parent。<br>
-					如果setData的数据没有level和parent两个属性，控件会自动加上。<br>
-				</td>
-			</tr>
-			<tr>
-				<td>setValue</td>
-				<td>object</td>
-				<td>设置控件的选择值。控件会选择value与该parameter相等的第一条记录。</td>
-			</tr>
-			<tr>
-				<td>setData</td>
-				<td>Array</td>
-				<td>给控件设置可选值。该parameter是一个json对象的二维数组。</td>
-			</tr>
-			<tr>
-				<td>getOptions</td>
-				<td>none</td>
-				<td>取得options</td>
-			</tr>
-			<tr>
-				<td>hideCombo</td>
-				<td>none</td>
-				<td>收起comboMenu。</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<script type="text/javascript" src="../../../js/vendors.min.js"></script>
-	<script type="text/javascript" src="../../../widget/dashboard-widget.min.js"></script>
-	<script type="text/javascript" src="comboMenu-init.js"></script>
+</div>
+<p>&nbsp;</p>
+<p style="font-size: 20px; color: red;">ComboMenu API</p>
+<p>&nbsp;</p>
+<p style="font-size: 16px; font-weight: bold;">属性：</p>
+<table class="apiTable" style="table-layout: fixed; min-width: 400px; width: 80%; margin-left: 5px;">
+    <tbody>
+        <tr>
+            <td style="width: 20%;">属性名</td>
+            <td style="width: 15%;">类型</td>
+            <td style="width: 50%;">说明</td>
+            <td style="width: 15%;">默认值</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; line-height: normal;">number</span></td>
+            <td>控件的高度（最小高度为27）</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; line-height: normal;">number</span></td>
+            <td>控件的宽度（最小宽度为120）</td>
+            <td>190</td>
+        </tr>
+        <tr>
+            <td>popWidth</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; line-height: normal;">number</span></td>
+            <td>除了第一级的下拉菜单，其它下拉菜单的宽。如果不设，会默认与width值相等</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>showSingleLevel</td>
+            <td>boolean</td>
+            <td>是否只显示选择值的单级值。如果是false,则显示其祖先到本级的值</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>hasAllData</td>
+            <td>boolean</td>
+            <td>是否添加所有数据可以选择的条目，如果设置为true，在下拉里的第一级的第一行会有一个&ldquo;全部数据&rdquo;的选项</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>joinStr</td>
+            <td>string</td>
+            <td>搜索功能后，父子级之间的连接字符</td>
+            <td>" &gt; "</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>string</td>
+            <td>左边标签内容</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>useSearch</td>
+            <td>boolean</td>
+            <td>是否用搜索功能</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>addParentAndLevel</td>
+            <td>boolean</td>
+            <td>是否需要控件来添加parent和level属性。默认为true。如果数据已经有parent和level属性了，可设置为false。（<span style="color: #ff0000;">除非调用函数中真的已经有parent和level属性的处理，否则，请设为false，该属性主要为了优化一点性能</span>） </td>
+            <td>true</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p style="font-size: 16px; font-weight: bold;">事件：</p>
+<table class="apiTable" style="table-layout: fixed; min-width: 400px; width: 80%; margin-left: 5px;">
+    <tbody>
+        <tr>
+            <td style="width: 20%;">事件名</td>
+            <td style="width: 20%;">参数</td>
+            <td style="width: 60%;">描述</td>
+        </tr>
+        <tr>
+            <td>onShow</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
+            <td>当下拉菜单poplist显示时触发。</td>
+        </tr>
+        <tr>
+            <td>onHide</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
+            <td><span style="font-size: 13.63636302948px; line-height: 19.0909080505371px;">当下拉菜单poplist隐藏时触发。</span></td>
+        </tr>
+        <tr>
+            <td>onClick</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
+            <td>点击时触发</td>
+        </tr>
+        <tr>
+            <td>onChanged</td>
+            <td><span style="font-family: verdana, helvetica, arial, sans-serif; font-size: 16px; line-height: normal;">none</span></td>
+            <td> 当选择的值变化时触发。如果两次选择的object的value值一样，则不会触发。该事件可以拦截，如果返回false，可以阻止该事件。<br>
+                回调函数中有两个参数：onChange(oldValue, newValue) </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p style="font-size: 16px; font-weight: bold;">方法：</p>
+<table class="apiTable" style="table-layout: fixed; min-width: 400px; width: 80%; margin-left: 5px;">
+    <tbody>
+        <tr>
+            <td style="width: 20%;">方法名</td>
+            <td style="width: 20%;">参数</td>
+            <td style="width: 60%;">描述</td>
+        </tr>
+        <tr>
+            <td>getValue</td>
+            <td>none</td>
+            <td> 取得当前控件的选择值。该值为一个json对象，有五个属性：<br>
+                value,text,children,level,parent。<br>
+                如果setData的数据没有level和parent两个属性，控件会自动加上。<br></td>
+        </tr>
+        <tr>
+            <td>setValue</td>
+            <td>object</td>
+            <td>设置控件的选择值。控件会选择value与该parameter相等的第一条记录。</td>
+        </tr>
+        <tr>
+            <td>setData</td>
+            <td>Array</td>
+            <td>给控件设置可选值。该parameter是一个json对象的二维数组。</td>
+        </tr>
+        <tr>
+            <td>getOptions</td>
+            <td>none</td>
+            <td>取得options</td>
+        </tr>
+        <tr>
+            <td>hideCombo</td>
+            <td>none</td>
+            <td>收起comboMenu。</td>
+        </tr>
+    </tbody>
+</table>
+<script type="text/javascript" src="../../../js/vendors.min.js"></script> 
+<script type="text/javascript" src="../../../widget/dashboard-widget.min.js"></script> 
+<script type="text/javascript" src="comboMenu-init.js"></script>
 </body>
 </html>

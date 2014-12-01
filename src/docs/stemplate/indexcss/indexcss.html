@@ -20,63 +20,21 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-xs-12">
-        <h6 style="margin-top:15px;border-bottom:none;margin-bottom:4px;"class="page-header ">&nbsp;您当前的位置：基础分析  > 市场  > 市场需求图谱</h6>
-    </div>
+
     <div class="col-xs-12 rightcontent">
+    <br/>
+     <br/>
+    
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
-                <div style="height:50px;" class="panel-heading">
-                    <div class="form-group">
-                        <div class="col-xs-2"> 
-                            <!-- 	<label class="checkbox-inline">
-								范围：</label> -->
-                            <button type="button" name="scope" class="btn btn-primary btn-sm"
-								value="1">全部</button>
-                            <button type="button" name="scope" class="btn btn-default btn-sm"
-								value="2">自营</button>
-                            <button type="button" name="scope" class="btn btn-default btn-sm"
-								value="3">POP</button>
-                        </div>
-                        <div class="col-xs-3"> 
-                            <!-- <label class="checkbox-inline" style="margin-top: 5px;">日期：</label>-->
-                            <label class="checkbox-inline">
-                            <div id="dateRangePicker"
-									style="border: 1px solid #bfbfbf; cursor: pointer;width:190px;height:32px;padding:5px 10px;background:white; "> <i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span id="dateRange"></span> <b class="caret"></b> </div>
-                            </label>
-                        </div>
-                        <div class="col-xs-3">
-                            <label style="margin-left:0px;" class="checkbox-inline">
-                            <div  class="clearfix">
-                                <div style="position:relative;" id="cmbDiv"></div>
-                            </div>
-                            </label>
-                        </div>
-                        <div class="col-xs-2"> 
-                            <!-- <label  class="checkbox-inline">区域：</label>-->
-                            <div style="border:1px solid #bfbfbf;background:white;padding-left:10px;height:32px;width:180px;" > <span style="line-height:30px;vertical-align: top;">地区:</span>
-                                <input id="district_cn" type="text" 
-									style="background:white;cursor: pointer; width: 100px; height: 30px;padding-bottom:2px;box-shadow:none;border:none;overflow:hidden;"
-									name="district_cn" value="全部数据" readonly>
-                                <input
-									name="citycategory" id="citycategory" style="display: none"
-									value="" />
-                            </div>
-                        </div>
-                        <div class="col-xs-2 navbar-right">
-                            <button id="searchButton" type="button"
-								class="btn btn-primary btn-sm">查询</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in"> </div>
-            </div>
-            <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion"
-					   href="#collapseTwo">引言</a> </h4>
+                    <h3 class="panel-title"> 警告框 </h3>
                 </div>
                 <div class="panel-body">
+                <h3>Input 控件</h3>
+                <hr/>
+                    <h4>基本实例</h4>
+                    <p> 将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框，.alert 类是必须要设置的，另外我们还提供了有特殊意义的4个类（例如，.alert-success），代表不同的警告信息。目前提供了成功、消息、警告或危险。</p>
                     <div class="alert alert-success alert-dismissable"> <i class="fa fa-check"></i>
                         <button type="button" class="close" data-dismiss="alert"
 							aria-hidden="true">×</button>
@@ -86,11 +44,33 @@
                         <button type="button" class="close" data-dismiss="alert"
 							aria-hidden="true">×</button>
                         <b>Alert!</b> Info alert preview. This alert is dismissable. </div>
+                         <h4>警告输入框</h4>
+                    <p>警告组件通过提供一些灵活的预定义消息，为常见的用户动作提供反馈消息。</p>
+                     <div class="row">
+                            <div class="col-xs-4">
+                                <div class="form-group has-success">
+                                    <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Input with success</label>
+                                    <input type="text" class="form-control" id="inputSuccess" placeholder="Enter ..."/>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="form-group has-warning">
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-warning"></i> Input with warning</label>
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Enter ..."/>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="form-group has-error">
+                                    <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with error</label>
+                                    <input type="text" class="form-control" id="inputError" placeholder="Enter ..."/>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading" >
-                    <h4 class="panel-title"> Form 元素 </h4>
+                    <h3 class="panel-title"> Form 元素 </h3>
                 </div>
                 <div class="panel-body">
                     <h3 >Input 控件</h3>
@@ -195,29 +175,9 @@
                     <!-- /input-group -->
                     <h3> Disabled Elements</h3>
                     <hr/>
-                    <h4>警告输入框</h4>
-                    <p>警告组件通过提供一些灵活的预定义消息，为常见的用户动作提供反馈消息。</p>
+                   
                     <form role="form">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <div class="form-group has-success">
-                                    <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Input with success</label>
-                                    <input type="text" class="form-control" id="inputSuccess" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="form-group has-warning">
-                                    <label class="control-label" for="inputWarning"><i class="fa fa-warning"></i> Input with warning</label>
-                                    <input type="text" class="form-control" id="inputWarning" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="form-group has-error">
-                                    <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with error</label>
-                                    <input type="text" class="form-control" id="inputError" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                        </div>
+                       
                         <h4>禁用状态</h4>
                         <p>为元素添加 disabled 属性，使其表现出禁用状态。</p>
                         <div class="row">
