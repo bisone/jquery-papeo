@@ -1,0 +1,96 @@
+[
+	{
+		"createDate" : "2014-11-28 15:50:56.995 CST",
+		"updateDate" : "2014-11-28 15:50:56.995 CST",
+		"id" : 282,
+		"name" : "UI标准化模板",
+		"resourceName" : "",
+		"url" : "",
+		"parentId" : -1,
+		"sequence" : 1,
+		"children" : [{
+					"createDate" : "2014-11-28 15:50:57.13 CST",
+					"updateDate" : "2014-11-28 15:50:57.13 CST",
+					"id" : 284,
+					"name" : "基础分析",
+					"resourceName" : "",
+					"url" : "/menus?new",
+					"parentId" : 282,
+					"sequence" : 1,
+					"level" : 2,
+					"project" : ""
+				},{
+					"createDate" : "2014-11-28 15:50:57.13 CST",
+					"updateDate" : "2014-11-28 15:50:57.13 CST",
+					"id" : 284,
+					"name" : "多维分析",
+					"resourceName" : "",
+					"url" : "/menus?new",
+					"parentId" : 282,
+					"sequence" : 1,
+					"level" : 2,
+					"project" : ""
+				},{
+					"createDate" : "2014-11-28 15:50:57.13 CST",
+					"updateDate" : "2014-11-28 15:50:57.13 CST",
+					"id" : 284,
+					"name" : "专题分析",
+					"resourceName" : "",
+					"url" : "/menus?new",
+					"parentId" : 282,
+					"sequence" : 1,
+					"level" : 2,
+					"project" : ""
+				}],
+		"sonMenuNum" : 3,
+		"level" : 1,
+		"project" : ""
+	},{
+		"createDate" : "2014-11-28 15:50:56.995 CST",
+		"updateDate" : "2014-11-28 15:50:56.995 CST",
+		"id" : 282,
+		"name" : "UI标准化模板1",
+		"resourceName" : "",
+		"url" : "",
+		"parentId" : -1,
+		"sequence" : 1,
+		"children" : [{
+					"createDate" : "2014-11-28 15:50:57.13 CST",
+					"updateDate" : "2014-11-28 15:50:57.13 CST",
+					"id" : 284,
+					"name" : "基础分析1",
+					"resourceName" : "",
+					"url" : "/menus?new",
+					"parentId" : 282,
+					"sequence" : 1,
+					"level" : 2,
+					"project" : ""
+				},{
+					"createDate" : "2014-11-28 15:50:57.13 CST",
+					"updateDate" : "2014-11-28 15:50:57.13 CST",
+					"id" : 284,
+					"name" : "多维分析1",
+					"resourceName" : "",
+					"url" : "/menus?new",
+					"parentId" : 282,
+					"sequence" : 1,
+					"level" : 2,
+					"project" : ""
+				},{
+					"createDate" : "2014-11-28 15:50:57.13 CST",
+					"updateDate" : "2014-11-28 15:50:57.13 CST",
+					"id" : 284,
+					"name" : "专题分析2",
+					"resourceName" : "",
+					"url" : "/menus?new",
+					"parentId" : 282,
+					"sequence" : 1,
+					"level" : 2,
+					"project" : ""
+				}],
+		"sonMenuNum" : 3,
+		"level" : 1,
+		"project" : ""
+	}
+
+]
