@@ -18,7 +18,11 @@
 					"parentId" : 282,
 					"sequence" : 1,
 					"level" : 2,
-					"project" : ""
+					"project" : "",
+					"iconClass": "",
+					"infoUrl": "",
+					"type": "",
+					"position": ""
 				},{
 					"createDate" : "2014-11-28 15:50:57.13 CST",
 					"updateDate" : "2014-11-28 15:50:57.13 CST",
@@ -29,7 +33,11 @@
 					"parentId" : 282,
 					"sequence" : 1,
 					"level" : 2,
-					"project" : ""
+					"project" : "",
+					"iconClass": "",
+					"infoUrl": "",
+					"type": "",
+					"position": ""
 				},{
 					"createDate" : "2014-11-28 15:50:57.13 CST",
 					"updateDate" : "2014-11-28 15:50:57.13 CST",
@@ -40,11 +48,19 @@
 					"parentId" : 282,
 					"sequence" : 1,
 					"level" : 2,
-					"project" : ""
+					"project" : "",
+					"iconClass": "",
+					"infoUrl": "",
+					"type": "",
+					"position": ""
 				}],
 		"sonMenuNum" : 3,
 		"level" : 1,
-		"project" : ""
+		"project" : "",
+		"iconClass": "",
+		"infoUrl": "",
+		"type": "",
+		"position": ""
 	},{
 		"createDate" : "2014-11-28 15:50:56.995 CST",
 		"updateDate" : "2014-11-28 15:50:56.995 CST",
@@ -64,7 +80,11 @@
 					"parentId" : 282,
 					"sequence" : 1,
 					"level" : 2,
-					"project" : ""
+					"project" : "",
+					"iconClass": "",
+					"infoUrl": "",
+					"type": "",
+					"position": ""
 				},{
 					"createDate" : "2014-11-28 15:50:57.13 CST",
 					"updateDate" : "2014-11-28 15:50:57.13 CST",
@@ -75,7 +95,11 @@
 					"parentId" : 282,
 					"sequence" : 1,
 					"level" : 2,
-					"project" : ""
+					"project" : "",
+					"iconClass": "",
+					"infoUrl": "",
+					"type": "",
+					"position": ""
 				},{
 					"createDate" : "2014-11-28 15:50:57.13 CST",
 					"updateDate" : "2014-11-28 15:50:57.13 CST",
@@ -86,11 +110,19 @@
 					"parentId" : 282,
 					"sequence" : 1,
 					"level" : 2,
-					"project" : ""
+					"project" : "",
+					"iconClass": "",
+					"infoUrl": "",
+					"type": "",
+					"position": ""
 				}],
 		"sonMenuNum" : 3,
 		"level" : 1,
-		"project" : ""
+		"project" : "",
+		"iconClass": "",
+		"infoUrl": "",
+		"type": "",
+		"position": ""
 	}
 
 ]
