@@ -83,7 +83,7 @@ $.widget("ui.soneHeader", {
 
 					var item='<li><a href="" class="line"> '+
 	                 ' <div class="u-img"><img src="'+v.uImg+'" alt=""></div>'+
-	                  '<h4 class="u-name">'+v.uName+'<small class="u-time">'+v.uTime+'</small></h4>'+
+	                  '<div class="u-name">'+v.uName+'<small class="u-time">'+v.uTime+'</small></div>'+
 	                 ' <div class="u-info">'+v.uInfo+'</div>'+
 	                 
                 	'</a></li>';
