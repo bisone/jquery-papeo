@@ -4,18 +4,19 @@
 @charset "utf-8";
 @top_bg:rgba(0,0,0,.1);
 #header {
-	height: 50px;
-	width: 100%;
-	min-width: 900px;
-	background: #54ade5;
+
+	 height:auto;
+	 background: #54ade5;
  .header-main {
-	 padding: 0px;
+	 padding:0px 10px;
+	 height:50px;
+	 position:relative;
 		 .logo {
 			 width: 220px;
 			 float: left;
 			 font-family: "Kaushan Script", cursive;
 			 font-size: 20px;
-			 font-weight: 500;
+			 font-weight: 500; 
 			 margin-right: 30px;
 			 height: 50px;
 			 line-height: 50px;
@@ -360,6 +361,16 @@ li.user-header {
 #navbox{
 	clear: both;
 	background: none repeat scroll 0 0 #f8f8f8;
+    position:absolute;
+    width: 100%;
+	top:50px;
+	left:0px;
+	display:block;
+	z-index:10;
+
+
+	border-bottom:2px solid #54ade5;
+	
     ul{
 	 li {
 		 float: none!important;
@@ -368,7 +379,7 @@ li.user-header {
 		 line-height:25px;
 		 background: url("../img/ibm_bullet_grey_off.png") no-repeat scroll 0 10px rgba(0, 0, 0, 0);
 		 clear: left;
-		 padding: 5px 0 5px 8px;
+		 padding: 5px 10px;
 			 a {
 			 color: #666;
 			 display: inline!important;
@@ -401,7 +412,7 @@ li.user-header {
 }
 .cont {
 	position: relative;
-	padding:10px;
+	padding:15px;
 	width:900px;
 	margin:0 auto;
 }

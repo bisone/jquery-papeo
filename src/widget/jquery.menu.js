@@ -1,6 +1,30 @@
 $.widget("ui.soneLeftMenu", {
     options: {
-        value: 0
+        value: 0,
+		data:[
+			{
+				"iconClass": "fa fa-bar-chart-o ",
+				"name": "JS 插件",
+				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
+				"price": {"lable":"**","value":1200},
+				 "children": [{"name":"Input插件 ","url":"docs/stemplate/index/input.html"},{"name":"table插件","url":"docs/stemplate/index/table.html"},{"name":" 统计插件","url":"docs/stemplate/index/statistics.html"},{"name":" 总插件","url":"docs/stemplate/index/indexjs.html"}]
+			},
+			  {
+				"iconClass": "fa fa-line-chart",
+				"name": " css 样式",
+				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
+				"price": {"lable":"**","value":1200},
+				"children": [{"name":"css样式","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
+			},
+
+			{
+				"iconClass": "fa fa-line-chart",
+				"name": "帮助文档",
+				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
+				"price": {"lable":"**","value":1200},
+				"children": [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
+			}
+		]
     },
 
     _create: function() {
@@ -13,11 +37,11 @@ $.widget("ui.soneLeftMenu", {
             type: "GET",
             success: function(mydata) {
 			try{
-                    mydata = $.parseJSON(mydata);
-                }catch(e){
-                }
+                mydata = $.parseJSON(mydata);
+			}catch(e){
+			}
 
-                scope.createTemplate(mydata);
+            scope.createTemplate(mydata);
             }});
 		
 		}else{
@@ -121,6 +145,13 @@ $.widget("ui.soneLeftMenu", {
             $(this).parent().siblings("li").find("a").removeClass("curr");
             $(this).addClass("curr");
         });
+		
+		//菜单添加点击事件
+		$("#left-menu a").click(function(o){
+		  var link=$(this).attr("href");
+		  $("#ifm").attr('src',link);
+		  return false;
+		 });
 
     },
 
@@ -131,4 +162,5 @@ $.widget("ui.soneLeftMenu", {
         $.Widget.prototype.destroy.call(this);
 
     }
+	
 });

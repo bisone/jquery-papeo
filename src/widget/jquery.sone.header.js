@@ -1,17 +1,17 @@
 $.widget("ui.soneHeader", {
 	options : {
-		modelNames : ['UI标准化模板'],
+		//modelNames : ['UI标准化模板'],
 		messages : [{
 					uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
-				},{
+				}, {
 					uImg : 'http://placeholder.qiniudn.com/39x39/fc0/fff',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
-				},{
+				}, {
 					uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
@@ -20,28 +20,49 @@ $.widget("ui.soneHeader", {
 		projects : [{
 					projectName : 'A项目',
 					pct : '80%',
-					style:'p-type1'
+					style : 'p-type1'
 				}, {
 					projectName : 'B项目',
 					pct : '85%',
-					style:'p-type2'
+					style : 'p-type2'
 				}, {
 					projectName : 'C项目',
 					pct : '70%',
-					style:'p-type3'
+					style : 'p-type3'
 				}],
-				user: [{
+		user : [{
 					userImg : './img/avatar3.png',
 					userName : '李某某--营销开发部',
-					usermes:'Member since Nov. 2012'
-				
+					usermes : 'Member since Nov. 2012'
+
 				}]
 	},
 
 	_create : function() {
-		var scope = this;
-		var myData = this.options.modelNames;
-		var tpl = $('<div class="header-main"> '
+		var scope = this;     
+		if(this.options.data==null){
+			  $.ajax({
+				 url: "/header.json",
+				 type: "GET",
+				 success: function(mydata) {
+					try{
+						mydata = $.parseJSON(mydata);
+					}catch(e){
+					}
+					scope.createTemplate(mydata);
+				},
+				error:function(data){
+					alert(data);
+				}
+			 });
+		
+		}else{
+		    scope.createTemplate(this.options.data);
+		}
+		
+	},
+	createTemplate:function(mydata){
+	    var tpl = $('<div class="header-main"> '
 				+ '<div class="logo">UI标准化模版</div>'
 				+ '<div  class="nav" id="navlist">'
 				+ '<ul id="navfouce"></ul>'
@@ -50,7 +71,7 @@ $.widget("ui.soneHeader", {
 				+ '<a href="javascript:;" class="prev">&lt;</a>'
 				+ ' <a href="javascript:;" class="next">&gt;</a>'
 				+ ' </div>'
-				
+
 				+ ' <div class="navbar-right">'
 				+ '<form class="navbar-form navbar-left search-bar " role="search">'
 				+ '	<div class="form-group">'
@@ -67,19 +88,31 @@ $.widget("ui.soneHeader", {
 				+ ' </li>'
 				+ ' <li class="dropdown user-menu">'
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i>李某某</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
-				+ ' </li>'
-				+ ' </ul>'
-				+ '</div> </div>');
+				+ ' </li>' + ' </ul>' + '</div>'
+				//二级菜单
+				+'<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;"></div>'
+				+' </div>');
 
-		$.each(this.options.modelNames, function(k, v) {
+		$.each(mydata, function(k, v) {
 					var tmp = '';
 					if (k == 0) {
 						tmp = 'class="curr"';
 					}
-					tpl.find("#navlist ul").append('<li ' + tmp + ' ><a href="">'
-							+ v + '</a></li>');
+					tpl.find("#navlist ul").append('<li ' + tmp
+							+ ' ><a href="javascript:;">' + v.name + '</a></li>');
+					var secondMenuData=v.children;
+					for(var i=0;i<secondMenuData.length;i++){
+					    var child=secondMenuData[i];
+					    if(i==0){
+						    tpl.find("#navbox").append('<div class="cont" style="display:none;"><ul></ul></div>');
+						
+						}
+						tpl.find("#navbox div:last ul").append('<li><a href="#" menuId='+child.id+' url='+ child.url +'>'+ child.name+'</a></li>');
+					   
+					}	
 				});
 		$.each(this.options.messages, function(k, v) {
+
 
 					var item='<li><a href="" class="line"> '+
 	                 ' <div class="u-img"><img src="'+v.uImg+'" alt=""></div>'+
@@ -87,35 +120,42 @@ $.widget("ui.soneHeader", {
 	                 ' <div class="u-info">'+v.uInfo+'</div>'+
 	                 
                 	'</a></li>';
+
 					tpl.find(".navbar-right .fore1 ").append(item);
 				});
-				
+
 		$.each(this.options.projects, function(k, v) {
 
-					var item= '<li>'+
-								'<a href="">'+
-								  '<span class="txt">'+
-									'<span class="tit">'+v.projectName+'</span>'+
-									'<span class="pct">'+v.pct+'</span>'+
-								  '</span>'+
-								  '<span class="progress '+ v.style+'"><b style="width:'+v.pct+'"></b><s></s></span>'+
-								'</a>'+
-							  '</li>';
+					var item = '<li>' + '<a href="">' + '<span class="txt">'
+							+ '<span class="tit">' + v.projectName + '</span>'
+							+ '<span class="pct">' + v.pct + '</span>'
+							+ '</span>' + '<span class="progress ' + v.style
+							+ '"><b style="width:' + v.pct
+							+ '"></b><s></s></span>' + '</a>' + '</li>';
 					tpl.find(".navbar-right  .fore2").append(item);
 				});
-				$.each(this.options.user, function(k, v) {
+		$.each(this.options.user, function(k, v) {
 
-					var item= '<li  class="text-center user-header ">'+
-								' <img src="'+v.userImg+'" class="img-circle" alt="">'+
-								'<h4 class="text-center">'+v.userName+'</h4>'+
-								'<p class="text-center">'+v.usermes+'</p>'+
-							  '</li>'+'<li class="user-footer"><div class="pull-left"><a class="btn btn-default btn-flat" href="#">Profile</a></div><div class="pull-right"><a class="btn btn-default btn-flat" href="#">Sign out</a></div></li>';
-					tpl.find(".navbar-right  .fore3").append(item);
-				});
+			var item = '<li  class="text-center user-header ">'
+					+ ' <img src="'
+					+ v.userImg
+					+ '" class="img-circle" alt="">'
+					+ '<h4 class="text-center">'
+					+ v.userName
+					+ '</h4>'
+					+ '<p class="text-center">'
+					+ v.usermes
+					+ '</p>'
+					+ '</li>'
+					+ '<li class="user-footer"><div class="pull-left"><a class="btn btn-default btn-flat" href="#">Profile</a></div><div class="pull-right"><a class="btn btn-default btn-flat" href="#">Sign out</a></div></li>';
+			tpl.find(".navbar-right  .fore3").append(item);
+		});
 
-		scope.element.html(tpl);
+		this.element.html(tpl);
 
-		scope._update(myData);
+		this._update(mydata);
+	
+	
 	},
 
 	_setOption : function(key, value) {
@@ -153,21 +193,15 @@ $.widget("ui.soneHeader", {
 			}
 		});
 
-		/*$(".messages dl", _ele).click(function(event) {
-					event.stopPropagation();
-					if ($(this).find("dd").css("display") == "none") {
-						$(".messages").find("dd").hide();
-						$(this).find("dd").show()
-					} else {
-						$(this).find("dd").hide()
-					}
-				});
-		$(".messages dd", _ele).click(function(event) {
-					event.stopPropagation();
-				});
-		$(document).click(function() {
-					$(".messages", _ele).find("dd").hide();
-				});*/
+		/*
+		 * $(".messages dl", _ele).click(function(event) {
+		 * event.stopPropagation(); if ($(this).find("dd").css("display") ==
+		 * "none") { $(".messages").find("dd").hide(); $(this).find("dd").show() }
+		 * else { $(this).find("dd").hide() } }); $(".messages dd",
+		 * _ele).click(function(event) { event.stopPropagation(); });
+		 * $(document).click(function() { $(".messages",
+		 * _ele).find("dd").hide(); });
+		 */
 		window.onload = window.onresize = function() {
 			var w = $(window).width();
 			var n = $(".nav", _ele).find("li").length;
@@ -180,7 +214,7 @@ $.widget("ui.soneHeader", {
 			} else if (n > num) {
 				$(".nav-option", _ele).show();
 			}
-			$(".nav", _ele).css("width", $(document).width()-817 + "px");
+			$(".nav", _ele).css("width", $(document).width() - 817 + "px");
 			$(".nav ul", _ele).css("width", 110 * n + "px");
 			$(".nav-option .next", _ele).css("left", (110 * num + 260) + "px");
 
@@ -209,26 +243,109 @@ $.widget("ui.soneHeader", {
 						}
 					});
 		};
-		
-		
-	
-		  $('#search', _ele).typeahead({
-     		source: ['Dashboard','Form elements','Common Elements','Validation','Wizard','Buttons','Icons','Interface elements','Support','Calendar','Gallery','Reports','Charts','Graphs','Widgets'],
-		items: 4
 
-      
-   });
-		
-		
+		$('#search', _ele).typeahead({
+			source : ['Dashboard', 'Form elements', 'Common Elements',
+					'Validation', 'Wizard', 'Buttons', 'Icons',
+					'Interface elements', 'Support', 'Calendar', 'Gallery',
+					'Reports', 'Charts', 'Graphs', 'Widgets'],
+			items : 4
+
+		});
+
+		this.addFirstMenuEvent();
+		this.addSecondMenuEvent();
 
 	},
-
-	
-
 
 	_destroy : function() {
 		this.element.text("");
 		$.Widget.prototype.destroy.call(this);
+
+	},
+	addFirstMenuEvent : function() {
+       /* $("#header .nav li").click(function(o){
+			 if($(o.target).parent().hasClass("curr")){
+				return false;
+			 }
+			 if(o.target.text=='UI标准化模板'){
+				  window.location.href="/indexjs.html";
+			 }else if(o.target.text=='技术指南'){
+				  window.location.href="/docs/indexjs.html";
+			 }
+		});*/
+	},
+	// 添加二级菜单
+	addSecondMenuEvent : function() {
+
+		var time = null;
+		var list = $("#navlist");
+		var box = $("#navbox");
+		var lista = list.find("a");
+
+		for (var i = 0, j = lista.length; i < j; i++) {
+			if (lista[i].className == "now") {
+				var olda = i;
+			}
+		}
+
+		var box_show = function(hei) {
+			box.stop().animate({
+						height : hei,
+						opacity : 1
+					}, 400);
+		}
+
+		var box_hide = function() {
+			box.stop().animate({
+						height : 0,
+						opacity : 0
+					}, 400);
+		}
+
+		lista.hover(function() {
+					lista.removeClass("now");
+					$(this).addClass("now");
+					clearTimeout(time);
+					var index = list.find("a").index($(this));
+					box.find(".cont").hide().eq(index).show();
+					var _height = box.find(".cont").eq(index).height() + 25;
+					box_show(_height)
+				}, function() {
+					time = setTimeout(function() {
+								box.find(".cont").hide();
+								box_hide();
+							}, 50);
+					lista.removeClass("now");
+					lista.eq(olda).addClass("now");
+				});
+
+		box.find(".cont").hover(function() {
+					var _index = box.find(".cont").index($(this));
+					lista.removeClass("now");
+					lista.eq(_index).addClass("now");
+					clearTimeout(time);
+					$(this).show();
+					var _height = $(this).height() + 25;
+					box_show(_height);
+				}, function() {
+					time = setTimeout(function() {
+								$(this).hide();
+								box_hide();
+							}, 50);
+					lista.removeClass("now");
+					lista.eq(olda).addClass("now");
+				});
+		//添加二级菜单事件
+		$("#navbox a").click(function(){
+		      $("#navfouce li").removeClass("curr");
+		      var num=$(this).parent().index($(this));
+			  $("#navfouce li").eq(index).addClass("curr");
+		      alert($(this).attr("url")+":"+$(this).attr("menuid"));
+		
+		
+		});
+		
 
 	}
 });
