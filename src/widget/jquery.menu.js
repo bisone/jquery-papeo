@@ -14,15 +14,15 @@ $.widget("ui.soneLeftMenu", {
 				"name": " css 样式",
 				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
 				"price": {"lable":"**","value":1200},
-				"children": [{"name":"css样式","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
+				"children": [{"name":"css组件","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"窗体小部件","url":"docs/stemplate/indexcss/widgets.html"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
 			},
 
 			{
 				"iconClass": "fa fa-line-chart",
-				"name": "帮助文档",
+				"name": "文档",
 				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
 				"price": {"lable":"**","value":1200},
-				"children": [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
+				"children": [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"标准化说明","url":"docs/stemplate/comboMenu/norm.html"},{"name":"欢迎界面","url":"docs/stemplate/comboMenu/welcome.html"},{"name":"控件3","url":"#"}]
 			}
 		]
     },

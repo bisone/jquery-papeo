@@ -229,3 +229,122 @@ a:hover, a:focus {
     width: 50px;
     height: 34px;
 }
+
+/*************widgets.html的css*********************/
+.small-box {
+    border-radius: 2px;
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+	.inner {
+    padding: 10px;
+	color:#f9f9f9 ;
+		h3 {
+		font-size: 38px;
+		font-weight: bold;
+		margin: 0 0 10px;
+		padding: 0;
+		white-space: nowrap;
+		
+	}
+	p {
+    font-size: 15px;
+	margin: 0 0 0px;
+		 small {
+		color: #f9f9f9;
+		display: block;
+		font-size: 12px;
+		margin-top: 5px;
+		}
+		}
+}
+	 .icon {
+    bottom:25px;
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 90px;
+    position: absolute;
+    right: 5px;
+    top: auto;
+    z-index: 0;
+	
+}
+	.small-box-footer {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+		color: rgba(255, 255, 255, 0.8);
+		display: block;
+		padding: 3px 0;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		z-index: 10;
+		&:hover {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.15);
+		color: #fff;
+	}
+	}
+}
+.bg-aqua {
+    background-color: #00c0ef !important;
+	   color: #f9f9f9 !important;
+}
+.bg-green {
+    background-color: #00a65a !important;
+   color: #f9f9f9 !important;
+}
+.bg-yellow {
+    background-color: #f39c12 !important;
+	   color: #f9f9f9 !important;
+}
+.bg-red {
+    background-color: #f56954 !important;
+	   color: #f9f9f9 !important;
+}
+.small-box:hover .icon {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: tansformAnimation;
+    animation-timing-function: ease;
+}
+@keyframes tansformAnimation {
+0% {
+    font-size: 90px;
+}
+100% {
+    font-size: 100px;
+}
+}
+.panel-success {
+    border-top:2px solid #00a65a;
+
+}
+.panel-success > .panel-heading {
+    background-color: #fff;
+    border-color:transparent;
+    color: #3c763d;
+}
+.panel-warning {
+    border-top:2px solid #f39c12;
+
+}
+.panel-warning > .panel-heading {
+    background-color: #fff;
+    border-color:transparent;
+    color: #8a6d3b;
+}
+.panel-info {
+    border-top:2px solid #00c0ef;
+
+}
+.panel-info > .panel-heading {
+    background-color: #fff;
+    border-color:transparent;
+    color: #31708f;
+}
+.panel{
+	.pagination {
+    margin:0;
+ 
+}
+
+	}

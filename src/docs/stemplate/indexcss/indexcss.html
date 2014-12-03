@@ -20,256 +20,240 @@
 </head>
 <body>
 <div class="row">
-
-    <div class="col-xs-12 rightcontent">
-    <br/>
-     <br/>
-    
+    <div class="col-xs-12 rightcontent"> <br/>
+        <h3>css组件</h3>
+        <hr/>
+        <p>利用Bootstrap的组件和css样式无数可复用的组件，包括字体图标、下拉菜单、导航、警告框、弹出框等更多功能</p>
+        <p>官网：<a href="http://v3.bootcss.com/components/" target="_blank">http://v3.bootcss.com/components/</a> </p>
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"> 警告框 </h3>
+            <h3>警告控件</h3>
+            <hr/>
+            <h4>基本实例</h4>
+            <p> 将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框，.alert 类是必须要设置的，另外我们还提供了有特殊意义的4个类（例如，.alert-success），代表不同的警告信息。目前提供了成功、消息、警告或危险。</p>
+            <div class="alert alert-success alert-dismissable"> <i class="fa fa-check"></i>
+                <button type="button" class="close" data-dismiss="alert"
+							aria-hidden="true">×</button>
+                截止 2014-10-01，根据自营范围内来自的数据显示，在全国域内家电部门 大家电
+                的预测销量为100万台，整体未来销售走势良好。 </div>
+            <div class="alert alert-info alert-dismissable"> <i class="fa fa-info"></i>
+                <button type="button" class="close" data-dismiss="alert"
+							aria-hidden="true">×</button>
+                <b>Alert!</b> Info alert preview. This alert is dismissable. </div>
+            <h4>警告输入框</h4>
+            <p>警告组件通过提供一些灵活的预定义消息，为常见的用户动作提供反馈消息。</p>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="form-group has-success">
+                        <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Input with success</label>
+                        <input type="text" class="form-control" id="inputSuccess" placeholder="Enter ..."/>
+                    </div>
                 </div>
-                <div class="panel-body">
-                <h3>警告控件</h3>
-                <hr/>
-                    <h4>基本实例</h4>
-                    <p> 将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框，.alert 类是必须要设置的，另外我们还提供了有特殊意义的4个类（例如，.alert-success），代表不同的警告信息。目前提供了成功、消息、警告或危险。</p>
-                    <div class="alert alert-success alert-dismissable"> <i class="fa fa-check"></i>
-                        <button type="button" class="close" data-dismiss="alert"
-							aria-hidden="true">×</button>
-                        截止 2014-10-01，根据自营范围内来自的数据显示，在全国域内家电部门 大家电
-                        的预测销量为100万台，整体未来销售走势良好。 </div>
-                    <div class="alert alert-info alert-dismissable"> <i class="fa fa-info"></i>
-                        <button type="button" class="close" data-dismiss="alert"
-							aria-hidden="true">×</button>
-                        <b>Alert!</b> Info alert preview. This alert is dismissable. </div>
-                         <h4>警告输入框</h4>
-                    <p>警告组件通过提供一些灵活的预定义消息，为常见的用户动作提供反馈消息。</p>
-                     <div class="row">
-                            <div class="col-xs-4">
-                                <div class="form-group has-success">
-                                    <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Input with success</label>
-                                    <input type="text" class="form-control" id="inputSuccess" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="form-group has-warning">
-                                    <label class="control-label" for="inputWarning"><i class="fa fa-warning"></i> Input with warning</label>
-                                    <input type="text" class="form-control" id="inputWarning" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="form-group has-error">
-                                    <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with error</label>
-                                    <input type="text" class="form-control" id="inputError" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-xs-4">
+                    <div class="form-group has-warning">
+                        <label class="control-label" for="inputWarning"><i class="fa fa-warning"></i> Input with warning</label>
+                        <input type="text" class="form-control" id="inputWarning" placeholder="Enter ..."/>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="form-group has-error">
+                        <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with error</label>
+                        <input type="text" class="form-control" id="inputError" placeholder="Enter ..."/>
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" >
-                    <h3 class="panel-title"> Form 元素 </h3>
+            <h3 >Input 控件</h3>
+            <hr/>
+            <h4>基本实例</h4>
+            <p>在输入框的任意一侧添加额外元素或按钮。你还可以在输入框的两侧同时添加额外元素。</p>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="input-group"> <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <h3 >Input 控件</h3>
-                    <hr/>
-                    <h4>基本实例</h4>
-                    <p>在输入框的任意一侧添加额外元素或按钮。你还可以在输入框的两侧同时添加额外元素。</p>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <div class="input-group"> <span class="input-group-addon">@</span>
-                                <input type="text" class="form-control" placeholder="Username">
-                            </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                                <span class="input-group-addon">.00</span> </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="input-group"> <span class="input-group-addon">$</span>
-                                <input type="text" class="form-control">
-                                <span class="input-group-addon">.00</span> </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                <input type="text" class="form-control" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                                <span class="input-group-addon"><i class="fa fa-check"></i></span> </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="input-group"> <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                <input type="text" class="form-control">
-                                <span class="input-group-addon"><i class="fa fa-ambulance"></i></span> </div>
-                        </div>
-                    </div>
-                    <h4> 作为额外元素的多选框和单选框</h4>
-                    <p>可以将多选框或单选框作为额外元素添加到输入框组中。</p>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <div class="input-group"> <span class="input-group-addon">
-                                <input type="checkbox">
-                                </span>
-                                <input type="text" class="form-control">
-                            </div>
-                            <!-- /input-group --> 
-                        </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-xs-6">
-                            <div class="input-group"> <span class="input-group-addon">
-                                <input type="radio">
-                                </span>
-                                <input type="text" class="form-control">
-                            </div>
-                            <!-- /input-group --> 
-                        </div>
-                        <!-- /.col-lg-6 --> 
-                    </div>
-                    <!-- /.row -->
-                    
-                    <h4>尺寸</h4>
-                    <p>为 .input-group 添加相应的尺寸类，其内部包含的元素将自动调整自身的尺寸。不需要为输入框组中的每个元素重复地添加控制尺寸的类。</p>
-                    <p class="margin">1.Small <code>.input-group.input-group-sm</code></p>
-                    <p>2.作为额外元素的按钮--为输入框组添加按钮需要额外添加一层嵌套，不是 .input-group-addon，而是添加 .input-group-btn 来包裹按钮元素。</p>
-                    <div class="input-group input-group-sm">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                        <button class="btn btn-info btn-flat" type="button">Go!</button>
-                        </span> </div>
-                    <!-- /input-group -->
-                    
-                    <p class="margin">Normal</p>
+                <div class="col-xs-4">
                     <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-danger">Action</button>
-                        </div>
-                        <!-- /btn-group -->
                         <input type="text" class="form-control">
-                    </div>
-                    <!-- /input-group -->
-                    <p class="margin">1.Large: <code>.input-group.input-group-lg</code></p>
-                    <p class="margin">2.作为额外元素的分裂式按钮下拉菜单</p>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Action <span class="fa fa-caret-down"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <!-- /btn-group -->
+                        <span class="input-group-addon">.00</span> </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="input-group"> <span class="input-group-addon">$</span>
                         <input type="text" class="form-control">
-                    </div>
-                    <!-- /input-group -->
-                    <h3> Disabled Elements</h3>
-                    <hr/>
-                   
-                    <form role="form">
-                       
-                        <h4>禁用状态</h4>
-                        <p>为元素添加 disabled 属性，使其表现出禁用状态。</p>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label>Text</label>
-                                    <input type="text" class="form-control" placeholder="Enter ..."/>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label>Text Disabled</label>
-                                    <input type="text" class="form-control" placeholder="Enter ..." disabled/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6"> 
-                                <!-- textarea -->
-                                <div class="form-group">
-                                    <label>Textarea</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label>Textarea Disabled</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter ..." disabled></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- input states -->
-                        <div class="row">
-                            <div class="col-xs-6"> 
-                                
-                                <!-- select -->
-                                <div class="form-group">
-                                    <label>Select</label>
-                                    <select class="form-control">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label>Select Disabled</label>
-                                    <select class="form-control" disabled>
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6"> 
-                                
-                                <!-- Select multiple-->
-                                <div class="form-group">
-                                    <label>Select Multiple</label>
-                                    <select multiple class="form-control">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label>Select Multiple Disabled</label>
-                                    <select multiple class="form-control" disabled>
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        <span class="input-group-addon">.00</span> </div>
                 </div>
             </div>
+            <br/>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon"><i class="fa fa-check"></i></span> </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="input-group"> <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon"><i class="fa fa-ambulance"></i></span> </div>
+                </div>
+            </div>
+            <h4> 作为额外元素的多选框和单选框</h4>
+            <p>可以将多选框或单选框作为额外元素添加到输入框组中。</p>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="input-group"> <span class="input-group-addon">
+                        <input type="checkbox">
+                        </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- /input-group --> 
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-xs-6">
+                    <div class="input-group"> <span class="input-group-addon">
+                        <input type="radio">
+                        </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- /input-group --> 
+                </div>
+                <!-- /.col-lg-6 --> 
+            </div>
+            <!-- /.row -->
+            
+            <h4>尺寸</h4>
+            <p>为 .input-group 添加相应的尺寸类，其内部包含的元素将自动调整自身的尺寸。不需要为输入框组中的每个元素重复地添加控制尺寸的类。</p>
+            <p class="margin">1.Small <code>.input-group.input-group-sm</code></p>
+            <p>2.作为额外元素的按钮--为输入框组添加按钮需要额外添加一层嵌套，不是 .input-group-addon，而是添加 .input-group-btn 来包裹按钮元素。</p>
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                <button class="btn btn-info btn-flat" type="button">Go!</button>
+                </span> </div>
+            <!-- /input-group -->
+            
+            <p class="margin">Normal</p>
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-danger">Action</button>
+                </div>
+                <!-- /btn-group -->
+                <input type="text" class="form-control">
+            </div>
+            <!-- /input-group -->
+            <p class="margin">1.Large: <code>.input-group.input-group-lg</code></p>
+            <p class="margin">2.作为额外元素的分裂式按钮下拉菜单</p>
+            <div class="input-group input-group-lg">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Action <span class="fa fa-caret-down"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <input type="text" class="form-control">
+            </div>
+            <!-- /input-group -->
+            <h3> Disabled Elements</h3>
+            <hr/>
+            <form role="form">
+                <h4>禁用状态</h4>
+                <p>为元素添加 disabled 属性，使其表现出禁用状态。</p>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>Text</label>
+                            <input type="text" class="form-control" placeholder="Enter ..."/>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>Text Disabled</label>
+                            <input type="text" class="form-control" placeholder="Enter ..." disabled/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6"> 
+                        <!-- textarea -->
+                        <div class="form-group">
+                            <label>Textarea</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>Textarea Disabled</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter ..." disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- input states -->
+                <div class="row">
+                    <div class="col-xs-6"> 
+                        
+                        <!-- select -->
+                        <div class="form-group">
+                            <label>Select</label>
+                            <select class="form-control">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>Select Disabled</label>
+                            <select class="form-control" disabled>
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6"> 
+                        
+                        <!-- Select multiple-->
+                        <div class="form-group">
+                            <label>Select Multiple</label>
+                            <select multiple class="form-control">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>Select Multiple Disabled</label>
+                            <select multiple class="form-control" disabled>
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
