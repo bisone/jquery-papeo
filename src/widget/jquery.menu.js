@@ -1,48 +1,4 @@
 $.widget("ui.soneLeftMenu", {
-<<<<<<< HEAD
-    options: {
-        value: 0,
-		data:[
-			{
-				"iconClass": "fa fa-bar-chart-o ",
-				"name": "JS 插件",
-				"info": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
-				"children": [{"name":"Input插件 ","url":"docs/stemplate/index/input.html"},{"name":"table插件","url":"docs/stemplate/index/table.html"},{"name":" 统计插件","url":"docs/stemplate/index/statistics.html"},{"name":" 总插件","url":"docs/stemplate/index/indexjs.html"}]
-			},
-			  {
-				"iconClass": "fa fa-line-chart",
-				"name": " css 样式",
-				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
-				"price": {"lable":"**","value":1200},
-				"children": [{"name":"css组件","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"窗体小部件","url":"docs/stemplate/indexcss/widgets.html"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
-
-			},
-
-			{
-				"iconClass": "fa fa-line-chart",
-
-				"name": "文档",
-				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
-				"price": {"lable":"**","value":1200},
-				"children": [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"标准化说明","url":"docs/stemplate/comboMenu/norm.html"},{"name":"欢迎界面","url":"docs/stemplate/comboMenu/welcome.html"},{"name":"控件3","url":"#"}]
-
-			}
-		]
-    },
-
-    _create: function() {
-        this.element.addClass("wrap");
-        var scope = this;
-        
-		if(this.options.data==null){
-		  $.ajax({
-            url: "/left.menu.json",
-            type: "GET",
-            success: function(mydata) {
-			try{
-                mydata = $.parseJSON(mydata);
-			}catch(e){
-=======
     //定义数据位空状态
 	empty:false,
 	options : {
@@ -130,8 +86,8 @@ $.widget("ui.soneLeftMenu", {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-						tpl.find('.sone-left-menu').append('<li><a href="' + item.url + '">'
-								+ item.name + '</a></li>');
+						tpl.find('.sone-left-menu').append('<li class="sidebar-menu item item-1" ><div class="itm-one"><a href="' + item.url + '">' 
+							+'<span class="'+item.iconClass+' text-center"></span>'+ item.name + '</a></div></li>');
 					}
                     item.children=item.children||[];
 					$.each(item.children, function(n, ch) {
@@ -203,7 +159,6 @@ $.widget("ui.soneLeftMenu", {
 							.removeClass("item-open");
 					$(this).parent().addClass("item-open");
 				}
->>>>>>> 576b1f47791148c12141582018f221e783db7168
 			}
 		});
 

@@ -34,6 +34,18 @@ a:hover, a:focus {
         position: relative;
         border-bottom: 1px solid #dcdbd9;
         cursor: pointer;
+		&:hover{
+			background-color:#fff;
+			}
+		.itm-one{
+			a{
+			  padding: 10px 0;
+			  display:block;
+			}
+			 .fa{
+				  width:52px;
+				 }
+			}
         .itm-lv1 {
             padding: 10px 0;
             /* height: 65px; */
@@ -163,8 +175,23 @@ a:hover, a:focus {
         .item {
             background: #54ade5;
             z-index: 10;
+			.itm-one{
+			 padding: 10px 0;
+			 
+			 a{
+				 color:#fff;
+				 &:hover{
+					 color:#54ade5;
+					 
+					 }
+				 
+				 }
+			}
+			
+			
             .itm-lv1 {
                 border-left: 0 none;
+			
                 .con {
                     display: none;
                 }
@@ -180,8 +207,14 @@ a:hover, a:focus {
             }
         }
         .item-open {
+			
 			background-color:#fff;
-		   
+			&:hover{
+		     	color:#54ade5;	
+				}
+			.itm-one{
+				color:#54ade5;
+			}
             .itm-lv1 {
 				 background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
                 .tit {
