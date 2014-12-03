@@ -365,7 +365,7 @@ $.widget("ui.soneHeader", {
 	    //url空且 有菜单才对;
 	    
 		//获取二级、三级菜单数据,如果数据为空，隐藏leftmenu iframe 刷新;如果有数据 构造菜单；iframe指向欢迎界面
-		if(parseInt(level)==0 && parseInt(sonMenuNum) >0 ){
+		if(parseInt(level)==1 && parseInt(sonMenuNum) >0 ){
 		    return false;
 		}
 		$('#left-menu').soneLeftMenu('destroy');
