@@ -5,9 +5,8 @@ $.widget("ui.soneLeftMenu", {
 			{
 				"iconClass": "fa fa-bar-chart-o ",
 				"name": "JS 插件",
-				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
-				"price": {"lable":"**","value":1200},
-				 "children": [{"name":"Input插件 ","url":"docs/stemplate/index/input.html"},{"name":"table插件","url":"docs/stemplate/index/table.html"},{"name":" 统计插件","url":"docs/stemplate/index/statistics.html"},{"name":" 总插件","url":"docs/stemplate/index/indexjs.html"}]
+				"info": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
+				"children": [{"name":"Input插件 ","url":"docs/stemplate/index/input.html"},{"name":"table插件","url":"docs/stemplate/index/table.html"},{"name":" 统计插件","url":"docs/stemplate/index/statistics.html"},{"name":" 总插件","url":"docs/stemplate/index/indexjs.html"}]
 			},
 			  {
 				"iconClass": "fa fa-line-chart",
@@ -15,14 +14,17 @@ $.widget("ui.soneLeftMenu", {
 				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
 				"price": {"lable":"**","value":1200},
 				"children": [{"name":"css组件","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"窗体小部件","url":"docs/stemplate/indexcss/widgets.html"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}]
+
 			},
 
 			{
 				"iconClass": "fa fa-line-chart",
+
 				"name": "文档",
 				"info": [{"lable":"控件", "value": 100},{"lable":"种类","value":10}],
 				"price": {"lable":"**","value":1200},
 				"children": [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"标准化说明","url":"docs/stemplate/comboMenu/norm.html"},{"name":"欢迎界面","url":"docs/stemplate/comboMenu/welcome.html"},{"name":"控件3","url":"#"}]
+
 			}
 		]
     },
@@ -66,12 +68,12 @@ $.widget("ui.soneLeftMenu", {
                         '</div>'+
                         '<div class="con">'+
                         '<div class="info">';
-                    $.each(item.info, function (n,i) {
+                    $.each(item.info[0], function (n,i) {
                         tpl +='<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;';
                     });
                     tpl +='</div>'+
                         '<div class="price">'+
-                        '<strong>'+item.price.value+'</strong>'+item.price.lable+
+                        '<strong>'+item[1].value+'</strong>'+item[1].lable+
                         '</div>'+
                         '</div>'+
                         '</div>'+
