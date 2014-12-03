@@ -62,7 +62,6 @@ $.widget("ui.soneLeftMenu", {
 								'</div>'+
 							'</div>'+
 						'</div>');
-						tpl.find('.sone-left-menu li:last').append('<div class="itm-lv2"><ul></ul></div>');
 						//add info
 						$.each(item.infoUrl[0], function (n,i) {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
@@ -73,12 +72,16 @@ $.widget("ui.soneLeftMenu", {
 							+'<span class="'+item.iconClass+' text-center"></span>'+ item.name + '</a></div></li>');
 =======
 					    tpl.find('.sone-left-menu').append('<li class="item item-1"></li>');
-						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1"><ul></ul></div><div class="itm-lv2"><ul></ul></div>')
+						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1"><ul></ul></div>');
 						tpl.find('.sone-left-menu > li:last .itm-lv1 ul').append('<li><a href="' + item.url + '">'
 								+ item.name + '</a></li>');
 >>>>>>> origin/master
 					}
                     item.children=item.children||[];
+					if(item.children.length>0){
+					   tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv2"><ul></ul></div>')
+					
+					}
 					$.each(item.children, function(n, ch) {
 								tpl.find('.sone-left-menu > li:last .itm-lv2 ul')
 										.append('<li><a href="' + ch.url + '">'

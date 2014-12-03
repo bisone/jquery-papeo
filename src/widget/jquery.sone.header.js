@@ -2,17 +2,17 @@ $.widget("ui.soneHeader", {
 	options : {
 		//modelNames : ['UI标准化模板'],
 		messages : [{
-					uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
+					//uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
 				}, {
-					uImg : 'http://placeholder.qiniudn.com/39x39/fc0/fff',
+					//uImg : 'http://placeholder.qiniudn.com/39x39/fc0/fff',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
 				}, {
-					uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
+					//uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
