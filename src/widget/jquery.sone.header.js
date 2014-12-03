@@ -44,7 +44,7 @@ $.widget("ui.soneHeader", {
 			  $.ajax({
 				 url: "/header.json",
 				 type: "GET",
-				 success: function(mydata) {
+				 success:function(mydata) {
 					try{
 						mydata = $.parseJSON(mydata);
 					}catch(e){
@@ -99,17 +99,20 @@ $.widget("ui.soneHeader", {
 						tmp = 'class="curr"';
 					}
 					tpl.find("#navlist ul").append('<li ' + tmp
-							+ ' ><a href="javascript:;">' + v.name + '</a></li>');
+							+ ' ><a href="javascript:;" level='+v.level+' sonMenuNum='+v.sonMenuNum+' menuId='+v.id+' url='+ v.url +'>'+ v.name+'</a></li>');
 					var secondMenuData=v.children;
-					for(var i=0;i<secondMenuData.length;i++){
+					if(secondMenuData!=null){
+					   for(var i=0;i<secondMenuData.length;i++){
 					    var child=secondMenuData[i];
 					    if(i==0){
 						    tpl.find("#navbox").append('<div class="cont" style="display:none;"><ul></ul></div>');
 						
 						}
-						tpl.find("#navbox div:last ul").append('<li><a href="#" menuId='+child.id+' url='+ child.url +'>'+ child.name+'</a></li>');
+						tpl.find("#navbox div:last ul").append('<li><a href="#" level='+child.level+' sonMenuNum='+child.sonMenuNum+' menuId='+child.id+' url='+ child.url +'>'+ child.name+'</a></li>');
 					   
-					}	
+					   }
+					}
+						
 				});
 		$.each(this.options.messages, function(k, v) {
 
@@ -264,16 +267,21 @@ $.widget("ui.soneHeader", {
 
 	},
 	addFirstMenuEvent : function() {
-       /* $("#header .nav li").click(function(o){
-			 if($(o.target).parent().hasClass("curr")){
+	   var scope=this;
+       $("#navlist  a").click(function(o){
+			 if($(this).parent().hasClass("curr")){
 				return false;
 			 }
-			 if(o.target.text=='UI标准化模板'){
-				  window.location.href="/indexjs.html";
-			 }else if(o.target.text=='技术指南'){
-				  window.location.href="/docs/indexjs.html";
-			 }
-		});*/
+			 //点击一级菜单 隐藏left menu 修改iframe
+			 $("#navlist  li").removeClass("curr");
+			 $(this).parent().addClass("curr");
+			 var url=$(this).attr("url");
+			 var menuId=$(this).attr("menuid");
+			 var level=$(this).attr("level"); 
+			 var sonMenuNum=$(this).attr("sonMenuNum"); 
+			 scope.menuClick(level,sonMenuNum,url,menuId);
+			 return false;
+		});
 	},
 	// 添加二级菜单
 	addSecondMenuEvent : function() {
@@ -337,15 +345,45 @@ $.widget("ui.soneHeader", {
 					lista.eq(olda).addClass("now");
 				});
 		//添加二级菜单事件
+		var scope=this;
 		$("#navbox a").click(function(){
 		      $("#navfouce li").removeClass("curr");
-		      var num=$(this).parent().index($(this));
+		      var index=$("#navbox .cont").index($(this).closest(".cont"));
 			  $("#navfouce li").eq(index).addClass("curr");
-		      alert($(this).attr("url")+":"+$(this).attr("menuid"));
-		
-		
+			  var menuId=$(this).attr("menuid");
+			  //重新构建LeftMenu iframe 欢迎界面
+		      var url=$(this).attr("url");
+			  var level=$(this).attr("level"); 
+			  var sonMenuNum=$(this).attr("sonMenuNum"); 
+			  scope.menuClick(level,sonMenuNum,url,menuId);
+			  return false;
 		});
 		
 
+	},
+	menuClick:function(level,sonMenuNum,url,id){
+	    //url空且 有菜单才对;
+	    
+		//获取二级、三级菜单数据,如果数据为空，隐藏leftmenu iframe 刷新;如果有数据 构造菜单；iframe指向欢迎界面
+		if(parseInt(level)==0 && parseInt(sonMenuNum) >0 ){
+		    return false;
+		}
+		$('#left-menu').soneLeftMenu('destroy');
+		var menu=$('#left-menu').soneLeftMenu({
+					jsonUrl:'/'+id+'.json'
+				});
+		/*var empty=menu.soneHeader('getEmpty');
+		if(empty){
+			$("#left-menu").hide();	
+		}else{
+		   $("#left-menu").show(); 
+		}*/
+		if(url!=""){
+		    $("#ifm").attr('src', url);
+		}else{
+		    $("#ifm").attr('src', "/docs/welcome/welcome.html");
+		}
+		//iFrameResize();
+		 
 	}
 });
