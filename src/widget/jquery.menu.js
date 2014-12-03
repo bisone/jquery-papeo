@@ -48,25 +48,6 @@ $.widget("ui.soneLeftMenu", {
 	options : {
 		value : 0,
 		jsonUrl : '/left.menu.json'
-		/*
-		 * data:[ { "iconClass": "fa fa-bar-chart-o ", "name": "JS 插件", "info":
-		 * [[{"lable":"控件", "value":
-		 * 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
-		 * "children": [{"name":"Input插件
-		 * ","url":"docs/stemplate/index/input.html"},{"name":"table插件","url":"docs/stemplate/index/table.html"},{"name":"
-		 * 统计插件","url":"docs/stemplate/index/statistics.html"},{"name":"
-		 * 总插件","url":"docs/stemplate/index/indexjs.html"}] }, { "iconClass":
-		 * "fa fa-line-chart", "name": " css 样式", "info": [[{"lable":"控件",
-		 * "value":
-		 * 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
-		 * "children":
-		 * [{"name":"css样式","url":"docs/stemplate/indexcss/indexcss.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}] },
-		 *  { "iconClass": "fa fa-line-chart", "name": "帮助文档", "info":
-		 * [[{"lable":"控件", "value":
-		 * 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
-		 * "children":
-		 * [{"name":"comboMenu","url":"docs/stemplate/comboMenu/index.html"},{"name":"控件1","url":"#"},{"name":"控件2","url":"#"},{"name":"控件3","url":"#"}] } ]
-		 */
 	},
 	_create : function() {
 		this.element.addClass("wrap");
@@ -100,13 +81,14 @@ $.widget("ui.soneLeftMenu", {
 
 	},
 	_init : function() {
-		this._create();
+		//this._create();
 	},
 	createTemplate : function(mydata) {
 		var scope = this;
 		var tpl = $('<div class="left-side"> <ul class="sone-left-menu"></ul></div>');
 
 		$.each(mydata, function(n, item) {
+		            
 
 					if (item.type == "high" || item.type == "") {
                         tpl.find('.sone-left-menu').append('<li class="sidebar-menu item item-1" id="market"></li>');
@@ -130,7 +112,9 @@ $.widget("ui.soneLeftMenu", {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-						tpl.find('.sone-left-menu').append('<li><a href="' + item.url + '">'
+					    tpl.find('.sone-left-menu').append('<li class="item item-1"></li>');
+						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1"><ul></ul></div><div class="itm-lv2"><ul></ul></div>')
+						tpl.find('.sone-left-menu > li:last .itm-lv1 ul').append('<li><a href="' + item.url + '">'
 								+ item.name + '</a></li>');
 					}
                     item.children=item.children||[];
@@ -149,32 +133,6 @@ $.widget("ui.soneLeftMenu", {
 
 	},
 
-	/*
-	 * createTemplate:function(mydata){ var scope=this; var tpl = '<div
-	 * class="left-side"> <ul class="sone-left-menu">';
-	 * 
-	 * $.each(mydata, function(n, item){
-	 * 
-	 * if(item.type=="high"||item.type==""){ tpl += '<li id="market" class="sidebar-menu item item-1">'+ '<div
-	 * class="itm-lv1">'+ '<div class="tit">'+ '<span
-	 * class="'+item.iconClass+' text-center"></span>'+ '<span
-	 * class="text-center">'+item.name+'</span>'+ '<s>3</s>'+ '</div>'+ '<div
-	 * class="con">'+ '<div class="info">';
-	 * 
-	 * $.each(item.infoUrl[0], function (n,i) { tpl +='<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;';
-	 * }); tpl +='</div>'+ '<div class="price">'+ '<strong>'+item.infoUrl[1].value+'</strong>'+item.infoUrl[1].lable+ '</div>'+ '</div>'+ '</div>';
-	 * }else{ tpl += '<li><a href="'+item.url+'">'+item.name+'</a>'; } tpl+='<div
-	 * class="itm-lv2">'+ '<ul>'; $.each(item.children, function (n, ch) { tpl += '<li><a
-	 * href="'+ch.url+'">'+ch.name+'</a></li>'; }); tpl +='</ul>'+ '</div>'+ '</li>';
-	 * });
-	 * 
-	 * tpl += '<div class="resizer"><b></b></div>'+ '</ul></div>';
-	 * 
-	 * scope.element.html(tpl);
-	 * 
-	 * scope._update(mydata);
-	 *  },
-	 */
 	_setOption : function(key, value) {
 		// this.options[key] = value;
 
@@ -199,8 +157,7 @@ $.widget("ui.soneLeftMenu", {
 				if ($(this).parent().hasClass("item-open")) {
 					$(this).parent().removeClass("item-open");
 				} else {
-					$(this).parents(".sone-left-menu", _ele).find(".item-open")
-							.removeClass("item-open");
+					$(_ele).find(".item-open").removeClass("item-open");
 					$(this).parent().addClass("item-open");
 				}
 >>>>>>> 576b1f47791148c12141582018f221e783db7168
