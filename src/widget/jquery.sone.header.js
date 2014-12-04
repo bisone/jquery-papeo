@@ -301,24 +301,29 @@ $.widget("ui.soneHeader", {
 			box.stop().animate({
 						height : hei,
 						opacity : 1
-					}, 400);
+					}, 40);
 		}
 
 		var box_hide = function() {
 			box.stop().animate({
 						height : 0,
 						opacity : 0
-					}, 400);
+					}, 40);
 		}
-
+        var num=0;
 		lista.hover(function() {
 					lista.removeClass("now");
 					$(this).addClass("now");
+					box_hide();
 					clearTimeout(time);
 					var index = list.find("a").index($(this));
-					box.find(".cont").hide().eq(index).show();
-					var _height = box.find(".cont").eq(index).height() + 25;
-					box_show(_height)
+					if(box.find(".cont").hide().eq(index).length>0){
+					    box.find(".cont").hide().eq(index).show();
+						var _height = box.find(".cont").eq(index).height() + 25;
+						box_show(_height);
+					}
+					console.dir(num++);
+					
 				}, function() {
 					time = setTimeout(function() {
 								box.find(".cont").hide();

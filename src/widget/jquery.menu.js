@@ -22,10 +22,12 @@ $.widget("ui.soneLeftMenu", {
                             if(mydata.length==0){
 							    this.empty=true;
 								$("#left-menu").hide();	
+								$("#page-wrapper").css("margin-left",0);
 							}else{
 							    this.empty=false;
 							    scope.createTemplate(mydata);
 								$("#left-menu").show();
+								$("#page-wrapper").css("margin-left",202);
 							}
 							
 						}
@@ -71,6 +73,7 @@ $.widget("ui.soneLeftMenu", {
 						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1 itm-one">'
 						+'<span class="'+item.iconClass+' text-center"></span>'+item.name + '</div>');
 						
+
 					}
                     item.children=item.children||[];
 					if(item.children.length>0){
