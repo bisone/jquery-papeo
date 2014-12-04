@@ -2,17 +2,17 @@ $.widget("ui.soneHeader", {
 	options : {
 		//modelNames : ['UI标准化模板'],
 		messages : [{
-					//uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
+					uImg : './img/avatar3.png',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
 				}, {
-					//uImg : 'http://placeholder.qiniudn.com/39x39/fc0/fff',
+					uImg : './img/avatar3.png',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
 				}, {
-					//uImg : 'http://placeholder.qiniudn.com/39x39/f60/fff',
+					uImg : './img/avatar3.png',
 					uName : 'DIvyia',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
@@ -118,7 +118,7 @@ $.widget("ui.soneHeader", {
 
 
 					var item='<li><a href="" class="line"> '+
-	                 ' <div class="u-img"><img src="'+v.uImg+'" alt=""></div>'+
+	                 ' <div class="u-img"><img src="'+v.uImg+'" alt="" class="img-responsive"></div>'+
 	                  '<div class="u-name">'+v.uName+'<small class="u-time">'+v.uTime+'</small></div>'+
 	                 ' <div class="u-info">'+v.uInfo+'</div>'+
 	                 

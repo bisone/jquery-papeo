@@ -39,23 +39,23 @@ a:hover, a:focus {
 			}*/
 		.itm-one{
 			 .fa{
-				  width:52px;
+				  width:58px;
 				 }
 			}
         .itm-lv1 {
             padding: 10px 0;
-            /* height: 65px; */
             border-left: 5px solid #f8f8f8;
-            .tit {
-                float: left;
-                width: 53px;
-				height:60px;
-                span {
+			 span {
                     color: #54ade5;
-                    font-family: fontawesome;
-                    display: block;
+                    //font-family: fontawesome;
 					line-height:30px;
                 }
+            .tit {
+                float: left;
+                width: 58px;
+				height:60px;
+				text-align:center;
+               
 				span.fa{
 					font-size:18px;
 					}
@@ -109,6 +109,7 @@ a:hover, a:focus {
             display: none;
             background: #54ade5;
             zoom: 1;
+			
             ul {
                 border-left: 5px solid #2a79ab;
                 li{
@@ -128,11 +129,14 @@ a:hover, a:focus {
                         }
                     }
                 }
+			
             }
+			
         }
     }
     .item-open {
         background: #fff;
+		
         .itm-lv1 {
             border-left: 5px solid #2a79ab;
             .con {
@@ -141,8 +145,15 @@ a:hover, a:focus {
                 }
             }
         }
+		.itm-one{
+				span {
+				color:#54ade5;
+				}
+		  border-left: 5px solid #fff;
+		}
         .itm-lv2 {
             display: block;
+				
         }
     }
 
@@ -171,14 +182,8 @@ a:hover, a:focus {
         .item {
             background: #54ade5;
             z-index: 10;
-			.itm-one{
-			 
-			
-			}
-			
-			
             .itm-lv1 {
-                border-left: 0 none;
+                border-left:none;
 			
                 .con {
                     display: none;
@@ -192,17 +197,36 @@ a:hover, a:focus {
                         color: #fff;
                     }
                 }
+				
+				}
+				.itm-one{
+					span{
+						 color: #fff;
+					}
+					 span.itm-name{
+						 display:none;
+				 }
             }
         }
         .item-open {
 			
 			background-color:#fff;
-			color:#54ade5;	
+			color:#fff;	
+			//border-left: 5px solid #fff;
+			
 			&:hover{
 		     	color:#54ade5;	
 				}
 			.itm-one{
+				
+				span {
 				color:#54ade5;
+				}
+				
+				  
+				  
+				  
+				  
 			}
             .itm-lv1 {
 				 background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
@@ -216,7 +240,7 @@ a:hover, a:focus {
         .itm-lv2 {
             display: none;
             position: absolute;
-            left: 58px;
+            left:58px;
             top: 0;
             width: 180px;
             border: 1px solid #dcdbd9;
@@ -235,6 +259,7 @@ a:hover, a:focus {
                     }
                 }
             }
+			
         }
         .resizer {
             background: #54ade5;

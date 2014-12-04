@@ -53,7 +53,7 @@ $.widget("ui.soneLeftMenu", {
 						tpl.find('.sone-left-menu > li:last').append(
 						   '<div class="itm-lv1">'+
 							'<div class="tit">'+
-								 '<span class="'+item.iconClass+' text-center"></span>'+
+								 '<span class="'+item.iconClass+' text-center"></span><br/>'+
 								 '<span class="text-center">'+item.name+'</span><s>3</s>'+
 							'</div>'+
 							'<div class="con">'+
@@ -71,7 +71,7 @@ $.widget("ui.soneLeftMenu", {
 				 	} else {
 					    tpl.find('.sone-left-menu').append('<li class="sidebar-menu  item item-1"></li>');
 						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1 itm-one">'
-						+'<span class="'+item.iconClass+' text-center"></span>'+item.name + '</div>');
+						+'<span class="'+item.iconClass+' text-center"></span><span class="itm-name">'+item.name + '</span></div>');
 						
 
 					}
