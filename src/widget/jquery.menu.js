@@ -22,10 +22,12 @@ $.widget("ui.soneLeftMenu", {
                             if(mydata.length==0){
 							    this.empty=true;
 								$("#left-menu").hide();	
+								$("#page-wrapper").css("margin-left",0);
 							}else{
 							    this.empty=false;
 							    scope.createTemplate(mydata);
 								$("#left-menu").show();
+								$("#page-wrapper").css("margin-left",202);
 							}
 							
 						}
@@ -67,15 +69,10 @@ $.widget("ui.soneLeftMenu", {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-<<<<<<< HEAD
-						tpl.find('.sone-left-menu').append('<li class="sidebar-menu item item-1" ><div class="itm-one"><a href="' + item.url + '">' 
-							+'<span class="'+item.iconClass+' text-center"></span>'+ item.name + '</a></div></li>');
-=======
 					    tpl.find('.sone-left-menu').append('<li class="item item-1"></li>');
 						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1"><ul></ul></div>');
 						tpl.find('.sone-left-menu > li:last .itm-lv1 ul').append('<li><a href="' + item.url + '">'
 								+ item.name + '</a></li>');
->>>>>>> origin/master
 					}
                     item.children=item.children||[];
 					if(item.children.length>0){
