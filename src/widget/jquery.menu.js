@@ -67,15 +67,10 @@ $.widget("ui.soneLeftMenu", {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-<<<<<<< HEAD
-						tpl.find('.sone-left-menu').append('<li class="sidebar-menu item item-1" ><div class="itm-one"><a href="' + item.url + '">' 
-							+'<span class="'+item.iconClass+' text-center"></span>'+ item.name + '</a></div></li>');
-=======
-					    tpl.find('.sone-left-menu').append('<li class="item item-1"></li>');
-						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1"><ul></ul></div>');
-						tpl.find('.sone-left-menu > li:last .itm-lv1 ul').append('<li><a href="' + item.url + '">'
-								+ item.name + '</a></li>');
->>>>>>> origin/master
+					    tpl.find('.sone-left-menu').append('<li class="sidebar-menu  item item-1"></li>');
+						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1 itm-one">'
+						+'<span class="'+item.iconClass+' text-center"></span>'+item.name + '</div>');
+						
 					}
                     item.children=item.children||[];
 					if(item.children.length>0){
