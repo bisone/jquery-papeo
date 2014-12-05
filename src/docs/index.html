@@ -51,7 +51,14 @@
 	    $("#header .nav li:eq(1)").addClass("curr");
 		
 		
-		
+		function autoHeight(){
+        var iframe = document.getElementById("ifmd");
+        if(iframe.Document){//ie自有属性
+            iframe.style.height = iframe.Document.documentElement.scrollHeight;
+        }else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
+            iframe.height = iframe.contentDocument.body.offsetHeight ;
+        }
+    }
 	</script>
 	<div id="page-wrapper" >
 		<iframe  src ="bootstrap/bootstrap-3.2.0/docs/indexjs.html"  frameborder="0" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%"  onload="autoHeight();"></iframe>

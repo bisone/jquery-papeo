@@ -49,7 +49,7 @@ $.widget("ui.soneLeftMenu", {
 		            
 
 					if (item.type == "high" || item.type == "") {
-                        tpl.find('.sone-left-menu').append('<li class="sidebar-menu item item-1" id="market"></li>');
+                        tpl.find('.sone-left-menu').append('<li class="sidebar-menu item" ></li>');
 						tpl.find('.sone-left-menu > li:last').append(
 						   '<div class="itm-lv1">'+
 							'<div class="tit">'+
