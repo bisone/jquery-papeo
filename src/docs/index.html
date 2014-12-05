@@ -41,20 +41,20 @@
 
 
      <div id="left-menu">  </div>
-     <script>
-
-	
-	</script>
+   
 	 <script type="text/javascript" src="../js/vendors.min.js"></script>
     <script src="http://cdn.bootcss.com/highcharts/4.0.4/highcharts-all.js"></script>
     <script type="text/javascript" src="../widget/dashboard-widget.min.js"></script>
 	<script type="text/javascript" src="../js/common-init.js"></script>
-	 <script>
+	 <script type="text/javascript" language="javascript">
 	    $("#header .nav li").removeClass("curr");
 	    $("#header .nav li:eq(1)").addClass("curr");
+		
+		
+		
 	</script>
 	<div id="page-wrapper" >
-		<iframe  src ="bootstrap/bootstrap-3.2.0/docs/indexjs.html"  frameborder="0" height="auto" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%">
+		<iframe  src ="bootstrap/bootstrap-3.2.0/docs/indexjs.html"  frameborder="0" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%"  onload="autoHeight();"></iframe>
     </div> 
 	 
     </div>
@@ -62,4 +62,5 @@
     
 
   </body>
+ 
 </html>
