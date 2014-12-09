@@ -89,7 +89,7 @@
 					"createDate" : "2014-11-28 15:50:57.13 CST",
 					"updateDate" : "2014-11-28 15:50:57.13 CST",
 					"id" : 284,
-					"name" : "css样式",
+					"name" : "Input组件",
 					"resourceName" : "",
 					"url" : "/menus?new",
 					"parentId" : 282,
@@ -211,7 +211,7 @@
 		"sonMenuNum" : 3,
 		"level" : 1,
 		"project" : "",
-		"iconClass": "fa fa-line-chart",
+		"iconClass": "fa fa-area-chart",
 		"infoUrl": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
 		"type": "",
 		"position": ""

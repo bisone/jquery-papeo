@@ -29,6 +29,13 @@ a:hover, a:focus {
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
     margin-top:10px;
+	.itm-one{
+		 .itm-lv1 {
+			 .fa{
+				  width:58px;
+				 }
+		 }
+			}
     .item {
         background: #f8f8f8;
         position: relative;
@@ -37,11 +44,8 @@ a:hover, a:focus {
 		/*&:hover{
 			background-color:#fff;
 			}*/
-		.itm-one{
-			 .fa{
-				  width:58px;
-				 }
-			}
+		
+	
         .itm-lv1 {
             padding: 10px 0;
             border-left: 5px solid #f8f8f8;
@@ -119,8 +123,9 @@ a:hover, a:focus {
                         height: 35px;
                         color: #fff;
                         font: 14px/34px "Microsoft Yahei";
-                        padding-left: 18px;
+                        padding-left: 12px;
                         text-decoration: none;
+						 position: relative;
                         &:hover {
                             background: #2d94d5;
                         }
@@ -134,6 +139,8 @@ a:hover, a:focus {
 			
         }
     }
+	
+	
     .item-open {
         background: #fff;
 		
@@ -145,12 +152,9 @@ a:hover, a:focus {
                 }
             }
         }
-		.itm-one{
-				span {
-				color:#54ade5;
-				}
-		  border-left: 5px solid #fff;
-		}
+		
+		/*  border-left: 5px solid #fff;
+		}*/
         .itm-lv2 {
             display: block;
 				
@@ -179,6 +183,7 @@ a:hover, a:focus {
     }
     .sone-left-menu {
         width: 58px;
+		
         .item {
             background: #54ade5;
             z-index: 10;
@@ -188,6 +193,9 @@ a:hover, a:focus {
                 .con {
                     display: none;
                 }
+				span{
+					  color: #fff;
+					}
                 .tit {
                     float: none;
                     color: #fff;
@@ -198,11 +206,6 @@ a:hover, a:focus {
                     }
                 }
 				
-				}
-				.itm-one{
-					span{
-						 color: #fff;
-					}
 					 span.itm-name{
 						 display:none;
 				 }
@@ -217,18 +220,11 @@ a:hover, a:focus {
 			&:hover{
 		     	color:#54ade5;	
 				}
-			.itm-one{
-				
+		
+            .itm-lv1 {
 				span {
 				color:#54ade5;
 				}
-				
-				  
-				  
-				  
-				  
-			}
-            .itm-lv1 {
 				 background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
                 .tit {
                     span {

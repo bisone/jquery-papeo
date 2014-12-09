@@ -46,7 +46,7 @@
 		"sonMenuNum" : 3,
 		"level" : 1,
 		"project" : "",
-		"iconClass": "fa fa-line-chart",
+		"iconClass": "fa fa-area-chart",
 		"infoUrl": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
 		"type": "",
 		"position": ""

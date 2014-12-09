@@ -69,8 +69,8 @@ $.widget("ui.soneLeftMenu", {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-					    tpl.find('.sone-left-menu').append('<li class="sidebar-menu  item item-1"></li>');
-						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1 itm-one">'
+					    tpl.find('.sone-left-menu').append('<li class="sidebar-menu  item itm-one"></li>');
+						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1 ">'
 						+'<span class="'+item.iconClass+' text-center"></span><span class="itm-name">'+item.name + '</span></div>');
 						
 

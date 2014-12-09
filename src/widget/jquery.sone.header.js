@@ -381,7 +381,7 @@ $.widget("ui.soneHeader", {
 		if(empty){
 			$("#left-menu").hide();	
 		}else{
-		   $("#left-menu").show(); 
+		   $("#left-menu").show(); f
 		}*/
 		if(url!=""){
 		    $("#ifm").attr('src', url);
