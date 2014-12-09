@@ -310,7 +310,7 @@ $.widget("ui.soneHeader", {
 						opacity : 0
 					}, 40);
 		}
-        var num=0;
+
 		lista.hover(function() {
 					lista.removeClass("now");
 					$(this).addClass("now");
@@ -322,7 +322,6 @@ $.widget("ui.soneHeader", {
 						var _height = box.find(".cont").eq(index).height() + 25;
 						box_show(_height);
 					}
-					console.dir(num++);
 					
 				}, function() {
 					time = setTimeout(function() {

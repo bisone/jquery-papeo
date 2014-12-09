@@ -3,7 +3,9 @@ $.widget("ui.soneLeftMenu", {
 	empty:false,
 	options : {
 		value : 0,
-		jsonUrl : '/left.menu.json'
+		jsonUrl : '/left.menu.json',
+		//以后要给成从url获取
+		defaultMenuInfo:[[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}]
 	},
 	_create : function() {
 		this.element.addClass("wrap");
@@ -43,15 +45,24 @@ $.widget("ui.soneLeftMenu", {
 	},
 	createTemplate : function(mydata) {
 		var scope = this;
+		var tpl="";
+		if(this.options.navBefore){
+			tpl=$(this.options.navBefore);
+		}
 		var tpl = $('<div class="left-side"> <ul class="sone-left-menu"></ul></div>');
 
 		$.each(mydata, function(n, item) {
-		            
-
+			        var menuInfo=null;
+		            if(item.infoUrl==""){
+		            	menuInfo=scope.options.defaultMenuInfo;
+		            }else{
+		            	//暂时mock，以后用url获取数据
+						menuInfo=item.infoUrl;
+		            }
 					if (item.type == "high" || item.type == "") {
-                        tpl.find('.sone-left-menu').append('<li class="sidebar-menu item item-1" id="market"></li>');
+                        tpl.find('.sone-left-menu').append('<li class="sidebar-menu item"></li>');
 						tpl.find('.sone-left-menu > li:last').append(
-						   '<div class="itm-lv1">'+
+						   '<div class="itm-lv1" url="' + item.url + '">'+
 							'<div class="tit">'+
 								 '<span class="'+item.iconClass+' text-center"></span>'+
 								 '<span class="text-center">'+item.name+'</span><s>3</s>'+
@@ -60,17 +71,17 @@ $.widget("ui.soneLeftMenu", {
 								'<div class="info">'+
 								'</div>'+
 								'<div class="price">'+
-									'<strong>'+item.infoUrl[1].value+'</strong>'+item.infoUrl[1].lable+
+									'<strong>'+menuInfo[1].value+'</strong>'+menuInfo[1].lable+
 								'</div>'+
 							'</div>'+
 						'</div>');
 						//add info
-						$.each(item.infoUrl[0], function (n,i) {
+						$.each(menuInfo[0], function (n,i) {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-					    tpl.find('.sone-left-menu').append('<li class="item item-1"></li>');
-						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1"><ul></ul></div>');
+					    tpl.find('.sone-left-menu').append('<li class="item"></li>');
+						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1" url="' + item.url + '"><ul></ul></div>');
 						tpl.find('.sone-left-menu > li:last .itm-lv1 ul').append('<li><a href="' + item.url + '">'
 								+ item.name + '</a></li>');
 					}
@@ -96,7 +107,6 @@ $.widget("ui.soneLeftMenu", {
 
 	_setOption : function(key, value) {
 		// this.options[key] = value;
-
 	},
 
 	_update : function(data) {
@@ -107,12 +117,13 @@ $.widget("ui.soneLeftMenu", {
 	_initEvents : function(element) {
 		var _ele = element || this.element;
 
+		//菜单折叠
 		$(".resizer", _ele).click(function() {
 					$(".wrap").toggleClass("narrow-wrap");
 					$("#page-wrapper").toggleClass("narrow-content");
 					$(".item", _ele).find(".itm-lv2").removeAttr("style");
 				});
-
+        //子菜单打开、关闭
 		$(".item .itm-lv1", _ele).click(function() {
 			if (!$(".wrap", _ele).hasClass("narrow-wrap")) {
 				if ($(this).parent().hasClass("item-open")) {
@@ -123,7 +134,7 @@ $.widget("ui.soneLeftMenu", {
 				}
 			}
 		});
-
+        //折叠后hover右侧菜单弹出
 		$(".sone-left-menu .item", _ele).hover(function() {
 					if ($(".wrap").hasClass("narrow-wrap")) {
 						if ($(this).hasClass("item-open")) {
@@ -141,15 +152,25 @@ $.widget("ui.soneLeftMenu", {
 						$(this).find(".itm-lv2").hide();
 					}
 				});
+		//二级菜单a 标签点击
 		$(".itm-lv2 a", _ele).click(function() {
 					$(this).parent().siblings("li").find("a")
 							.removeClass("curr");
 					$(this).addClass("curr");
 				});
 
-		// 菜单添加点击事件
+		// 菜单添加点击事件a
 		$("#left-menu a").click(function(o) {
 					var link = $(this).attr("href");
+					$("#ifm").attr('src', link);
+					return false;
+				});
+		//一级菜单点击
+		$("#left-menu div.itm-lv1").click(function(o) {
+					var link = $(this).attr("url");
+					if(link==""){
+					    return false;
+					}
 					$("#ifm").attr('src', link);
 					return false;
 				});
