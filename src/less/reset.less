@@ -1,13 +1,11 @@
 body, div, dl, dt, dd, ul, ol, li, code, form, fieldset, legend, input, textarea, blockquote, th, td{
 	margin:0;
 	padding:0;
-
+	font-size:14px;
 }
 
 .clear{ clear:both;}
-li {
-	list-style:none;
-}
+
 
 a:focus {
      outline:none;
@@ -17,15 +15,16 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
-
 fieldset, img {
 	border:0;
 }
-address, caption, cite, code, dfn, em, strong, th, var {
+/*address, caption, cite, code, dfn, em, strong, th, var {
 	font-style:normal;
 	font-weight:normal;
+}*/
+li {
+	list-style:none;
 }
-
 caption, th {
 	text-align:left;
 }
@@ -76,13 +75,12 @@ legend {
 *+html .clearfix {
 	min-height:1%
 }
-body{ font:14px "Microsoft Yahei"}
+/*body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";}*/
 
 
 /**************w2ui样式*********/
 .w2ui-reset *{
-	line-height:none;
-	font:14px "Microsoft Yahei";}
+	line-height:none;}
 
 .w2ui-grid {
 		.w2ui-grid-header {
@@ -166,9 +164,6 @@ body{ font:14px "Microsoft Yahei"}
 			
 			}
 		
-}
-.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
-    vertical-align: middle;
 }
 .w2ui-grid .w2ui-grid-body table .w2ui-col-number {
     background-color: #f9f9f9;
@@ -306,11 +301,9 @@ button.w2ui-btn-blue:hover{
 				 border-top:1px solid #ddd;
 				 width:100%;
 				 td{
-					 font-size:14px;
 					   line-height: 28px;
 					   label{
-						   margin-bottom:0px;
-						   font-weight:normal;}
+						   margin-bottom:0px;}
 					 }
 				}
 				tr:first-child {
