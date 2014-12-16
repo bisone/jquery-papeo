@@ -60,11 +60,13 @@ $.widget("ui.soneLeftMenu", {
 						menuInfo=item.infoUrl;
 		            }
 					if (item.type == "high" || item.type == "") {
-                        tpl.find('.sone-left-menu').append('<li class="sidebar-menu item"></li>');
+
+                        tpl.find('.sone-left-menu').append('<li class="sidebar-menu item" ></li>');
+
 						tpl.find('.sone-left-menu > li:last').append(
 						   '<div class="itm-lv1" url="' + item.url + '">'+
 							'<div class="tit">'+
-								 '<span class="'+item.iconClass+' text-center"></span>'+
+								 '<span class="'+item.iconClass+' text-center"></span><br/>'+
 								 '<span class="text-center">'+item.name+'</span><s>3</s>'+
 							'</div>'+
 							'<div class="con">'+
@@ -80,10 +82,11 @@ $.widget("ui.soneLeftMenu", {
 							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
 						});
 				 	} else {
-					    tpl.find('.sone-left-menu').append('<li class="item"></li>');
-						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1" url="' + item.url + '"><ul></ul></div>');
-						tpl.find('.sone-left-menu > li:last .itm-lv1 ul').append('<li><a href="' + item.url + '">'
-								+ item.name + '</a></li>');
+
+					    tpl.find('.sone-left-menu').append('<li class="sidebar-menu  item itm-one"></li>');
+						tpl.find('.sone-left-menu > li:last').append('<div class="itm-lv1" url="' + item.url + '>'
+						+'<span class="'+item.iconClass+' text-center"></span><span class="itm-name">'+item.name + '</span></div>');
+
 					}
                     item.children=item.children||[];
 					if(item.children.length>0){
@@ -160,11 +163,11 @@ $.widget("ui.soneLeftMenu", {
 				});
 
 		// 菜单添加点击事件a
-		$("#left-menu a").click(function(o) {
+		/*$("#left-menu a").click(function(o) {
 					var link = $(this).attr("href");
 					$("#ifm").attr('src', link);
 					return false;
-				});
+				});*/
 		//一级菜单点击
 		$("#left-menu div.itm-lv1").click(function(o) {
 					var link = $(this).attr("url");

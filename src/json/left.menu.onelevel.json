@@ -37,7 +37,7 @@
 		"createDate" : "2014-11-28 15:50:56.995 CST",
 		"updateDate" : "2014-11-28 15:50:56.995 CST",
 		"id" : 282,
-		"name" : "帮助文档",
+		"name" : "文档",
 		"resourceName" : "",
 		"url" : "",
 		"parentId" : -1,
@@ -46,7 +46,7 @@
 		"sonMenuNum" : 3,
 		"level" : 1,
 		"project" : "",
-		"iconClass": "fa fa-line-chart",
+		"iconClass": "fa fa-area-chart",
 		"infoUrl": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
 		"type": "",
 		"position": ""

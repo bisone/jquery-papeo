@@ -29,37 +29,37 @@ a:hover, a:focus {
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
     margin-top:10px;
+	.itm-one{
+		 .itm-lv1 {
+			 .fa{
+				  width:58px;
+				 }
+		 }
+			}
     .item {
         background: #f8f8f8;
         position: relative;
         border-bottom: 1px solid #dcdbd9;
         cursor: pointer;
-		&:hover{
+		/*&:hover{
 			background-color:#fff;
-			}
-		.itm-one{
-			a{
-			  padding: 10px 0;
-			  display:block;
-			}
-			 .fa{
-				  width:52px;
-				 }
-			}
+			}*/
+		
+	
         .itm-lv1 {
             padding: 10px 0;
-            /* height: 65px; */
             border-left: 5px solid #f8f8f8;
-            .tit {
-                float: left;
-                width: 53px;
-				height:60px;
-                span {
+			 span {
                     color: #54ade5;
-                    font-family: fontawesome;
-                    display: block;
+                    //font-family: fontawesome;
 					line-height:30px;
                 }
+            .tit {
+                float: left;
+                width: 58px;
+				height:60px;
+				text-align:center;
+               
 				span.fa{
 					font-size:18px;
 					}
@@ -113,6 +113,7 @@ a:hover, a:focus {
             display: none;
             background: #54ade5;
             zoom: 1;
+			
             ul {
                 border-left: 5px solid #2a79ab;
                 li{
@@ -122,8 +123,9 @@ a:hover, a:focus {
                         height: 35px;
                         color: #fff;
                         font: 14px/34px "Microsoft Yahei";
-                        padding-left: 18px;
+                        padding-left: 12px;
                         text-decoration: none;
+						 position: relative;
                         &:hover {
                             background: #2d94d5;
                         }
@@ -132,11 +134,16 @@ a:hover, a:focus {
                         }
                     }
                 }
+			
             }
+			
         }
     }
+	
+	
     .item-open {
         background: #fff;
+		
         .itm-lv1 {
             border-left: 5px solid #2a79ab;
             .con {
@@ -145,8 +152,12 @@ a:hover, a:focus {
                 }
             }
         }
+		
+		/*  border-left: 5px solid #fff;
+		}*/
         .itm-lv2 {
             display: block;
+				
         }
     }
 
@@ -172,29 +183,19 @@ a:hover, a:focus {
     }
     .sone-left-menu {
         width: 58px;
+		
         .item {
             background: #54ade5;
             z-index: 10;
-			.itm-one{
-			 padding: 10px 0;
-			 
-			 a{
-				 color:#fff;
-				 &:hover{
-					 color:#54ade5;
-					 
-					 }
-				 
-				 }
-			}
-			
-			
             .itm-lv1 {
-                border-left: 0 none;
+                border-left:none;
 			
                 .con {
                     display: none;
                 }
+				span{
+					  color: #fff;
+					}
                 .tit {
                     float: none;
                     color: #fff;
@@ -204,18 +205,26 @@ a:hover, a:focus {
                         color: #fff;
                     }
                 }
+				
+					 span.itm-name{
+						 display:none;
+				 }
             }
         }
         .item-open {
 			
 			background-color:#fff;
+			color:#fff;	
+			//border-left: 5px solid #fff;
+			
 			&:hover{
 		     	color:#54ade5;	
 				}
-			.itm-one{
-				color:#54ade5;
-			}
+		
             .itm-lv1 {
+				span {
+				color:#54ade5;
+				}
 				 background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
                 .tit {
                     span {
@@ -227,7 +236,7 @@ a:hover, a:focus {
         .itm-lv2 {
             display: none;
             position: absolute;
-            left: 58px;
+            left:58px;
             top: 0;
             width: 180px;
             border: 1px solid #dcdbd9;
@@ -246,6 +255,7 @@ a:hover, a:focus {
                     }
                 }
             }
+			
         }
         .resizer {
             background: #54ade5;
@@ -380,4 +390,130 @@ a:hover, a:focus {
  
 }
 
+	}
+/**************tab.html********************/
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color:transparent;
+    text-decoration: none;
+}
+
+.example-tab-one{
+	.tab-content{
+	border:1px  solid #ddd;
+	border-top:0 solid #ddd;
+	padding:10px;
+	
+	
+	}
+	.nav-tabs { 
+		li {
+			 
+			a{
+				
+				 border-width:3px 1px 1px 1px;
+				 border-style: solid;
+				 border-radius:0;
+				 border-color: #54ade5 #ddd transparent;
+				 margin-right: -1px;
+				}
+		}
+		li.active{		
+			a{	
+				 border-width:3px 1px 1px 1px;
+				 border-color: #2a79ab #ddd transparent;
+				 &:focus{
+					 border-color: #2a79ab #ddd transparent;
+					 }
+					  &:hover{
+					 border-color: #2a79ab #ddd transparent;
+					 }
+				}
+			
+			}
+	}
+}
+.example-tab-two{
+	.tab-content{
+	border:1px  solid #3b7c33;
+	border-top:0 solid #3b7c33;
+	 padding:10px;
+	}
+ 
+
+	.nav-tabs { 
+		border-bottom: 1px solid #3b7c33;
+		li {
+			 
+			a{
+				 background: -moz-linear-gradient(center top , #5fae53, #3b7c33) repeat scroll 0 0 rgba(0, 0, 0, 0);
+				 border-width:1px;
+				 border-style: solid;
+				 border-radius:0;
+				 border-color: #3b7c33 #3b7c33 transparent;
+				 margin-right: -1px;
+				 color:#fff;
+				}
+		}
+		li.active{		
+			a{	
+				.tabtwo;
+				 &:focus{
+					.tabtwo;
+					 }
+					  &:hover{
+					.tabtwo;
+					 }
+				}
+			
+			}
+	}
+}
+.tabtwo{
+	 border-width:1px;
+	 border-style: solid;
+	 border-radius:0;
+	 border-color: #3b7c33 #3b7c33 transparent;
+	 background:#fff;
+	 color:#2c3f0a;
+	
+	}
+	
+.example-tab-three{
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+ 
+	.tab-content{
+	 padding:10px;
+	}
+	.nav-tabs { 
+	 	background-color:rgba(233,233,233,.1);
+		border-bottom: 3px solid #f56954;
+		li {
+			 
+			a{
+				
+				 border-width:1px;
+				 border-style: solid;
+				 border-radius:0;
+				 border-color:transparent;
+				}
+		}
+		li.active{		
+			a{	
+				.tabthree;
+				 &:focus{
+					.tabthree;
+					 }
+					  &:hover{
+					.tabthree;
+					 }
+				}
+			
+			}
+	}
+}
+.tabthree{
+	 background:#f56954;
+	 color:#fff;
+	
 	}
