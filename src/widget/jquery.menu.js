@@ -163,11 +163,11 @@ $.widget("ui.soneLeftMenu", {
 				});
 
 		// 菜单添加点击事件a
-		/*$("#left-menu a").click(function(o) {
+		$("#left-menu a").click(function(o) {
 					var link = $(this).attr("href");
 					$("#ifm").attr('src', link);
 					return false;
-				});*/
+				});
 		//一级菜单点击
 		$("#left-menu div.itm-lv1").click(function(o) {
 					var link = $(this).attr("url");
