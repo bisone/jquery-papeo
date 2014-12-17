@@ -217,7 +217,8 @@ $.widget("ui.soneHeader", {
 			} else if (n > num) {
 				$(".nav-option", _ele).show();
 			}
-			$(".nav", _ele).css("width", $(document).width() - 817 + "px");
+			/*$(".nav", _ele).css("width", $(document).width() - 817 + "px");*/
+			$(".nav", _ele).css("width", 110 * n + "px");
 			$(".nav ul", _ele).css("width", 110 * n + "px");
 			$(".nav-option .next", _ele).css("left", (110 * num + 260) + "px");
 

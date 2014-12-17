@@ -13,17 +13,17 @@
 }
 
 #page-wrapper {
-    padding: 0 15px;
+/*    padding: 0 15px;*/
     height:auto;
     background-color: #fff;
 }
-#page-wrapper .rightcontent{
+.narrow-content {
+    margin :  0 0 0 78px!important;
 }
 
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 202px;
         border-left: 1px solid #e7e7e7;
     }
 }
@@ -345,9 +345,7 @@ table.dataTable thead .sorting:after {
     color: #df8a13;
 }
 
-.narrow-content {
-    margin :  0 0 0 70px!important;
-}
+
 /**覆盖boostrap样式**/
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {

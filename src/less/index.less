@@ -23,13 +23,13 @@ a:hover, a:focus {
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 	margin-top: 10px;
- .itm-one {
- .itm-lv1 {
- .fa {
- width:58px;
-}
-}
-}
+	 .itm-one {
+		 .itm-lv1 {
+			 .fa {
+			 width:58px;
+			}
+		}
+	}
 .item {
 	background: #f8f8f8;
 	position: relative;
@@ -41,42 +41,42 @@ a:hover, a:focus {
 		
 	
         .itm-lv1 {
- padding: 10px 0;
- border-left: 5px solid #f8f8f8;
- span {
- color: #54ade5;
- //font-family: fontawesome;
- line-height:30px;
-}
- .tit {
- float: left;
- width: 58px;
- height:60px;
- text-align:center;
- span.fa {
- font-size:18px;
-}
- s {
- position: absolute;
- left: 38px;
- top: 18px;
- width: 21px;
- height: 21px;
- line-height: 20px;
- text-decoration: none;
- text-align: center;
- border-radius: 11px;
- background: #e55473;
- color: #fff;
- display:none
-}
-}
+		 padding: 10px 0;
+		 border-left: 5px solid #f8f8f8;
+		 span {
+		 color: #54ade5;
+		 //font-family: fontawesome;
+		 line-height:30px;
+		}
+		 .tit {
+		 float: left;
+		 width: 58px;
+		 height:60px;
+		 text-align:center;
+			 span.fa {
+			 font-size:18px;
+			}
+			 s {
+			 position: absolute;
+			 left: 38px;
+			 top: 18px;
+			 width: 21px;
+			 height: 21px;
+			 line-height: 20px;
+			 text-decoration: none;
+			 text-align: center;
+			 border-radius: 11px;
+			 background: #e55473;
+			 color: #fff;
+			 display:none
+			}
+		}
  .con {
  height:60px;
  border-left: 1px solid #eaeae8;
  padding:0px 0 0 10px;
  margin-left: 53px;
-                /* width: 107px; */
+       
                 .info {
  span {
  display: inline-block;
@@ -156,84 +156,109 @@ a:hover, a:focus {
 }
 }
 .narrow-wrap {
- #main {
- margin-left: 70px;
-}
+	 #main {
+	 margin-left: 70px;
+	}
 .sone-left-menu {
 	width: 58px;
  .item {
- background: #54ade5;
- z-index: 10;
- .itm-lv1 {
- border-left:none;
- .con {
- display: none;
-}
- span {
- color: #fff;
-}
- .tit {
- float: none;
- color: #fff;
- width: 58px;
- text-align: center;
- span {
- color: #fff;
-}
-}
- span.itm-name {
- display:none;
-}
-}
-}
-.item-open {
-	background-color: #fff;
-	color: #fff;
- //border-left: 5px solid #fff;
- &:hover {
- color:#54ade5;
-}
-.itm-lv1 {
- span {
- color:#54ade5;
-}
- background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
-.tit {
- span {
- color: #54ade5;
+	 background: #54ade5;
+	 z-index: 10;
+	 .itm-lv1 {
+		 border-left:none;
+		 .con {
+		 display: none;
+		}
+		 span {
+		 color: #fff;
+		}
+		 .tit {
+		 float: none;
+		 color: #fff;
+		 width: 58px;
+		 text-align: center;
+			 span {
+			 color: #fff;
+			}
+		}
+	 span.itm-name {
+	 display:none;
+	}
 }
 }
-}
-}
-.itm-lv2 {
-	display: none;
-	position: absolute;
-	left: 58px;
-	top: 0;
-	width: 180px;
-	border: 1px solid #dcdbd9;
-	background: #fbfbfa;
- ul {
- border-left: 0 none;
- li {
- a {
- color: #54ade5;
- &:hover {
- background: #f5f5f5;
-}
- .curr {
- background: #f5f5f5;
-}
-}
-}
-}
-}
-.resizer {
-	background: #54ade5;
- b {
- background:url(../img/icons.png) no-repeat -42px -245px
-}
-}
+	.item-open {
+		background-color: #fff;
+		color: #fff;
+	 //border-left: 5px solid #fff;
+		 &:hover {
+		 color:#54ade5;
+		}
+		.itm-lv1 {
+			 span {
+			 color:#54ade5;
+			}
+		 background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
+			.tit {
+				 span {
+				 color: #54ade5;
+				}
+			}
+		}
+	}
+	.itm-lv2 {
+		display: none;
+		position: absolute;
+		left: 57px;
+		top: 0;
+		width: 180px;
+		border: 1px solid #dcdbd9;
+		background: #fbfbfa;
+		
+		 ul {
+			  position: relative;
+			 border-left:none;
+			
+		 
+			 li {
+				  position: relative;
+				 &:after {
+						border-left: 1px dashed #54ade5;
+						bottom: 0;
+						content: "";
+						display: block;
+						left: 22px;
+						position: absolute;
+						top: 0;
+						width: 0;
+					}
+				 &:before {
+					border-top: 1px dashed #54ade5;
+					   content: "";
+						display: block;
+						left: 25px;
+						position: absolute;
+						top: 17px;
+						width: 9px;
+				}
+				 a {
+				 color: #54ade5;
+				 padding-left:37px;
+					 &:hover {
+					 background: #f5f5f5;
+					}
+					 .curr {
+					 background: #f5f5f5;
+					}
+				}
+			}
+		}
+	}
+	.resizer {
+		background: #54ade5;
+		 b {
+		 background:url(../img/icons.png) no-repeat -42px -245px
+		}
+	}
 }
 }
 .sone-market {
