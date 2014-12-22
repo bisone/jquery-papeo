@@ -187,5 +187,5 @@ gulp.task('webserver', function() {
 
 gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs']);
 
-//gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
-gulp.task('default', ['build', 'webserver']);
+gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
+// gulp.task('default', ['build', 'webserver']);

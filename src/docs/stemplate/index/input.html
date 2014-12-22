@@ -29,24 +29,63 @@
                 如果没有选择调用时，它将呈现出两个日历从选择开始日期和结束日期。或者，你可以提供一系列的日期范围，用户可以从相反的选择从日历上的日期选择。如果连接到一个文本输入，选择的日期将插入文本框。否则，你可以接受的选择提供一个自定义回调函数。
                 构件也可以被用来作为通过设置singledatepicker选择单个日期选择器</p>
             <p>官网：<a href="http://www.bootcss.com/p/bootstrap-datetimepicker/" target="_blank">http://www.bootcss.com/p/bootstrap-datetimepicker/</a></p>
-            <div class="form-group"> 
-                <!-- <label class="checkbox-inline" style="margin-top: 5px;">日期：</label>-->
-                <label class="checkbox-inline">
-                <div id="dateRangePicker"	style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "> <i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span id="dateRange"></span> <b class="caret"></b> </div>
-                </label>
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <label class="checkbox-inline">
+                    <div id="dateRangePicker"	style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "> <i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span id="dateRange"></span> <b class="caret"></b> </div>
+                    </label>
+                </div>
+            </div>
+            <div class="highlight">
+                <pre>
+ &lt;div class="form-group"&gt; 
+	&lt;label class="checkbox-inline"&gt;
+	&lt;div id="dateRangePicker"style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "&gt;
+		  &lt;i class="glyphicon glyphicon-calendar fa fa-calendar"&gt;&lt;/i&gt; &lt;span id="dateRange"&gt;&lt;/span&gt; &lt;b class="caret"&gt;&lt;/b&gt;
+           &lt;/div&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
             </div>
             <h4>comboMenu</h4>
             <p>注：详情了解见帮助文档comboMenu</p>
-            <div class="form-group">
+           
+            
+              <div class="bs-example">
+            <p>实例：</p>
+             <div class="form-group">
                 <label style="margin-left:0px;" class="checkbox-inline">
                 <div  class="clearfix">
                     <div style="position:relative;" id="cmbDiv"></div>
                 </div>
                 </label>
             </div>
+        </div>
+        <div class="highlight">
+<pre>
+ &lt;div class="form-group"&gt;
+        &lt;label style="margin-left:0px;" class="checkbox-inline"&gt;
+                &lt;div  class="clearfix"&gt;
+                    &lt;div style="position:relative;" id="cmbDiv"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        &lt;/label&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+            
+            
+            
+            
             <h4>区域选择</h4>
-            <p>####</p>
-            <div class="form-group">
+         
+         
+         
+            
+            
+      <div class="bs-example">
+            <p>实例：</p>
+               <div class="form-group">
                 <div style="border:1px solid #bbb;background:white;padding-left:10px;height:32px;width:190px;" > <span style="line-height:30px;vertical-align: top;">地区:</span>
                     <input id="district_cn" type="text" 
 									style="background:white;cursor: pointer; width: 100px; height: 30px;padding-bottom:2px;box-shadow:none;border:none;overflow:hidden;"
@@ -56,6 +95,26 @@
 									value="" />
                 </div>
             </div>
+        </div>
+        <div class="highlight">
+<pre>
+   &lt;div class="form-group"&gt;
+        &lt;div style="border:1px solid #bbb;background:white;padding-left:10px;height:32px;width:190px;" &gt;
+                 &lt;span style="line-height:30px;vertical-align: top;"&gt;地区:&lt;/span&gt;
+                    &lt;input id="district_cn" type="text" 
+			style="background:white;cursor: pointer; width: 100px; height: 30px;padding-bottom:2px;box-shadow:none;border:none;overflow:hidden;"
+			name="district_cn" value="全部数据" readonly&gt;
+                    &lt;input name="citycategory" id="citycategory" style="display: none" value="" /&gt;
+          &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>       
+            
+            
+            
+            
+            
+            
             <div id="collapseOne" class="panel-collapse collapse in"> </div>
             <h4>jquery.inputmask </h4>
             <p> jQuery inputMask掩码插件，是一个很简单的掩码控制插件，实现对字母、数字、下划线三种类型的输入控制，你可以任意组合。</p>
@@ -83,7 +142,8 @@
                         <!-- /.input group --> 
                     </div>
                     <!-- /.form group --> 
-                    
+                    </div>
+                    <div class="col-xs-6"> 
                     <!-- phone mask -->
                     <div class="form-group">
                         <label>US phone mask:</label>
