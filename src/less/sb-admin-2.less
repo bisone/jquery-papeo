@@ -4,28 +4,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
-    background-color: #f8f8f8;
+/*body {
+       background-color: #f7f7f7;
 }
-
+*/
 #wrapper {
     width: 100%;
 }
 
 #page-wrapper {
-    padding: 0 15px;
-    min-height: 568px;
+/*    padding: 0 15px;*/
+    height:auto;
     background-color: #fff;
 }
-#page-wrapper .rightcontent{
-    padding-left:0px;
+.narrow-content {
+    margin :  0 0 0 78px!important;
 }
 
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 200px;
-        padding: 0 0px;
         border-left: 1px solid #e7e7e7;
     }
 }
@@ -347,9 +345,7 @@ table.dataTable thead .sorting:after {
     color: #df8a13;
 }
 
-.narrow-content {
-    margin :  0 0 0 70px!important;
-}
+
 /**覆盖boostrap样式**/
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
@@ -363,23 +359,4 @@ table.dataTable thead .sorting:after {
     margin-bottom: 0;
     padding-left: 0px;
     vertical-align: middle;
-}
-#sub-nav li {
-  float:none!important;
-  display:inline;
-}
-#sub-nav li a {
-   display:inline!important;
-}
-#sub-nav div{
-  margin:0 auto;
-  width:50px;
-}
-#sub-nav{
- padding:0px!important;
- 
-}
-#sub-nav ul{
-
- margin-left:250px;
 }
