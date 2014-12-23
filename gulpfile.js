@@ -53,10 +53,30 @@ var fonts = [
     'src/bower_components/bootstrap/dist/fonts/*.{ttf,woff,eof,svg}',
     'src/bower_components/font-awesome/fonts/*.{ttf,woff,eof,svg}'
 ];
+var widget=[
+
+ 'src/widget/iframeResizer.contentWindow.min.js',
+ 'src/widget/iframeResizer.min.js',
+ 'src/widget/jquery.combomenu.js',
+ 'src/widget/jquery.menu.js',
+ 'src/widget/jquery.sone.demandgraph.js',
+ 'src/widget/jquery.sone.header.js',
+ 'src/widget/jquery.sone.provincepicker.js',
+ 'src/widget/jquery.inputmask.js',
+ 'src/widget/jquery.inputmask.date.extensions.js',
+ 'src/widget/jquery.inputmask.extensions.js',
+ 'src/widget/jquery.dataTables.js',
+ 'src/widget/dataTables.bootstrap.js',
+ 'src/widget/jquery.knob.js',
+ 'src/widget/jquery.sparkline.min'
+ 
+
+];
 
 var paths = {
     js: ['src/js/common-init.js','src/js/center-init.js', 'dist/js/templates.js'],
-	widget:['src/widget/**/*.*'],
+	//widget:['src/widget/**/*.*'],
+	widget:widget,
     files: ['src/index.html','src/index-debug.html','src/json/**/*.*'],
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
