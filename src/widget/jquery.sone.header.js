@@ -42,7 +42,7 @@ $.widget("ui.soneHeader", {
 		var scope = this;     
 		if(this.options.data==null){
 			  $.ajax({
-				 url: "/header.json",
+				 url: "json/header.json",
 				 type: "GET",
 				 success:function(mydata) {
 					try{
@@ -375,13 +375,13 @@ $.widget("ui.soneHeader", {
 		}
 		$('#left-menu').soneLeftMenu('destroy');
 		var menu=$('#left-menu').soneLeftMenu({
-					jsonUrl:'/'+id+'.json'
+					jsonUrl:'json/'+id+'.json'
 				});
 		/*var empty=menu.soneHeader('getEmpty');
 		if(empty){
 			$("#left-menu").hide();	
 		}else{
-		   $("#left-menu").show(); f
+		   $("#left-menu").show(); 
 		}*/
 		if(url!=""){
 		    $("#ifm").attr('src', url);

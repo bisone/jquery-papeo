@@ -3,7 +3,7 @@ $.widget("ui.soneLeftMenu", {
 	empty:false,
 	options : {
 		value : 0,
-		jsonUrl : '/left.menu.json',
+		jsonUrl : '/json/left.menu.json',
 		//以后要给成从url获取
 		defaultMenuInfo:[[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}]
 	},
