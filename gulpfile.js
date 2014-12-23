@@ -77,7 +77,8 @@ var paths = {
     js: ['src/js/common-init.js','src/js/center-init.js', 'dist/js/templates.js'],
 	//widget:['src/widget/**/*.*'],
 	widget:widget,
-    files: ['src/index.html','src/index-debug.html','src/json/**/*.*'],
+    files: ['src/index.html','src/index-debug.html'],
+	json:['src/json/**/*.*'],
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     fonts: fonts,
@@ -130,6 +131,14 @@ gulp.task('copy-templates', function() {
 gulp.task('copy-files', function(){
     return gulp.src(paths.files)
         .pipe(gulp.dest('dist'));
+		
+});
+
+// Copy all static/json files to output directory
+gulp.task('copy-json', function(){
+    return gulp.src(paths.json)
+        .pipe(gulp.dest('dist/json'));
+		
 });
 
 // Copy all images to output directory
@@ -205,7 +214,7 @@ gulp.task('webserver', function() {
     });
 });
 
-gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs']);
+gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files','copy-json', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs']);
 
-gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
-// gulp.task('default', ['build', 'webserver']);
+//gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
+ gulp.task('default', ['build', 'webserver']);
