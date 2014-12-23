@@ -31,8 +31,7 @@
         "bootstrap-material-design": "~0.1.5",
         "bootstrap-daterangepicker": "https://github.com/bisone/bootstrap-daterangepicker.git#master",
         "font-awesome": "~4.2.0",
-
         "w2ui": "~1.4.2",
         "raphael": "~2.1.2"
-
     }
+}
