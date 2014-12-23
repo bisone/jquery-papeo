@@ -10,15 +10,9 @@ var gulp    = require('gulp'),
     templates = require('gulp-angular-templates');
 
 var vendors = [
-    'src/bower_components/angular/angular.js',
-    'src/bower_components/angular-cookies/angular-cookies.js',
-    'src/bower_components/angular-bootstrap/ui-bootstrap.js',
-    'src/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-    'src/bower_components/angular-ui-router/release/angular-ui-router.js',
-
     'src/bower_components/jquery/dist/jquery.js',
     'src/bower_components/jquery-ui/jquery-ui.js',
-    // 'src/bower_components/underscore/underscore.js',
+    'src/bower_components/underscore/underscore.js',
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
 
     'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
@@ -59,10 +53,30 @@ var fonts = [
     'src/bower_components/bootstrap/dist/fonts/*.{ttf,woff,eof,svg}',
     'src/bower_components/font-awesome/fonts/*.{ttf,woff,eof,svg}'
 ];
+var widget=[
+
+ 'src/widget/iframeResizer.contentWindow.min.js',
+ 'src/widget/iframeResizer.min.js',
+ 'src/widget/jquery.combomenu.js',
+ 'src/widget/jquery.menu.js',
+ 'src/widget/jquery.sone.demandgraph.js',
+ 'src/widget/jquery.sone.header.js',
+ 'src/widget/jquery.sone.provincepicker.js',
+ 'src/widget/jquery.inputmask.js',
+ 'src/widget/jquery.inputmask.date.extensions.js',
+ 'src/widget/jquery.inputmask.extensions.js',
+ 'src/widget/jquery.dataTables.js',
+ 'src/widget/dataTables.bootstrap.js',
+ 'src/widget/jquery.knob.js',
+ 'src/widget/jquery.sparkline.min'
+ 
+
+];
 
 var paths = {
     js: ['src/js/common-init.js','src/js/center-init.js', 'dist/js/templates.js'],
-	widget:['src/widget/**/*.*'],
+	//widget:['src/widget/**/*.*'],
+	widget:widget,
     files: ['src/index.html','src/index-debug.html','src/json/**/*.*'],
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
@@ -99,7 +113,6 @@ gulp.task('copy-scripts', function() {
         //.pipe(uglify())
       //  .pipe(concat('dashboard-init.min.js'))
     // .pipe(insert.prepend('\'use strict\';'))
-
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -115,9 +128,6 @@ gulp.task('copy-templates', function() {
 
 // Copy all static/HTML files to output directory
 gulp.task('copy-files', function(){
-    gulp.src(paths.json)
-        .pipe(gulp.dest('dist/json'));
-
     return gulp.src(paths.files)
         .pipe(gulp.dest('dist'));
 });
