@@ -21,35 +21,155 @@
 <body>
 <div class="row">
     <div class="col-xs-12 rightcontent"> <br/>
-      
+        <h3>图片</h3>
+        <p>响应式图片---通过为图片添加 <code>.img-responsive</code> 类可以让图片支持响应式布局。其实质是为图片设置了 <code>max-width: 100%;</code> 和 <code>height: auto;</code> 属性，从而让图片在其父元素中更好的缩放。</p>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-responsive"</span> <span class="na">alt=</span><span class="s">"Responsive image"</span><span class="nt">&gt;</span>
+</pre>
+        </div>
+        <h3>图片形状</h3>
+        <p>通过为 <code>&lt;img&gt;</code> 元素添加以下相应的类，可以让图片呈现不同的形状。</p>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-rounded"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-circle"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-thumbnail"</span><span class="nt">&gt;</span>
+</pre>
+        </div>
+        <h3>警告框</h3>
+        <p>将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框，<code>.alert</code> 类是必须要设置的，另外我们还提供了有特殊意义的4个类（例如，<code>.alert-success</code>），代表不同的警告信息。</p>
+        <div class="bs-example">
+            <p>实例：</p>
+            <div class="alert alert-success" role="alert">Well done! You successfully read this important alert message. </div>
+            <div class="alert alert-info" role="alert">Heads up! This alert needs your attention, but it's not super important. </div>
+            <div class="alert alert-warning" role="alert">Warning! Better check yourself, you're not looking too good. </div>
+            <div class="alert alert-danger" role="alert">Oh snap! Change a few things up and try submitting again. </div>
+        </div>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-info"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-warning"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-danger"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <h3>可关闭的警告框</h3>
+        <p>为警告框添加一个可选的 <code>.alert-dismissible</code> 类和一个关闭按钮。</p>
+        <div class="bs-example">
+            <p>实例：</p>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <strong>Warning!</strong> Better check yourself, you're not looking too good. </div>
+        </div>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-warning alert-dismissible"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Warning!<span class="nt">&lt;/strong&gt;</span> Better check yourself, you're not looking too good.
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <h3>路径导航</h3>
+        <p>在一个带有层次的导航结构中标明当前页面的位置。</p>
+        <div class="bs-example">
+            <p>实例：</p>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+            </ol>
+        </div>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Data<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre>
+        </div>
+        <h3>快速浮动</h3>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-right"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <h3>徽章</h3>
+        <p >给链接、导航等元素嵌套 <code>&lt;span class="badge"&gt;</code> 元素，可以很醒目的展示新的或未读的信息条目。</p>
+        <div class="bs-example">
+            <p>实例：</p>
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+            </ul>
+        </div>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre>
+        </div>
+        <h3>带标题的面版</h3>
+        <p>通过 <code>.panel-heading</code> 可以很简单地为面板加入一个标题容器。你也可以通过添加设置了 <code>.panel-title</code> 类的 <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> 标签，添加一个预定义样式的标题。</p>
+        <div class="bs-example">
+            <p>实例：</p>
+            <div class="panel panel-default"> 
+                <!-- Default panel contents -->
+                <div class="panel-heading"> <span class="h4">Default Box </span>
+                    <div class=" pull-right">
+                        <button class="btn btn-default btn-sm" title="Collapse" data-toggle="tooltip" data-widget="collapse"> <i class="fa fa-minus"></i> </button>
+                        <button class="btn btn-default btn-sm" title="Remove" data-toggle="tooltip" data-widget="remove"> <i class="fa fa-times"></i> </button>
+                    </div>
+                </div>
+                <div class="panel-body"> panel class: <code>.panel</code>
+                    <p> amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel. berliner weisse wort chiller adjunct hydrometer alcohol aau! sour/acidic sour/acidic chocolate malt ipa ipa hydrometer. </p>
+                </div>
+                <div class="panel-footer"> <code>.panel-footer</code> </div>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    Panel content
+  <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-footer"</span><span class="nt">&gt;</span>Panel footer<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <p>情境效果---像其他组件一样，可以简单地通过加入有情境效果的状态类，给特定的内容使用更针对特定情境的面版。</p>
+        <div class="bs-example">
+            <p>实例：</p>
+            <div class="panel panel-primary"> 
+                <!-- Default panel contents -->
+                <div class="panel-heading"> <span class="h4">Default Box </span> </div>
+                <div class="panel-body"> panel class: <code>.panel  .panel-primary</code>
+                    <p> amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel. berliner weisse wort chiller adjunct hydrometer alcohol aau! sour/acidic sour/acidic chocolate malt ipa ipa hydrometer. </p>
+                </div>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
         <h3>Boxes </h3>
         <hr/>
         <p>Boxes是基于Bootstrap的panel和panel-*来创建的，里面还可根据自己的需求搭配按钮，分页等小部件；</p>
         <div class="row">
-            <div class="col-xs-4">
-                <div class="panel panel-default"> 
-                    <!-- Default panel contents -->
-                    <div class="panel-heading"> <span class="h4">Default Box </span>
-                        <div class=" pull-right">
-                            <button class="btn btn-default btn-sm" title="Collapse" data-toggle="tooltip" data-widget="collapse"> <i class="fa fa-minus"></i> </button>
-                            <button class="btn btn-default btn-sm" title="Remove" data-toggle="tooltip" data-widget="remove"> <i class="fa fa-times"></i> </button>
-                        </div>
-                    </div>
-                    <div class="panel-body"> panel class: <code>.panel</code>
-                        <p> amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel. berliner weisse wort chiller adjunct hydrometer alcohol aau! sour/acidic sour/acidic chocolate malt ipa ipa hydrometer. </p>
-                    </div>
-                    <div class="panel-footer"> <code>.panel-footer</code> </div>
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="panel panel-primary"> 
-                    <!-- Default panel contents -->
-                    <div class="panel-heading"> <span class="h4">Default Box </span> </div>
-                    <div class="panel-body"> panel class: <code>.panel</code>
-                        <p> amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel. berliner weisse wort chiller adjunct hydrometer alcohol aau! sour/acidic sour/acidic chocolate malt ipa ipa hydrometer. </p>
-                    </div>
-                </div>
-            </div>
             <div class="col-xs-4">
                 <div class="panel panel-success"> 
                     <!-- Default panel contents -->
@@ -70,8 +190,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="col-xs-4">
                 <div class="panel panel-warning"> 
                     <!-- Default panel contents -->
@@ -82,7 +200,6 @@
                                     <li ><a href="#">&laquo;</a></li>
                                     <li ><a href="#">1 <span class="sr-only">(current)</span></a></li>
                                     <li><a href="#">2</a></li>
-                                   
                                     <li><a href="#">&raquo;</a></li>
                                 </ul>
                             </nav>
@@ -97,16 +214,13 @@
                 <div class="panel panel-info"> 
                     <!-- Default panel contents -->
                     <div class="panel-heading"> <span class="h4">Default Box </span>
-                    <div class=" pull-right">
-                    <span class="label label-info">Info</span>
+                        <div class=" pull-right"> <span class="label label-info">Info</span> </div>
                     </div>
-                     </div>
                     <div class="panel-body"> panel class: <code>.panel</code>
                         <p> amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel. berliner weisse wort chiller adjunct hydrometer alcohol aau! sour/acidic sour/acidic chocolate malt ipa ipa hydrometer. </p>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
