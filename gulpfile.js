@@ -40,7 +40,7 @@ var styles = [
     'src/less/dashboard/widgets.less',
     'src/less/dashboard/hamburg.less',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
-
+    'src/bower_components/animate.less/animate.less',
     'src/less/reset.less',
     'src/less/index.less',
     'src/less/sb-admin-2.less',

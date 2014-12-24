@@ -8,7 +8,7 @@ $.widget("ui.soneLeftMenu", {
         var scope = this;
 
         $.ajax({
-            url: "/left.menu.json",
+            url: "json/left.menu.json",
             type: "GET",
             success: function(mydata) {
 

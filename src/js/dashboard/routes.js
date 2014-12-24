@@ -16,5 +16,10 @@ angular.module('Dashboard').config(['$stateProvider', '$urlRouterProvider',
         .state('tables', {
             url: '/tables', 
             templateUrl: 'tables.html'
+        })
+        .state('h5', {
+            url: '/h5', 
+            templateUrl: 'h5.html'
         });
+
 }]);
