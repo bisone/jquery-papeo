@@ -9,7 +9,6 @@
 
 // Import the library into your LESS file:
 @import 'keyframes.less'; // for lessphp, use 'keyframes_lessphp.less' instead
-@import 'animate-me.less'
 // For using keyframes, assuming you also have an animation LESS mixin like this (not included in library):
 .animation(@value) {
     -webkit-animation: @value;
@@ -34,10 +33,12 @@
 
 // Applying animation to fade-in block in 1.5 seconds
 .myBlock {
-    .animation(fadeIn 1.5s);
+    .animation(fadeIn 5s);
 }
 
-
+// #keytest{
+    // .myBlock;
+// }
 
 // Example 2. Three animation points
 
@@ -83,13 +84,13 @@
 
 
 // Example 4. Some crazy animation
-
+// @myVar: 123;
 .keyframes-item(crazy, 0%) {
     // first item cannot be empty, or keyframes could not be generated
     font-size: 72em;
 }
 .keyframes-item(crazy, 12%) {
-    .my-mixin(round(@myVar)); // you can use mixins, functions and variables
+    // .my-mixin(round(@myVar)); // you can use mixins, functions and variables
 }
 .keyframes-item(crazy, 21%) {
     // more
