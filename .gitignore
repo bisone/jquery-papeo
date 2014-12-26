@@ -46,3 +46,4 @@ npm-debug.log
 
 /dist
 *.bak
+src/sox/

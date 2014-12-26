@@ -58,7 +58,7 @@ var fonts = [
 var paths = {
     js: ['src/js/**/*.*', 'dist/js/templates.js'],
     json: ['src/json/**/*.*'],
-    files: ['src/index.html'],
+    files: ['src/index.html','src/weixin.html'],
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     fonts: fonts,
@@ -102,6 +102,9 @@ gulp.task('copy-templates', function() {
 gulp.task('copy-files', function(){
     gulp.src(paths.json)
         .pipe(gulp.dest('dist/json'));
+ // gulp.src('src/sox/**/**.*')
+        // .pipe(gulp.dest('dist/sox'));
+
 
     return gulp.src(paths.files)
         .pipe(gulp.dest('dist'));
