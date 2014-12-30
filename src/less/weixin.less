@@ -1,0 +1,28 @@
+@lesscompiler: 'js';
+@import 'animate-me.less';
+.animate-me(ani_arrow2;1.2s ease-in 0s infinite;'.ani_arrow2';
+           0%; '%stransform: translateY(10px); opacity:0';
+           40%; '%stransform: translateY(4px); opacity:1';
+           100%; '%stransform: translateY(-4px); opacity:0'
+           );
+
+
+.icos_arrow {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -25px;
+    &:before {
+        width: 40px;
+        height: 15px;
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 8px;
+        background-position: -0px -240px;
+        background-image: url(../img/icons.png);
+        background-repeat: no-repeat
+    };
+}
