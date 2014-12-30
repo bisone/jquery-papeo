@@ -395,5 +395,14 @@ $(function() {
 
 
 $(document).ready(function() {
-		$("#example1").dataTable();
+		$("#example1").dataTable(/*{
+        "columns": [
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "age" },
+            { "data": "start_date" },
+        ]
+    }*/);
 	});
+

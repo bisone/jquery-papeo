@@ -33,7 +33,7 @@
                 <p>实例：</p>
                 <div class="form-group">
                     <label class="checkbox-inline">
-                    <div id="dateRangePicker"	style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "> <i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span id="dateRange"></span> <b class="caret"></b> </div>
+                    <div id="dateRangePicker" style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "> <i class="glyphicon glyphicon-calendar fa fa-calendar"></i> <span id="dateRange"></span> <b class="caret"></b> </div>
                     </label>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 <pre>
  &lt;div class="form-group"&gt; 
 	&lt;label class="checkbox-inline"&gt;
-	&lt;div id="dateRangePicker"style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "&gt;
+	&lt;div id="dateRangePicker" style="border: 1px solid #bfbfbf; cursor: pointer;width:230px;height:32px;padding:5px 10px;background:white; "&gt;
 		  &lt;i class="glyphicon glyphicon-calendar fa fa-calendar"&gt;&lt;/i&gt; &lt;span id="dateRange"&gt;&lt;/span&gt; &lt;b class="caret"&gt;&lt;/b&gt;
            &lt;/div&gt;
 	&lt;/label&gt;
@@ -50,20 +50,18 @@
             </div>
             <h4>comboMenu</h4>
             <p>注：详情了解见帮助文档comboMenu</p>
-           
-            
-              <div class="bs-example">
-            <p>实例：</p>
-             <div class="form-group">
-                <label style="margin-left:0px;" class="checkbox-inline">
-                <div  class="clearfix">
-                    <div style="position:relative;" id="cmbDiv"></div>
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <label style="margin-left:0px;" class="checkbox-inline">
+                    <div  class="clearfix">
+                        <div style="position:relative;" id="cmbDiv"></div>
+                    </div>
+                    </label>
                 </div>
-                </label>
             </div>
-        </div>
-        <div class="highlight">
-<pre>
+            <div class="highlight">
+                <pre>
  &lt;div class="form-group"&gt;
         &lt;label style="margin-left:0px;" class="checkbox-inline"&gt;
                 &lt;div  class="clearfix"&gt;
@@ -72,32 +70,23 @@
         &lt;/label&gt;
 &lt;/div&gt;
 </pre>
-        </div>
-            
-            
-            
-            
+            </div>
             <h4>区域选择</h4>
-         
-         
-         
-            
-            
-      <div class="bs-example">
-            <p>实例：</p>
-               <div class="form-group">
-                <div style="border:1px solid #bbb;background:white;padding-left:10px;height:32px;width:190px;" > <span style="line-height:30px;vertical-align: top;">地区:</span>
-                    <input id="district_cn" type="text" 
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <div style="border:1px solid #bbb;background:white;padding-left:10px;height:32px;width:190px;" > <span style="line-height:30px;vertical-align: top;">地区:</span>
+                        <input id="district_cn" type="text" 
 									style="background:white;cursor: pointer; width: 100px; height: 30px;padding-bottom:2px;box-shadow:none;border:none;overflow:hidden;"
 									name="district_cn" value="全部数据" readonly>
-                    <input
+                        <input
 									name="citycategory" id="citycategory" style="display: none"
 									value="" />
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="highlight">
-<pre>
+            <div class="highlight">
+                <pre>
    &lt;div class="form-group"&gt;
         &lt;div style="border:1px solid #bbb;background:white;padding-left:10px;height:32px;width:190px;" &gt;
                  &lt;span style="line-height:30px;vertical-align: top;"&gt;地区:&lt;/span&gt;
@@ -108,78 +97,114 @@
           &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-        </div>       
-            
-            
-            
-            
-            
-            
+            </div>
             <div id="collapseOne" class="panel-collapse collapse in"> </div>
             <h4>jquery.inputmask </h4>
             <p> jQuery inputMask掩码插件，是一个很简单的掩码控制插件，实现对字母、数字、下划线三种类型的输入控制，你可以任意组合。</p>
             <p>使用说明：<a href="http://blog.sina.com.cn/s/blog_682ff6a50101o31v.html" target="_blank">http://blog.sina.com.cn/s/blog_682ff6a50101o31v.html</a></p>
-            <div class="row">
-                <div class="col-xs-6"> 
-                    
-                    <!-- Date dd/mm/yyyy -->
-                    <div class="form-group">
-                        <label>Date masks:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i> </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                        </div>
-                        <!-- /.input group --> 
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"> <i class="fa fa-calendar"></i> </div>
+                        <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                     </div>
-                    <!-- /.form group --> 
-                    
-                    <!-- Date mm/dd/yyyy -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i> </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
-                        </div>
-                        <!-- /.input group --> 
-                    </div>
-                    <!-- /.form group --> 
-                    </div>
-                    <div class="col-xs-6"> 
-                    <!-- phone mask -->
-                    <div class="form-group">
-                        <label>US phone mask:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon"> <i class="fa fa-phone"></i> </div>
-                            <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/>
-                        </div>
-                        <!-- /.input group --> 
-                    </div>
-                    <!-- /.form group --> 
-                    
-                    <!-- phone mask -->
-                    <div class="form-group">
-                        <label>Intl US phone mask:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon"> <i class="fa fa-phone"></i> </div>
-                            <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask/>
-                        </div>
-                        <!-- /.input group --> 
-                    </div>
-                    <!-- /.form group --> 
-                    
-                    <!-- IP mask -->
-                    <div class="form-group">
-                        <label>IP mask:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon"> <i class="fa fa-laptop"></i> </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask/>
-                        </div>
-                        <!-- /.input group --> 
-                    </div>
-                    <!-- /.form group --> 
                 </div>
+            </div>
+            <div class="highlight">
+                <pre>
+ &lt;div class="input-group">
+ &lt;div class="input-group-addon"&gt; &lt;i class="fa fa-calendar"&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/&gt;
+  &lt;/div&gt;
+</pre>
+            </div>
+            
+            <!-- Date mm/dd/yyyy -->
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"> <i class="fa fa-calendar"></i> </div>
+                        <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight">
+                <pre>
+ &lt;div class="input-group"&gt;
+    &lt;div class="input-group-addon"&gt; &lt;i class="fa fa-calendar"&gt;&lt;/i&gt; &lt;/div&gt;
+	&lt;input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            
+            <!-- phone mask --> 
+            
+            <!-- /.form group -->
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"> <i class="fa fa-phone"></i> </div>
+                        <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/>
+                    </div>
+                    <!-- /.input group --> 
+                </div>
+            </div>
+            <div class="highlight">
+                <pre>
+ &lt;div class="input-group"&gt;
+    &lt;div class="input-group-addon"&gt; &lt;i class="fa fa-phone"&gt;&lt;/i&gt; &lt;/div&gt;
+    &lt;input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- phone mask -->
+            
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"> <i class="fa fa-phone"></i> </div>
+                        <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask/>
+                    </div>
+                    <!-- /.input group --> 
+                </div>
+                <!-- /.form group --> 
+            </div>
+            <div class="highlight">
+                <pre>
+ &lt;div class="input-group"&gt;
+  &lt;div class="input-group-addon"&gt; &lt;i class="fa fa-phone"&gt;&lt;/i&gt; &lt;/div&gt;
+  &lt;input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask/&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <div class="bs-example">
+                <p>实例：</p>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"> <i class="fa fa-laptop"></i> </div>
+                        <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask/>
+                    </div>
+                    <!-- /.input group --> 
+                </div>
+            </div>
+            <div class="highlight">
+                <pre>
+
+&lt;div class="input-group"&gt;
+    &lt;div class="input-group-addon"&gt; &lt;i class="fa fa-laptop"&gt;&lt;/i&gt; &lt;/div&gt;
+    &lt;input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask/&gt;
+&lt;/div&gt;
+                        <!-- /.input group --> 
+                  
+</pre>
             </div>
         </div>
     </div>
+</div>
 </div>
 <script type="text/javascript" src="../../../js/vendors.min.js"></script> 
 <script src="http://cdn.bootcss.com/highcharts/4.0.4/highcharts-all.js"></script> 
