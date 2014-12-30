@@ -45,3 +45,5 @@ Icon
 npm-debug.log
 
 *.bak
+src/sox
+dist/sox
