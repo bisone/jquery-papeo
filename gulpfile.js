@@ -22,7 +22,9 @@ var vendors = [
     'src/bower_components/bootstrap/dist/js/bootstrap.js',
     'src/bower_components/w2ui/w2ui-1.4.2.js',
     'src/bower_components/moment/moment.js',
-    'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+    'src/bower_components/textillate/assets/jquery.fittext.js',
+    'src/bower_components/textillate/assets/jquery.lettering.js',
+    'src/bower_components/textillate/jquery.textillate.js',
     'src/bower_components/raphael/raphael.js'
 ];
 
@@ -46,6 +48,7 @@ var styles = [
     'src/less/sb-admin-2.less',
     'src/less/top.less',
     'src/less/combo.less',
+    'src/bower_components/textillate/assets/animate.css',
     'src/less/weixin.less'
 ];
 

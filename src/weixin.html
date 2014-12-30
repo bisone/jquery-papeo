@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="Dashboard">
+<html lang="en" >
 
   <head>
     <meta charset="utf-8">
@@ -13,10 +13,20 @@
   <body>
     <div id="wrapper">
 
-      <h1 class="animated flip">微信演示页面</h1>
-      <img src="img/html5/sbg4.jpg" alt="" class="animated flip" id="bg4"/>
+      <h1 class="tlt h1" data-in-effect="flash">微信演示页面</h1>
+      <img src="img/html5/1.png" alt="" class="animated flip" id="bg4"/>
       <div class="icos_arrow ani_arrow2"></div>
 
     </div>
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script>
+     $(function () {
+       $('.tlt').textillate({
+         // enable looping
+         loop: true}
+       );
+     })
+    </script>
+
   </body>
 </html>

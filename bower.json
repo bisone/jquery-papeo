@@ -29,6 +29,7 @@
     "font-awesome": "~4.2.0",
     "w2ui": "~1.4.2",
     "raphael": "~2.1.2",
-    "animate.less": "https://github.com/machito/animate.less.git#master"
+    "animate.less": "https://github.com/machito/animate.less.git#master",
+    "textillate": "*"
   }
 }
