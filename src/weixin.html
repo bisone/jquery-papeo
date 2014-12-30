@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
   </head>
   <body>
+    <div class="my-pagination "></div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <!--First Slide-->
@@ -18,8 +19,8 @@
           <!-- Any HTML content of the first slide goes here -->
           <div id="wrapper">
 
-            <img src="img/html5/1.png" alt="" class="animated flip" id="bg4"/>
             <h1 class="tlt h1" data-in-effect="flash">微信演示页面</h1>
+            <img src="img/html5/1.png" alt="" class="animated flip" id="bg4"/>
 
 
           </div>
@@ -46,7 +47,8 @@
        var mySwiper = $('.swiper-container').swiper({
          //Your options here:
          mode:'vertical',
-         loop: false 
+         loop: false ,
+         pagination: '.my-pagination'
          //etc..
        });
 
