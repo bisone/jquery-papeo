@@ -11,16 +11,45 @@
     <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
   </head>
   <body>
-    <div id="wrapper">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!--First Slide-->
+        <div class="swiper-slide">
+          <!-- Any HTML content of the first slide goes here -->
+          <div id="wrapper">
 
-      <h1 class="tlt h1" data-in-effect="flash">微信演示页面</h1>
-      <img src="img/html5/1.png" alt="" class="animated flip" id="bg4"/>
-      <div class="icos_arrow ani_arrow2"></div>
+            <img src="img/html5/1.png" alt="" class="animated flip" id="bg4"/>
+            <h1 class="tlt h1" data-in-effect="flash">微信演示页面</h1>
 
+
+          </div>
+        </div>
+
+        <!--Second Slide-->
+        <div class="swiper-slide">
+          <!-- Any HTML content of the second slide goes here -->
+          <h1 class="tlt h1" data-in-effect="flash">微信演示页面</h1>
+        </div>
+
+        <!--Third Slide-->
+        <div class="swiper-slide">
+          <!-- Any HTML content of the third slide goes here -->
+          <h1 class="tlt h1" data-in-effect="flash">微信演示页面</h1>
+        </div>
+        <!--Etc..-->
+      </div>
     </div>
+    <div class="icos_arrow ani_arrow2"></div>
     <script type="text/javascript" src="js/vendors.min.js"></script>
     <script>
      $(function () {
+       var mySwiper = $('.swiper-container').swiper({
+         //Your options here:
+         mode:'vertical',
+         loop: false 
+         //etc..
+       });
+
        $('.tlt').textillate({
          // enable looping
          loop: true}

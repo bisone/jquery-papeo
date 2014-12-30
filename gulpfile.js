@@ -25,6 +25,7 @@ var vendors = [
     'src/bower_components/textillate/assets/jquery.fittext.js',
     'src/bower_components/textillate/assets/jquery.lettering.js',
     'src/bower_components/textillate/jquery.textillate.js',
+    'src/bower_components/Swiper-master/dist/idangerous.swiper.js',
     'src/bower_components/raphael/raphael.js'
 ];
 
@@ -49,6 +50,7 @@ var styles = [
     'src/less/top.less',
     'src/less/combo.less',
     'src/bower_components/textillate/assets/animate.css',
+    'src/bower_components/Swiper-master/dist/idangerous.swiper.css',
     'src/less/weixin.less'
 ];
 
