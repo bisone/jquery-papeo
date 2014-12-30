@@ -8,6 +8,8 @@
 
 
 // Import the library into your LESS file:
+@import 'animate-me.less';
+// @import 'animate.less';
 @import 'keyframes.less'; // for lessphp, use 'keyframes_lessphp.less' instead
 // For using keyframes, assuming you also have an animation LESS mixin like this (not included in library):
 .animation(@value) {
@@ -19,7 +21,7 @@
 
 
 
-// Example 1. Basic usage 
+// Example 1. Basic usage
 
 // Preparing styles for animation points
 .keyframes-item(fadeIn, 0%) {
@@ -37,7 +39,7 @@
 }
 
 // #keytest{
-    // .myBlock;
+// .myBlock;
 // }
 
 // Example 2. Three animation points
@@ -124,3 +126,23 @@
         colorChange 4.5s 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     );
 }
+.keyframes-item(ani_arrow 0%) {
+    // finally!
+    opacity: 0;
+    transform: translateY(10px)
+
+}
+.keyframes-item(ani_arrow 40%) {
+    // finally!
+    opacity: 1;
+    transform: translateY(4px)
+
+}
+
+.keyframes-item(ani_arrow 100%) {
+    // finally!
+    opacity: 0;
+    transform: translateY(-4px)
+
+}
+

@@ -46,7 +46,7 @@ var styles = [
     'src/less/sb-admin-2.less',
     'src/less/top.less',
     'src/less/combo.less',
-    'src/less/usage.less'
+    'src/less/weixin.less'
 ];
 
 var fonts = [
