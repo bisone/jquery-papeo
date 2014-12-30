@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 <meta name="description" content="">
 <meta name="author" content="">
 <title>UI标准化模版</title>
@@ -52,7 +52,7 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <h4>无边框</h4>
+            <h4>无边框(默认UI)</h4>
             <div id="treeview7" class="test"></div>
         </div>
         <div class="col-sm-4">
@@ -95,6 +95,32 @@
     <br/>
     <br/>
     <br/>
+    <div class="highlight">
+        <pre>
+1.加载插件、Bootstrap、jQuery;
+&lt;script src="./js/bootstrap-treeview.js"&gt;&lt;/script&gt;
+2.HTML内容
+&lt;div id="treeview1"&gt;&lt;/div&gt;
+3.函数调用---详情见treeview.js
+//可以设置图标，字体颜色，背景颜色；
+ $('#treeview1').treeview({
+  		  expandIcon: "fa fa-plus-square",//设置展开图标
+          collapseIcon: "fa fa-minus-square",//设置收起图标
+          nodeIcon: "glyphicon glyphicon-user",//设置默认字段图标（可修改）
+          color: "#fff",
+          backColor: "#1ABC9C",//设置背景颜色
+          onhoverColor: "#16A085",//设置鼠标移上的背景颜色
+          borderColor: "#34495E",//设置边框颜色
+          showBorder: false,//设置边框
+          showTags: true,
+          highlightSelected: true, 
+          selectedColor: "#fff",
+          selectedBackColor: "#16A085",
+          data: defaultData
+        });
+
+</pre>
+    </div>
     <br/>
 </div>
 <script type="text/javascript" src="../../../js/vendors.min.js"></script> 

@@ -20,10 +20,12 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-xs-12 rightcontent"><br/>
-        <h3>Small Boxes</h3>
+    <div class="col-xs-12 rightcontent"> <br/>
+        <h3>jQuery线状图插件Sparkline</h3>
         <hr/>
-        <p>Small Boxes是用来查看统计数据。创建一个Small Boxes使用的class为small-box和匹配的bg - *类。</p>
+        <p>在sparkline中，我们可以找到基本的线图，柱图，饼图等等，它的使用语法是：$(selector).sparkline(values, options);</p>
+        <p>官网地址：<a href=" http://omnipotent.net/jquery.sparkline/"  target="_blank">http://omnipotent.net/jquery.sparkline/</a></p>
+        <p>文档地址：<a href="http://omnipotent.net/jquery.sparkline/#docs"  target="_blank">http://omnipotent.net/jquery.sparkline/#docs</a></p>
         <div class="tabBlock">
             <div class="row  tabBlock-tabs" >
                 <div class=" col-xs-3 tabBlock-tab is-active">
@@ -34,8 +36,7 @@
                             <p><small> ↓ 50.32% 3,419,779 </small></p>
                         </div>
                         <div  class="icon">
-                         
-                            <input type="text" class="knob" value="30" data-width="50" data-height="50" data-fgColor="#3c8dbc" data-readonly="true"/>
+                            <div class="sparkline" data-type="bar" data-width="70px" data-height="50px" data-bar-Width="5" data-bar-Spacing="2" > 6,4,8, -9, 10, -5, 13, 18, 21, -7, 9 </div>
                         </div>
                     </div>
                 </div>
@@ -71,7 +72,7 @@
                             <p><small> ↓ 50.32% 3,419,779 </small></p>
                         </div>
                         <div  class="icon">
-                            <div class="sparkline" data-type="bar" data-width="70px" data-height="50px" data-bar-Width="5" data-bar-Spacing="2" data-bar-Color="#f39c12"> 6,20,8, 9, 10, 5, 13, 18, 21, 7, 9 </div>
+                            <div class="sparkline" data-type="bar" data-width="70px" data-height="50px" data-bar-Width="5" data-bar-Spacing="2" data-bar-Color="#f39c12"> 6,4,8, 9, 10, 5, 13, 18, 21, 7, 9 </div>
                         </div>
                     </div>
                 </div>
@@ -90,6 +91,38 @@
                     <div > 2014年12月1 至2014年12月2日与上月同一时间段相比，在"全部"范围内，根据 " 全部" 区域内的数据显示， "血糖仪"产品中,产地的搜索次数为：0；品牌的搜索次数为：0；测试时间的搜索次数为：0；类别的搜索次数为：0；采血方式的搜索次数为：0。 </div>
                 </div>
             </div>
+        </div>
+        <div class="highlight">
+            <pre>
+实例
+1.js文件:
+&lt;script type="text/javascript" src="jquery.sparkline.js"&gt;&lt;/script&gt; 
+2.html代码
+柱状图
+&lt;div class="sparkline" data-type="bar" data-width="70px" data-height="50px" data-bar-Width="5" data-bar-Spacing="2" &gt; 6,4,8, -9, 10,  18, 21, -7, 9 &lt;/div&gt;
+饼图
+ &lt;div class="sparkline" data-type="pie" data-offset="90" data-width="50px" data-height="50px"&gt; 6,4,8 &lt;/div&gt;
+ 线形图
+ &lt;div class="sparkline" data-type="line" data-spot-Radius="2" data-highlight-Spot-Color="#f39c12" data-highlight-Line-Color="#222" data-min-Spot-Color="#f56954" data-max-Spot-Color="#00a65a" data-spot-Color="#39CCCC" data-offset="90" data-width="75px" data-height="50px" data-line-Width='1' data-line-Color='#39CCCC' data-fill-Color='rgba(57, 204, 204, 0.08)'&gt; 6,4,7,8,4,3,2,2,5,6,7,4,1,5,7,9,9,8,7,6 &lt;/div&gt;
+3.函数调用---详情见chart.js
+
+    $(function() {  
+        // 我们可以将值直接放入到span中  
+        $('.inlinesparkline').sparkline();   
+  
+        // 给定值  
+        var myvalues = [10,8,5,7,4,4,1];  
+        $('.dynamicsparkline').sparkline(myvalues);  
+  
+    // 给定值和参数，可以制定画图的类型以及颜色  
+        $('.dynamicbar').sparkline(myvalues, {type: 'bar', barColor: 'green'} );  
+  
+        // 使用'html' 参数的话是制定数据在标签中，代替一个数组值  
+        $('.inlinebar').sparkline('html', {type: 'bar', barColor: 'red'} );  
+    });  
+
+
+</pre>
         </div>
     </div>
 </div>

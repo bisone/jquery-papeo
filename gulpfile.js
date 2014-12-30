@@ -20,6 +20,8 @@ var vendors = [
 
     'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js',
+	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.zh-CN.js',
     'src/bower_components/raphael/raphael.js'
 
 ];
@@ -27,7 +29,8 @@ var thirdparty_styles=[
     'src/bower_components/w2ui/dist/w2ui.min.css',
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
-	'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css'
+	'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
+	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css'
 
 ];
 var styles = [
@@ -67,8 +70,8 @@ var widget=[
  'src/widget/jquery.inputmask.extensions.js',
  'src/widget/jquery.dataTables.js',
  'src/widget/dataTables.bootstrap.js',
- 'src/widget/jquery.knob.js',
- 'src/widget/jquery.sparkline.min'
+ 'src/widget/jquery.sparkline.min.js',
+ 'src/widget/bootstrap-treeview.js',
  
 
 ];

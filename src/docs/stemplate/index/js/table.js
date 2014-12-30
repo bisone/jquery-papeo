@@ -393,16 +393,58 @@ $(function() {
     });
 });
 
-
 $(document).ready(function() {
-		$("#example1").dataTable(/*{
-        "columns": [
-            { "data": "name" },
-            { "data": "position" },
-            { "data": "office" },
-            { "data": "age" },
-            { "data": "start_date" },
-        ]
-    }*/);
-	});
-
+	$('#example1').dataTable( {
+		"bAutoWidth": true,
+		"aLengthMenu": [[10, 25, 50,100, -1], [10, 25, 50,100, "All"]],
+		"bProcessing": true,
+		"sAjaxSource": 'data/arrays.txt',
+		"oLanguage": {
+			"sLengthMenu": "每页显示 _MENU_ 条记录",
+			"sZeroRecords": "抱歉， 没有找到",
+			"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+			"sInfoEmpty": "没有数据",
+			"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+			"oPaginate": {
+			"sFirst": "首页",
+			"sPrevious": "前一页",
+			"sNext": "后一页",
+			"sLast": "尾页"
+		},
+		"sZeroRecords": "没有检索到数据",
+		 "columnDefs": [{
+            "visible": false,
+            "targets": 2
+        }],
+        "order": [[1, 'asc']],
+        "drawCallback": function(settings) {
+            var api = this.api();
+            var rows = api.rows({
+                page: 'current'
+            }).nodes();
+            var last = null;
+ 
+            api.column(2, {
+                page: 'current'
+            }).data().each(function(group, i) {
+                if (last !== group) {
+                    $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+ 
+                    last = group;
+                }
+            });		
+		}
+		}
+	} );
+	
+	
+	$('#example1 tbody').on('click', 'tr.group',
+    function() {
+        var currentOrder = table.order()[0];
+        if (currentOrder[0] === 1 && currentOrder[1] === 'asc') {
+            table.order([1, 'desc']).draw();
+        } else {
+            table.order([1, 'asc']).draw();
+        }
+    });
+} );
