@@ -2,7 +2,6 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
- 
 <meta name="description" content="">
 <meta name="author" content="">
 <title>UI标准化模版</title>
@@ -39,11 +38,6 @@
                     <input type="file" id="exampleInputFile">
                     <p class="help-block">Example block-level help text here.</p>
                 </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">
-                        Check me out </label>
-                </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
@@ -62,10 +56,7 @@
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputFile"</span><span class="nt">&gt;</span>File input<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"exampleInputFile"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Example block-level help text here.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Check me out
+  
     <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
@@ -92,111 +83,6 @@
         <div class="highlight">
             <pre>
 <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-</pre>
-        </div>
-        <h3>多选和单选框</h3>
-        <p>多选框（checkbox）用于选择列表中的一个或多个选项，而单选框（radio）用于从多个选项中只选择一个。</p>
-        <p>设置了 <code>disabled</code> 属性的单选或多选框都能被赋予合适的样式。对于和多选或单选框联合使用的 <code>&lt;label&gt;</code> 标签，如果也希望将悬停于上方的鼠标设置为“禁止点击”的样式，请将 <code>.disabled</code> 类赋予 <code>.radio</code>、<code>.radio-inline</code>、<code>.checkbox</code>、<code>.checkbox-inline</code> 或 <code>&lt;fieldset&gt;</code>。</p>
-        <div class="bs-example">
-            <p>实例：</p>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="">
-                    Option one is this and that&mdash;be sure to include why it's great </label>
-            </div>
-            <div class="checkbox disabled">
-                <label>
-                    <input type="checkbox" value="" disabled>
-                    Option two is disabled </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Option one is this and that&mdash;be sure to include why it's great </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Option two can be something else and selecting it will deselect option one </label>
-            </div>
-            <div class="radio disabled">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                    Option three is disabled </label>
-            </div>
-        </div>
-        <div class="highlight">
-            <pre>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
-    Option one is this and that<span class="ni">&amp;mdash;</span>be sure to include why it's great
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox disabled"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    Option two is disabled
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    Option one is this and that<span class="ni">&amp;mdash;</span>be sure to include why it's great
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
-    Option two can be something else and selecting it will deselect option one
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio disabled"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    Option three is disabled
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre>
-        </div>
-        <h3>下拉列表（select）</h3>
-        <p>使用默认选项或添加 <code>multiple</code> 属性可以同时显示多个选项。</p>
-        <div class="bs-example">
-            <p>实例：</p>
-            <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <br/>
-            <select multiple class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="highlight">
-            <pre>
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>3<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>4<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>5<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
-
-<span class="nt">&lt;select</span> <span class="na">multiple</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>3<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>4<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>5<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
 </pre>
         </div>
         <h3>被禁用的输入框</h3>
@@ -226,11 +112,7 @@
                             <option>Disabled select</option>
                         </select>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">
-                            Can't check this </label>
-                    </div>
+                   
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </fieldset>
             </form>
@@ -248,11 +130,6 @@
       <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"disabledSelect"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;option&gt;</span>Disabled select<span class="nt">&lt;/option&gt;</span>
       <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Can't check this
-      <span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
@@ -286,27 +163,7 @@
                 <label class="control-label" for="inputError1">Input with error</label>
                 <input type="text" class="form-control" id="inputError1">
             </div>
-            <div class="has-success">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" id="checkboxSuccess" value="option1">
-                        Checkbox with success </label>
-                </div>
-            </div>
-            <div class="has-warning">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" id="checkboxWarning" value="option1">
-                        Checkbox with warning </label>
-                </div>
-            </div>
-            <div class="has-error">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" id="checkboxError" value="option1">
-                        Checkbox with error </label>
-                </div>
-            </div>
+           
         </div>
         <div class="highlight">
             <pre>
@@ -322,30 +179,8 @@
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"inputError1"</span><span class="nt">&gt;</span>Input with error<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputError1"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"has-success"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkboxSuccess"</span> <span class="na">value=</span><span class="s">"option1"</span><span class="nt">&gt;</span>
-      Checkbox with success
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"has-warning"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkboxWarning"</span> <span class="na">value=</span><span class="s">"option1"</span><span class="nt">&gt;</span>
-      Checkbox with warning
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"has-error"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkboxError"</span> <span class="na">value=</span><span class="s">"option1"</span><span class="nt">&gt;</span>
-      Checkbox with error
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+
+
 </pre>
         </div>
         <h3>添加额外的图标</h3>
@@ -602,7 +437,6 @@
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.row --&gt;</span>
 </pre>
         </div>
-       
     </div>
 </div>
 <script type="text/javascript" src="../../../js/vendors.min.js"></script> 

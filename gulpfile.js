@@ -30,7 +30,8 @@ var thirdparty_styles=[
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
 	'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
-	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css'
+	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css',
+	
 
 ];
 var styles = [
