@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 <meta name="description" content="">
 <meta name="author" content="">
 <title>UI标准化模版</title>
@@ -30,7 +30,6 @@
                 组件无数可复用的组件，包括字体图标、下拉菜单、导航、警告框、弹出框等更多功能。<br/>
                 JavaScript 插件jQuery 插件为 Bootstrap 的组件赋予了“生命”。可以简单地一次性引入所有插件，或者逐个引入到你的页面中。 </p>
             <p>官网：<a href="http://v3.bootcss.com/css/" target="_blank">http://v3.bootcss.com/css/</a></p>
-          
             <h4>2.字体图标</h4>
             <p>Glyphicons:<a href="http://v3.bootcss.com/components/#glyphicons" target="_blank">http://v3.bootcss.com/components/</a></p>
             <p>Font Awesome:<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">http://fortawesome.github.io/Font-Awesome/icons/</a></p>
@@ -40,6 +39,34 @@
             <h4>4.左边导航</h4>
             <p>注：jquery.menu.js</p>
             <pre>&lt;div id="left-menu"&gt;&lt;/div&gt;</pre>
+            <h4>5.必须引用的文件</h4>
+            <p> gulpfile.js是标准化UI引用的所有JS文件和css文件（函数调用文件除外），可根据自己的需求引用；</p>
+            <pre>
+js文件
+    'src/bower_components/jquery/dist/jquery.js',
+    'src/bower_components/bootstrap/dist/js/bootstrap.js',
+    'src/widget/jquery.sone.header.js',
+    'src/widget/jquery.menu.js',
+css文件
+    'src/bower_components/bootstrap/dist/css/bootstrap.css',
+    'src/bower_components/font-awesome/css/font-awesome.css',
+less文件
+  'src/less/dashboard/variables.less',
+    'src/less/dashboard/mixins.less',
+    'src/less/dashboard/main.less',
+    'src/less/dashboard/loading.less',
+    'src/less/dashboard/content.less',
+    'src/less/dashboard/header.less',
+    'src/less/dashboard/sidebar.less',
+    'src/less/dashboard/widgets.less',
+    'src/less/dashboard/hamburg.less',
+    'src/less/reset.less',
+    'src/less/index.less',
+    'src/less/sb-admin-2.less',
+    'src/less/top.less',
+    'src/less/combo.less',
+	'src/less/w2ui.less'
+            </pre>
         </div>
     </div>
 </div>

@@ -365,6 +365,9 @@ button.w2ui-btn-blue:hover{
 	}
 	
 /******************	dataTables样式*******************/
+.dataTables_processing{
+	display:none;}
+	
 div.dataTables_length label {
 	font-weight: normal;
 	float: left;
@@ -587,4 +590,80 @@ div.DTFC_RightFootWrapper table,
 div.DTFC_LeftFootWrapper table {
     border-top: none;
 }
+/**************datetimepicker**************/
+.datetimepicker table tr td span{
+	font-size:14px;
+	height:45px;
+	line-height:45px;
+	
+	
+	}
 
+.datetimepicker legend{
+	font-size:14px;
+	}
+	
+	
+.datetimepicker table tr td.active, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover, .datetimepicker table tr td.active:hover,.datetimepicker table tr td span.active, .datetimepicker table tr td span.active.disabled, .datetimepicker table tr td span.active.disabled:hover, .datetimepicker table tr td span.active:hover{
+	 background-image:none;
+	
+	}
+/*********checkbox,radio***************/
+
+.checkbox, .radio {
+    margin-bottom: 12px;
+    padding-left: 32px;
+    position: relative;
+    transition: all 0.25s ease 0s;
+}
+.checkbox:hover, .radio:hover {
+    color: #1abc9c;
+}
+.checkbox input, .radio input {
+    opacity: 0;
+    outline: medium none !important;
+}
+.checkbox.checked .icon, .radio.checked .icon {
+    background-position: -60px -30px;
+    opacity: 1;
+}
+.checkbox.checked .icon-to-fade, .radio.checked .icon-to-fade {
+    opacity: 0;
+}
+.checkbox.disabled, .radio.disabled {
+    color: #d7dddd;
+    cursor: default;
+}
+.checkbox.disabled .icon, .radio.disabled .icon {
+    opacity: 0;
+}
+.checkbox.disabled .icon-to-fade, .radio.disabled .icon-to-fade {
+    background-position: -30px -60px;
+    opacity: 1;
+}
+.checkbox.disabled.checked .icon, .radio.disabled.checked .icon {
+    background-position: 0 -90px;
+    opacity: 1;
+}
+.checkbox.disabled.checked .icon-to-fade, .radio.disabled.checked .icon-to-fade {
+    opacity: 0;
+}
+.checkbox .icon, .checkbox .icon-to-fade, .radio .icon, .radio .icon-to-fade {
+    background:url(../img/checkbox.png) no-repeat scroll -90px 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 20px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: -1px;
+    transition: opacity 0.1s linear 0s;
+    width: 20px;
+}
+.checkbox .icon, .radio .icon {
+    opacity: 0;
+    top: 0;
+    z-index: 2;
+}
+.radio .icon, .radio .icon-to-fade {
+    background-image:url(../img/radio.png);
+}

@@ -31,6 +31,7 @@ var vendors = [
 	'src/bower_components/jquery-treetable/jquery.treetable.js',  
 	'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+
     'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
 	'src/bower_components/bootstrap-select/js/bootstrap-select.js', 
 	'src/bower_components/metisMenu/dist/metisMenu.js',
@@ -43,7 +44,6 @@ var vendors = [
 	
 	'src/other_components/datatablebootstrap/dataTables.bootstrap.js',
 	'src/other_components/sparkline/jquery.sparkline.js',
-	
 
 ];
 
@@ -90,7 +90,6 @@ var widget=[
  'src/widget/jquery.sone.demandgraph.js',
  'src/widget/jquery.sone.header.js',
  'src/widget/jquery.sone.provincepicker.js'
- 
 
 ];
 

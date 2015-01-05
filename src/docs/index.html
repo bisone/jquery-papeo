@@ -1,43 +1,38 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>UI标准化模版</title>
-	<link rel="stylesheet" type="text/css" href="css/thirdpart.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.min.css">
-    <!-- ECharts单文件引入 -->
-    <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
-
-    
-  </head>
-  <body>
-    <div id="wrapper" >
-
-      <div id="header"></div>
-	  <div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
-		<div class="cont" style="display:none;"> 
-			<ul>
-				<li ><a href="javascript:;">基础分析</a></li>
-				<li class="curr"><a href="javascript:;">专题分析</a></li>
-				<li><a href="javascript:;">多维分析</a></li>
-				<li><a href="javascript:;">专题分析</a></li>
-				<li><a href="javascript:;">多维分析</a></li>
-			</ul>
-		</div>
-			<div class="cont" style="display:none;">
-			   <ul>
-				  <li  class="curr"><a href="javascript:;">UI标准化框架</a></li>
-				  <li><a href="javascript:;">Bootstrap</a></li>
-				  <li><a href="javascript:;">highchart</a></li>
-				  <li><a href="javascript:;">echarts</a></li>
-				</ul>
-
-			</div>
-    
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="description" content="">
+<meta name="author" content="">
+<title>UI标准化模版</title>
+<link rel="stylesheet" type="text/css" href="css/thirdpart.min.css">
+<link rel="stylesheet" type="text/css" href="../css/dashboard.min.css">
+<!-- ECharts单文件引入 -->
+<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+</head>
+<body>
+<div id="wrapper" >
+    <div id="header"></div>
+    <div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;">
+        <div class="cont" style="display:none;">
+            <ul>
+                <li ><a href="javascript:;">基础分析</a></li>
+                <li class="curr"><a href="javascript:;">专题分析</a></li>
+                <li><a href="javascript:;">多维分析</a></li>
+                <li><a href="javascript:;">专题分析</a></li>
+                <li><a href="javascript:;">多维分析</a></li>
+            </ul>
+        </div>
+        <div class="cont" style="display:none;">
+            <ul>
+                <li  class="curr"><a href="javascript:;">UI标准化框架</a></li>
+                <li><a href="javascript:;">Bootstrap</a></li>
+                <li><a href="javascript:;">highchart</a></li>
+                <li><a href="javascript:;">echarts</a></li>
+            </ul>
+        </div>
     </div>
+
 
 
      <div id="left-menu">  </div>
@@ -46,6 +41,7 @@
     <script type="text/javascript" src="../widget/dashboard-widget.min.js"></script>
 	<script type="text/javascript" src="../js/common-init.js"></script>
 	<script type="text/javascript" language="javascript">
+
 	    $("#header .nav li").removeClass("curr");
 	    $("#header .nav li:eq(1)").addClass("curr");
 		
@@ -59,14 +55,10 @@
         }
     }
 	</script>
-	<div id="page-wrapper" >
-		<iframe  src ="bootstrap/bootstrap-3.2.0/docs/indexjs.html"  frameborder="0" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%"  onload="autoHeight();"></iframe>
-    </div> 
-	 
+    <div id="page-wrapper" >
+        <iframe  src ="bootstrap/bootstrap-3.2.0/docs/indexjs.html"  frameborder="0" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%"  onload="autoHeight();">
+        </iframe>
     </div>
-   
-    
-
-  </body>
- 
+</div>
+</body>
 </html>

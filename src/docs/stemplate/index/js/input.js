@@ -128,6 +128,43 @@ $(function() {
 });
 
 
+//datetimepicker
+ $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm',
+		ShowUpDown:true,
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 3,
+		minView: 3,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+	
+	
+	
 //daterangepicker
 $(function() {
 	var cb = function(start, end, label) {
@@ -193,7 +230,7 @@ $(function() {
 
 	$('#dateRangePicker').daterangepicker(optionSet1, cb);
 		
-		
+	
     
 });
 //provincepicker
@@ -216,6 +253,7 @@ $(function() {
 
 
 $(document).ready(function() {
+	
 	// Datemask dd/mm/yyyy
 	$("#datemask").inputmask("dd/mm/yyyy", {
 				"placeholder" : "dd/mm/yyyy"

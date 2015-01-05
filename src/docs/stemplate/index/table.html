@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 <meta name="description" content="">
 <meta name="author" content="">
 <title>UI标准化模版</title>
@@ -21,449 +21,172 @@
 <body>
 <div class="row">
     <div class="col-xs-12 rightcontent"> <br/>
+        <h4>Datatables(默认UI)</h4>
+        <p> Datatables 插件使用 Bootstrap 框架的基本示例。基本功能：分页、排序、过滤。</p>
+        <p>Datatables中文网:<a href="http://dt.thxopen.com/" target="_blank">http://dt.thxopen.com/</a></p>
+        <p> jQuery的DataTables插件的使用方法:<a href="http://www.guoxk.com/node/jquery-datatables" target="_blank"> http://www.guoxk.com/node/jquery-datatables</a></p>
+        <div class="panel panel-default" >
+            <div class="panel-heading" >
+                <h4 class="panel-title">DataTables </h4>
+            </div>
+            <div class="panel-body table-responsive">
+                <table id="example1" class="table table-bordered table-condensed table-striped table-hover" >
+                    <thead>
+                        <tr>
+                            <th>Rendering </th>
+                            <th>Browser</th>
+                            <th>Platform(s)</th>
+                            <th>Engine version</th>
+                            <th>CSS grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5">Loading data from server</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Rendering</th>
+                            <th>Browser</th>
+                            <th>Platform(s)</th>
+                            <th>Engine version</th>
+                            <th>CSS grade</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre>
+ 1.js文件
+ src/widget/jquery.dataTables.js
+ src/widget/dataTables.bootstrap.js
+ 2.函数调用---详情见table.js
+$(document).ready(function() {
+$('#example1').dataTable( {
+	"bAutoWidth": true, //自动宽度
+	"aLengthMenu": [[10, 25, 50,100, -1], [10, 25, 50,100, "All"]], //定义每页显示数据数量
+	"bProcessing": true,
+	"sAjaxSource": 'data/arrays.txt', //用ajax
+	"oLanguage": {  //改变语言
+		"sLengthMenu": "每页显示 _MENU_ 条记录",
+		"sZeroRecords": "抱歉， 没有找到",
+		"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+		"sInfoEmpty": "没有数据",
+		"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+		"oPaginate": {
+		"sFirst": "首页",
+		"sPrevious": "前一页",
+		"sNext": "后一页",
+		"sLast": "尾页"
+	},
+	"sZeroRecords": "没有检索到数据",
+	}
+} );
+} );
+</pre>
+        </div>
         <div class="panel-group" id="accordion">
             <h4>w2ui</h4>
             <p>w2ui 是一个jQuery UI 库，包括了许多控件用于创建类似于桌面应用和数据驱动的Web程序。
                 它包含了以下控件：layout, sidebar, toolbar, grid, popup, tabs, forms 和 field controls。这些控件采用HTML5-CSS3技术实现，并拥有强大的API来控制它们的各个方面。</p>
             <p>w2ui官网：<a href="http://w2ui.com/web/home" target="_blank">http://w2ui.com/web/home</a></p>
             <div id="grid" style="height: 400px;"></div>
-            <h4>Datatables</h4>
-            <p> Datatables 插件使用 Bootstrap 框架的基本示例。基本功能：分页、排序、过滤。</p>
-            <p>官网:<a href="http://www.datatables.net/" target="_blank">http://www.datatables.net/</a></p>
-            <p> jQuery的DataTables插件的使用方法:<a href="http://www.guoxk.com/node/jquery-datatables" target="_blank"> http://www.guoxk.com/node/jquery-datatables</a></p>
-            <div class="panel panel-default">
-                <div class="panel-heading" >
-                    <h4 class="panel-title">DataTables </h4>
-                </div>
-                <div class="panel-body table-responsive">
-                    <table id="example1" class="table table-bordered table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet
-                                    Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td> 4</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet
-                                    Explorer 5.0</td>
-                                <td>Win 95+</td>
-                                <td>5</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet
-                                    Explorer 5.5</td>
-                                <td>Win 95+</td>
-                                <td>5.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet
-                                    Explorer 6</td>
-                                <td>Win 98+</td>
-                                <td>6</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet Explorer 7</td>
-                                <td>Win XP SP2+</td>
-                                <td>7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>AOL browser (AOL desktop)</td>
-                                <td>Win XP</td>
-                                <td>6</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 1.0</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 1.5</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 2.0</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 3.0</td>
-                                <td>Win 2k+ / OSX.3+</td>
-                                <td>1.9</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Camino 1.0</td>
-                                <td>OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Camino 1.5</td>
-                                <td>OSX.3+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Netscape 7.2</td>
-                                <td>Win 95+ / Mac OS 8.6-9.2</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Netscape Browser 8</td>
-                                <td>Win 98SE+</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Netscape Navigator 9</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.0</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.1</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.2</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.2</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.3</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.4</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.4</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.5</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.6</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.6</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.7</td>
-                                <td>Win 98+ / OSX.1+</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.8</td>
-                                <td>Win 98+ / OSX.1+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Seamonkey 1.1</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Epiphany 2.20</td>
-                                <td>Gnome</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 1.2</td>
-                                <td>OSX.3</td>
-                                <td>125.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 1.3</td>
-                                <td>OSX.3</td>
-                                <td>312.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 2.0</td>
-                                <td>OSX.4+</td>
-                                <td>419.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 3.0</td>
-                                <td>OSX.4+</td>
-                                <td>522.1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>OmniWeb 5.5</td>
-                                <td>OSX.4+</td>
-                                <td>420</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>iPod Touch / iPhone</td>
-                                <td>iPod</td>
-                                <td>420.1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>S60</td>
-                                <td>S60</td>
-                                <td>413</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 7.0</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 7.5</td>
-                                <td>Win 95+ / OSX.2+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 8.0</td>
-                                <td>Win 95+ / OSX.2+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 8.5</td>
-                                <td>Win 95+ / OSX.2+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 9.0</td>
-                                <td>Win 95+ / OSX.3+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 9.2</td>
-                                <td>Win 88+ / OSX.3+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 9.5</td>
-                                <td>Win 88+ / OSX.3+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera for Wii</td>
-                                <td>Wii</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Nokia N800</td>
-                                <td>N800</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Nintendo DS browser</td>
-                                <td>Nintendo DS</td>
-                                <td>8.5</td>
-                                <td>C/A<sup>1</sup></td>
-                            </tr>
-                            <tr>
-                                <td>KHTML</td>
-                                <td>Konqureror 3.1</td>
-                                <td>KDE 3.1</td>
-                                <td>3.1</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>KHTML</td>
-                                <td>Konqureror 3.3</td>
-                                <td>KDE 3.3</td>
-                                <td>3.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>KHTML</td>
-                                <td>Konqureror 3.5</td>
-                                <td>KDE 3.5</td>
-                                <td>3.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 4.5</td>
-                                <td>Mac OS 8-9</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 5.1</td>
-                                <td>Mac OS 7.6-9</td>
-                                <td>1</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 5.2</td>
-                                <td>Mac OS 8-X</td>
-                                <td>1</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>NetFront 3.1</td>
-                                <td>Embedded devices</td>
-                                <td>-</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>NetFront 3.4</td>
-                                <td>Embedded devices</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>Dillo 0.8</td>
-                                <td>Embedded devices</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>Links</td>
-                                <td>Text only</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>Lynx</td>
-                                <td>Text only</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>IE Mobile</td>
-                                <td>Windows Mobile 6</td>
-                                <td>-</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>PSP browser</td>
-                                <td>PSP</td>
-                                <td>-</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>U</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <!-- /.box-body --> 
-                
+            <div class="highlight">
+                <pre>
+ 1.js文件
+ src/bower_components/w2ui/dist/w2ui.min.js
+ 2.css文件
+ src/bower_components/w2ui/dist/w2ui.min.css
+ 3.html代码
+ &lt;div id="grid" style="height: 400px;"&gt;&lt;/div&gt;
+ 4.函数调用---详情见table.js
+ $(function() {
+    $('#grid').w2grid({
+        name : 'grid',
+        header : '列表名称',
+        show : {  //基础属性配置
+            toolbar : true,
+            footer : true,
+            header : true,
+            lineNumbers: true,
+            selectColumn: true,
+            expandColumn: true
+        },
+        searches : [ {//搜索字段
+            field : 'lname',
+            caption : '名字',
+            type : 'text'
+        }, {
+            field : 'fname',
+            caption : '姓氏',
+            type : 'text'
+        }, {
+            field : 'email',
+            caption : '邮箱',
+            type : 'text'
+        } ],
+        sortData : [ {
+            field : 'recid',
+            direction : 'ASC'
+        } ],
+        columns : [ {//表格表头的控制
+            field : 'recid',
+            caption : 'ID',
+            size : '50px',
+            sortable : true,
+            attr : 'align=center'
+        }, {
+            field : 'lname',
+            caption : '姓氏',
+            size : '30%',
+            sortable : true,
+            resizable : true
+        }, {
+            field : 'fname',
+            caption : '名字',
+            size : '30%',
+            sortable : true,
+            resizable : true
+        }, {
+            field : 'email',
+            caption : '邮件',
+            size : '40%',
+            sortable : true,
+            resizable : true
+        }, {
+            field : 'sdate',
+            caption : '起始时间',
+            size : '120px',
+            sortable : true,
+            resizable : true
+        } ],
+        records : [ {//字段数据
+            recid : 1,
+            fname : 'John',
+            lname : 'doe',
+            email : 'jdoe@gmail.com',
+            sdate : '4/3/2012'
+        },
+        .
+        .
+        .  
+        
+         {
+            recid : 2,
+            fname : 'Stuart',
+            lname : 'Motzart',
+            email : 'jdoe@gmail.com',
+            sdate : '4/3/2012'
+        }, 
+        onExpand: function (event) {//隐藏的内容
+            $('#'+event.box_id).html('<div style="padding: 10px">Expanded content</div>').animate({ 'height': 100 }, 100);
+        }
+    });
+});
+
+                </pre>
             </div>
         </div>
     </div>
@@ -472,5 +195,6 @@
 <script src="http://cdn.bootcss.com/highcharts/4.0.4/highcharts-all.js"></script> 
 <script type="text/javascript" src="../../../widget/dashboard-widget.min.js"></script> 
 <script type="text/javascript" src="js/table.js"></script>
+
 </body>
 </html>

@@ -7,6 +7,8 @@ a {
 a:hover, a:focus {
 	text-decoration: none;
 }
+li{
+	list-style:none;}
 #wrapper{
 	background: none repeat scroll 0 0 #f4f4f4;
 	}
@@ -170,6 +172,7 @@ a:hover, a:focus {
 	 z-index: 10;
 	 .itm-lv1 {
 		 border-left:none;
+		
 		 .con {
 		 display: none;
 		}
@@ -193,12 +196,14 @@ a:hover, a:focus {
 	.item-open {
 		background-color: #fff;
 		color: #fff;
-	 //border-left: 5px solid #fff;
+	
 		 &:hover {
 		 color:#54ade5;
+		  background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
 		}
+	
 		.itm-lv1 {
-			 background:url(../img/menu-active.png) no-repeat scroll right center transparent !important;
+			
 			 span {
 			 color:#54ade5;
 			}
