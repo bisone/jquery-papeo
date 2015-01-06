@@ -31,7 +31,8 @@ var vendors = [
 	'src/bower_components/jquery-treetable/jquery.treetable.js',  
 	'src/bower_components/moment/moment.js',
     'src/bower_components/bootstrap-daterangepicker/daterangepicker.js',
-
+    'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js',
+	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.zh-CN.js',
     'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
 	'src/bower_components/bootstrap-select/js/bootstrap-select.js', 
 	'src/bower_components/metisMenu/dist/metisMenu.js',
