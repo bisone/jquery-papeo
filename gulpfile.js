@@ -15,12 +15,12 @@ var vendors = [
 	'src/bower_components/bootstrap/dist/js/bootstrap.js',
 	//'src/bower_components/html5shiv/dist/html5shiv.js',
 	//'src/bower_components/respond/dest/respond.min',
-    'src/bower_components/underscore/underscore.js',
-	'src/bower_components/backbone/backbone.js',
+    //'src/bower_components/underscore/underscore.js',
+	//'src/bower_components/backbone/backbone.js',
 	
 	'src/bower_components/raphael/raphael.js',
 	//'src/bower_components/highstock/highstock.js',
-	'src/bower_components/highcharts/highcharts-all.js',
+	//'src/bower_components/highcharts/highcharts-all.js',
 	//'src/bower_components/highstock/modules/exporting.js',
     //'src/bower_components/highstock/modules/drilldown.js',
     //'src/bower_components/highstock/modules/data.js',
@@ -41,9 +41,11 @@ var vendors = [
 	'src/bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js',
 	'src/bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
 	'src/bower_components/aterrien/jQuery-Knob/js/jquery.knob.js',
+	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js',
+	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.zh-CN.js',
 	
-	'src/other_components/datatablebootstrap/dataTables.bootstrap.js',
-	'src/other_components/sparkline/jquery.sparkline.js',
+	'src/js/third-party/datatablebootstrap/dataTables.bootstrap.js',
+	'src/js/third-party/sparkline/jquery.sparkline.js',
 
 ];
 
@@ -52,11 +54,12 @@ var thirdparty_styles=[
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
 	'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
-	'src/bower_components/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.0.custom.js',
+	'src/bower_components/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.0.custom.css',
 	'src/bower_components/jquery-treetable/css/jquery.treetable.css',
 	'src/bower_components/jquery-treetable/css/jquery.treetable.theme.default.css',
 	//'src/bower_components/datatables/media/css/jquery.dataTables.css',
-	'src/bower_components/metisMenu/dist/metisMenu.css'
+	'src/bower_components/metisMenu/dist/metisMenu.css',
+	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css'
 
 ];
 var styles = [
@@ -85,17 +88,23 @@ var fonts = [
 ];
 var widget=[
 
- 'src/widget/jquery.sone.combomenu.js',
- 'src/widget/jquery.sone.menu.js',
- 'src/widget/jquery.sone.demandgraph.js',
- 'src/widget/jquery.sone.header.js',
- 'src/widget/jquery.sone.provincepicker.js'
+	 'src/js/sone-widget/jquery.sone.combomenu.js',
+	 'src/js/sone-widget/jquery.sone.demandgraph.js',
+	 'src/js/sone-widget/jquery.sone.provincepicker.js'
 
 ];
 
+var ui=[
+    'src/js/sone-ui/jquery.sone.menu.js',
+    'src/js/sone-ui/jquery.sone.header.js'
+];
+
+var example=[
+    'src/js/sone-example/common-init.js',
+	'src/js/sone-example/center-init.js'
+];
+
 var paths = {
-    js: ['src/js/common-init.js','src/js/center-init.js'],
-	//widget:['src/widget/**/*.*'],
 	widget:widget,
     files: ['src/index.html','src/index-debug.html'],
 	json:['src/json/**/*.*'],
@@ -117,25 +126,34 @@ gulp.task('copy-vendors', function() {
     return gulp.src(paths.vendors)
         .pipe(uglify())
         .pipe(concat('vendors.min.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js/third-party'));
 });
 
-// Minify and copy all dashboard widget files to dashboard-widget.min.js
+// Minify and copy all sone ui files to js/sone-ui/sone-ui.min.js
+gulp.task('copy-soneui', function() {
+    return gulp.src(ui)
+        //.pipe(uglify())
+        .pipe(concat('sone-ui.min.js'))
+    // .pipe(insert.prepend('\'use strict\';'))
+        .pipe(gulp.dest('dist/js/sone-ui'));
+});
+
+// Minify and copy all dashboard widget files to js/sone-widget/sone-widget.min.js
 gulp.task('copy-widget', function() {
     return gulp.src(paths.widget)
         //.pipe(uglify())
-        .pipe(concat('dashboard-widget.min.js'))
+        .pipe(concat('sone-widget.min.js'))
     // .pipe(insert.prepend('\'use strict\';'))
-        .pipe(gulp.dest('dist/widget'));
+        .pipe(gulp.dest('dist/js/sone-widget'));
 });
 
-// Minify and copy all dashboard example script files to dashboard-init.min.js
-gulp.task('copy-scripts', function() {
-    return gulp.src(paths.js)
+//copy all dashboard example script files to js/example
+gulp.task('copy-example', function() {
+    return gulp.src(example)
         //.pipe(uglify())
       //  .pipe(concat('dashboard-init.min.js'))
     // .pipe(insert.prepend('\'use strict\';'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js/sone-example'));
 });
 
 // Minify and copy all angular templates to templates.min.js
@@ -179,7 +197,7 @@ gulp.task('compile-thirdparty-less', function(){
     return gulp.src(paths.thirdparty_styles)
         .pipe(less())
         .pipe(cssmin())
-        .pipe(concat('thirdpart.min.css'))
+        .pipe(concat('third-party.min.css'))
         .pipe(gulp.dest('dist/css'));
 });
 
@@ -188,7 +206,7 @@ gulp.task('compile-less', function(){
     return gulp.src(paths.styles)
         .pipe(less())
         .pipe(cssmin())
-        .pipe(concat('dashboard.min.css'))
+        .pipe(concat('sone-ui.min.css'))
         .pipe(gulp.dest('dist/css'));
 });
 
@@ -201,7 +219,7 @@ gulp.task('copy-docs', function(){
 //copy the html5 patch
 gulp.task('copy-html5', function(){
     return gulp.src(paths.html5Patch)
-        .pipe(gulp.dest('dist/js/html5patch'));
+        .pipe(gulp.dest('dist/js/third-party/html5patch'));
 });
 
 
@@ -210,7 +228,8 @@ gulp.task('copy-html5', function(){
  */
 gulp.task('watch', function () {
     gulp.watch(paths.vendors, ['copy-vendors']);
-    gulp.watch(paths.js, ['copy-scripts']);
+    gulp.watch(paths.js, ['copy-soneui']);
+	gulp.watch(paths.js, ['copy-example']);
     gulp.watch(paths.templates, ['copy-templates']);
     gulp.watch(paths.files, ['copy-files']);
     gulp.watch(paths.images, ['copy-images']);
@@ -242,7 +261,7 @@ gulp.task('webserver', function() {
     });
 });
 
-gulp.task('build', ['copy-vendors','copy-widget', 'copy-scripts', 'copy-templates', 'copy-files','copy-json', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs', 'copy-html5']);
+gulp.task('build', ['copy-vendors','copy-soneui', 'copy-widget', 'copy-example', 'copy-templates', 'copy-files','copy-json', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs', 'copy-html5']);
 
 //gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
  gulp.task('default', ['build', 'webserver']);

@@ -128,7 +128,7 @@ $(function() {
 });
 
 //daterangepicker
-/*$(function() {
+$(function() {
 	var cb = function(start, end, label) {
 					$('#dateRangePicker span').html(
 							start.format('YYYY-MM-D') + ' - '
@@ -194,7 +194,7 @@ $(function() {
 		
 		
     
-});*/
+});
 //provincepicker
 $(function() {
 	$("#district_cn").provincepicker({

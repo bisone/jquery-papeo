@@ -30,12 +30,10 @@ $.widget("ui.soneHeader", {
 					pct : '70%',
 					style : 'p-type3'
 				}],
-		user : [{
-					userImg : './img/avatar3.png',
-					userName : '李某某--营销开发部',
-					usermes : 'Member since Nov. 2012'
-
-				}]
+		userImg : './img/avatar3.png',
+		userInfo:{},
+		logoUrl:'',
+		logoutUrl:'javascript:;;'
 	},
 
 	_create : function() {
@@ -46,7 +44,8 @@ $.widget("ui.soneHeader", {
 				 type: "GET",
 				 success:function(mydata) {
 					try{
-						mydata = $.parseJSON(mydata);
+						//mydata = $.parseJSON(mydata);
+						mydata = eval(mydata);
 					}catch(e){
 					}
 					scope.createTemplate(mydata);
@@ -62,8 +61,16 @@ $.widget("ui.soneHeader", {
 		
 	},
 	createTemplate:function(mydata){
+	    var logoText='';
+		var logoStyle='';
+		if(this.options.logoUrl==''){
+		    logoText='UI标准化模版';
+		}else{
+		    logoStyle='style="background:url('+this.options.logoUrl+') no-repeat"';
+		}
+		var userName=this.options.userInfo.userName||'';
 	    var tpl = $('<div class="header-main"> '
-				+ '<div class="logo">UI标准化模版</div>'
+				+ '<div class="logo"'+logoStyle+'>'+logoText+'</div>'
 				+ '<div  class="nav" id="navlist">'
 				+ '<ul id="navfouce"></ul>'
 				+ '</div>'
@@ -87,7 +94,7 @@ $.widget("ui.soneHeader", {
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore2 " role="menu"><li class="header"> <h4>4个项目正在进行</h4></li></ul>'
 				+ ' </li>'
 				+ ' <li class="dropdown user-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i style="font-style:normal ">李某某</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
+				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i style="font-style:normal ">'+userName+'</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
 				+ ' </li>' + ' </ul>' + '</div>'
 				//二级菜单
 				+'<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;"></div>'
@@ -137,22 +144,28 @@ $.widget("ui.soneHeader", {
 							+ '"></b><s></s></span>' + '</a>' + '</li>';
 					tpl.find(".navbar-right  .fore2").append(item);
 				});
-		$.each(this.options.user, function(k, v) {
-
-			var item = '<li  class="text-center user-header ">'
-					+ ' <img src="'
-					+ v.userImg
-					+ '" class="img-circle" alt="">'
-					+ '<h4 class="text-center">'
-					+ v.userName
-					+ '</h4>'
-					+ '<p class="text-center">'
-					+ v.usermes
-					+ '</p>'
-					+ '</li>'
-					+ '<li class="user-footer"><div class="pull-left"><a class="btn btn-default btn-flat" href="#">Profile</a></div><div class="pull-right"><a class="btn btn-default btn-flat" href="#">Sign out</a></div></li>';
-			tpl.find(".navbar-right  .fore3").append(item);
-		});
+		
+        var userInfo=this.options.userInfo;
+		userInfo.userName=userInfo.userName||'';
+		userInfo.logonTime=userInfo.logonTime||'';
+		userInfo.userImg=userInfo.userImg||this.options.userImg;
+		var logoutUrl=this.options.logoutUrl;
+		//var profile=<div class="pull-left"><a class="btn btn-default btn-flat" href="javascript:;;">Profile</a></div> 暂时不用
+		var item = '<li  class="text-center user-header ">'
+		         +'<div style="background:(url('+userInfo.userImg+')"></div>'
+				//+ ' <img src="'
+				//+ userInfo.userImg
+				//+ '" class="img-circle" alt="">'
+				+ '<h4 class="text-center">'
+				+ userInfo.userName
+				+ '</h4>'
+				+ '<p class="text-center">'
+				+ userInfo.logonTime
+				+ '</p>'
+				+ '</li>'
+				+ '<li class="user-footer"><div class="pull-right"><a class="btn btn-default btn-flat" href="'+logoutUrl+'">Sign out</a></div></li>';
+		tpl.find(".navbar-right  .fore3").append(item);
+		
 
 		this.element.html(tpl);
 

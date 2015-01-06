@@ -17,7 +17,8 @@ $.widget("ui.soneLeftMenu", {
 						type : "GET",
 						success : function(mydata) {
 							try {
-								mydata = $.parseJSON(mydata);
+								//mydata = $.parseJSON(mydata);
+								mydata = eval(mydata);
 								
 							} catch (e) {
 							}
