@@ -2,18 +2,18 @@ $.widget("ui.soneHeader", {
 	options : {
 		//modelNames : ['UI标准化模板'],
 		messages : [{
-					uImg : './img/avatar3.png',
-					uName : 'DIvyia',
+	
+					uName : '01',
+					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
+					uTime : '2014-12-12'
+				}, {
+					
+					uName : '02',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
 				}, {
-					uImg : './img/avatar3.png',
-					uName : 'DIvyia',
-					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
-					uTime : '2分钟前'
-				}, {
-					uImg : './img/avatar3.png',
-					uName : 'DIvyia',
+
+					uName : '03',
 					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
 					uTime : '2分钟前'
 				}],
@@ -81,10 +81,10 @@ $.widget("ui.soneHeader", {
 				+ '</form>'
 				+ ' <ul class=" navbar-nav">'
 				+ ' <li class="dropdown  messages-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-envelope"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore1 " role="menu"><li class="header"> <h4>4个项目正在进行</h4></li></ul>'
+				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-envelope"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore1 " role="menu"><li class="header"> <span>4个项目正在进行</span></li><li class="footer"><a href="#">See All Messages</a></li></ul>'
 				+ ' </li>'
 				+ ' <li class="dropdown projects-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore2 " role="menu"><li class="header"> <h4>4个项目正在进行</h4></li></ul>'
+				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore2 " role="menu"><li class="header"> <span>4个项目正在进行</span></li></ul>'
 				+ ' </li>'
 				+ ' <li class="dropdown user-menu">'
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i style="font-style:normal ">李某某</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
@@ -118,10 +118,9 @@ $.widget("ui.soneHeader", {
 
 
 					var item='<li><a href="" class="line"> '+
-	                 ' <div class="u-img"><img src="'+v.uImg+'" alt="" class="img-responsive"></div>'+
-	                  '<div class="u-name">'+v.uName+'<small class="u-time">'+v.uTime+'</small></div>'+
-	                 ' <div class="u-info">'+v.uInfo+'</div>'+
-	                 
+	                 ' <div class="u-name">'+v.uName+'</div>'+	                  
+	                ' <div class="u-info">'+v.uInfo+'</div>'+
+	                 '<div class="u-time">'+v.uTime+'</div>'+
                 	'</a></li>';
 
 					tpl.find(".navbar-right .fore1 ").append(item);

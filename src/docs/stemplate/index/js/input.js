@@ -131,6 +131,7 @@ $(function() {
 //datetimepicker
  $('.form_datetime').datetimepicker({
         language:  'zh-CN',
+		
         weekStart: 1,
         todayBtn:  1,
 		autoclose: 1,
