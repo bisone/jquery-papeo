@@ -1,35 +1,32 @@
 $.widget("ui.soneHeader", {
 	options : {
 		//modelNames : ['UI标准化模板'],
-		messages : [{
-	
-					uName : '01',
-					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
-					uTime : '2014-12-12'
+		/*notices : [{
+					noticeId : '01',
+					noticeTitle : '通知一',
+					noticeTime : '2010-10-11'
 				}, {
-					
-					uName : '02',
-					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
-					uTime : '2分钟前'
+					noticeId : '02',
+					noticeTitle : '通知二',
+					noticeTime : '2010-10-11'
 				}, {
-
-					uName : '03',
-					uInfo : '刚才看见你的数据，有些想法刚才看见你的数据，有些想法',
-					uTime : '2分钟前'
+					noticeId : '03',
+					noticeTitle : '通知三',
+					noticeTime : '2010-10-11'
 				}],
-		projects : [{
-					projectName : 'A项目',
-					pct : '80%',
-					style : 'p-type1'
+		tasks : [{
+					taskId : '01',
+					taskTitle : '任务一',
+					taskTime : '2010-10-11'
 				}, {
-					projectName : 'B项目',
-					pct : '85%',
-					style : 'p-type2'
+					taskId : '02',
+					taskTitle : '任务二',
+					taskTime : '2010-10-11'
 				}, {
-					projectName : 'C项目',
-					pct : '70%',
-					style : 'p-type3'
-				}],
+					taskId : '03',
+					taskTitle : '任务三',
+					taskTime : '2010-10-11'
+				}],*/
 		userImg : './img/avatar3.png',
 		userInfo:{},
 		logoUrl:'',
@@ -69,6 +66,8 @@ $.widget("ui.soneHeader", {
 		    logoStyle='style="background:url('+this.options.logoUrl+') no-repeat"';
 		}
 		var userName=this.options.userInfo.userName||'';
+		var notices=this.options.notices || [];
+		var tasks=this.options.tasks || [];
 	    var tpl = $('<div class="header-main"> '
 				+ '<div class="logo"'+logoStyle+'>'+logoText+'</div>'
 				+ '<div  class="nav" id="navlist">'
@@ -88,10 +87,15 @@ $.widget("ui.soneHeader", {
 				+ '</form>'
 				+ ' <ul class=" navbar-nav">'
 				+ ' <li class="dropdown  messages-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-envelope"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore1 " role="menu"><li class="header"> <span>4个项目正在进行</span></li><li class="footer"><a href="#">See All Messages</a></li></ul>'
+					+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-envelope"></i>'
+					+ '<span class="label  label-success">4</span></a>'
+					+'<ul class="dropdown-menu fore1 " role="menu">'
+					+'</ul>'
 				+ ' </li>'
 				+ ' <li class="dropdown projects-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i><span class="label  label-success">4</span></a>  <ul class="dropdown-menu fore2 " role="menu"><li class="header"> <span>4个项目正在进行</span></li></ul>'
+				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i>'
+				    +'<span class="label  label-success">4</span></a>'
+					+'  <ul class="dropdown-menu fore2 " role="menu"></ul>'
 				+ ' </li>'
 				+ ' <li class="dropdown user-menu">'
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i style="font-style:normal ">'+userName+'</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
@@ -121,27 +125,38 @@ $.widget("ui.soneHeader", {
 					}
 						
 				});
-		$.each(this.options.messages, function(k, v) {
-
+		$.each(notices, function(k, v) {
+                    if(k==0){
+					   tpl.find(".navbar-right .fore2 ").append('<li class="header"> <span>营销体系通知:</span></li>');
+					}
 
 					var item='<li><a href="" class="line"> '+
-	                 ' <div class="u-name">'+v.uName+'</div>'+	                  
-	                ' <div class="u-info">'+v.uInfo+'</div>'+
-	                 '<div class="u-time">'+v.uTime+'</div>'+
+	                 ' <div class="u-name">'+v.noticeId+'</div>'+	                  
+	                ' <div class="u-info">'+v.noticeTitle+'</div>'+
+	                 '<div class="u-time">'+v.noticeTime+'</div>'+
                 	'</a></li>';
 
 					tpl.find(".navbar-right .fore1 ").append(item);
+					if(k==notices.length-1){
+					   tpl.find(".navbar-right .fore1 ").append(' <li class="footer"><a href="#">更多...</a></li>');
+					}
 				});
+		
 
-		$.each(this.options.projects, function(k, v) {
-
-					var item = '<li>' + '<a href="">' + '<span class="txt">'
-							+ '<span class="tit">' + v.projectName + '</span>'
-							+ '<span class="pct">' + v.pct + '</span>'
-							+ '</span>' + '<span class="progress ' + v.style
-							+ '"><b style="width:' + v.pct
-							+ '"></b><s></s></span>' + '</a>' + '</li>';
+		$.each(tasks, function(k, v) {
+                   
+					if(k==0){
+					   tpl.find(".navbar-right .fore2 ").append('<li class="header"><span>您的任务：</span></li>');
+					}
+					var item='<li><a href="" class="line"> '+
+	                 ' <div class="u-name">'+v.taskId+'</div>'+	                  
+	                ' <div class="u-info">'+v.taskTitle+'</div>'+
+	                 '<div class="u-time">'+v.taskTime+'</div>'+
+                	'</a></li>';
 					tpl.find(".navbar-right  .fore2").append(item);
+					if(k==tasks.length-1){
+					   tpl.find(".navbar-right .fore2 ").append(' <li class="footer"><a href="#">更多...</a></li>');
+					}
 				});
 		
         var userInfo=this.options.userInfo;
