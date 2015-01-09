@@ -170,8 +170,8 @@ $(function() {
 $(function() {
 	var cb = function(start, end, label) {
 					$('#dateRangePicker span').html(
-							start.format('YYYY-MM-D') + ' - '
-									+ end.format('YYYY-MM-D'));
+							start.format('YYYY-MM-DD') + ' - '
+									+ end.format('YYYY-MM-DD'));
 				};
 
 	var optionSet1 = {
@@ -226,8 +226,8 @@ $(function() {
 
 	$('#dateRangePicker span').html(
 			moment().subtract(29, 'days').format(
-					'YYYY-MM-D')
-					+ ' - ' + moment().format('YYYY-MM-D'));
+					'YYYY-MM-DD')
+					+ ' - ' + moment().format('YYYY-MM-DD'));
 
 	$('#dateRangePicker').daterangepicker(optionSet1, cb);
 		
@@ -289,7 +289,7 @@ $(document).ready(function() {
 		startDate : moment().subtract('days', 29),
 		endDate : moment()
 	}, function(start, end) {
-		$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - '
-				+ end.format('MMMM D, YYYY'));
+		$('#reportrange span').html(start.format('MMMM DD, YYYY') + ' - '
+				+ end.format('MMMM DD, YYYY'));
 	});
 });

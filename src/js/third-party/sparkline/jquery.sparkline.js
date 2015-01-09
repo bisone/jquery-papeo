@@ -880,8 +880,8 @@
             this.getSize(content);
             this.tooltip.html(content)
                 .css({
-                    'width': this.width,
-                    'height': this.height,
+                   /* 'width': this.width,
+                    'height': this.height,*/
                     'visibility': 'visible'
                 });
             if (this.hidden) {
@@ -2670,6 +2670,7 @@
         insertAfterShape: function (shapeid, shape) {
             alert('insertAfterShape not implemented');
         },
+
 
         /**
          * Remove a shape from the queue
