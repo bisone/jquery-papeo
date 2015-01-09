@@ -2,11 +2,11 @@ $('#header').soneHeader({
    userInfo:{
 		userName:'张三',
 		logonTime:'2014-12-05 12:34:25'
-	},
+	}
 	/*showSearch:false,
 	showNotices:false,
 	showTasks:false,*/
-	logoText:'test'
+	//logoText:'test'
 
 });
 //iframe auto fit
