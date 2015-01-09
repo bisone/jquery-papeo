@@ -45,6 +45,8 @@ var vendors = [
 	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js',
 	'src/bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.zh-CN.js',
 	
+	'src/bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js',
+	
 	'src/js/third-party/datatablebootstrap/dataTables.bootstrap.js',
 	'src/js/third-party/sparkline/jquery.sparkline.js',
 
@@ -60,8 +62,8 @@ var thirdparty_styles=[
 	'src/bower_components/jquery-treetable/css/jquery.treetable.theme.default.css',
 	//'src/bower_components/datatables/media/css/jquery.dataTables.css',
 	'src/bower_components/metisMenu/dist/metisMenu.css',
-	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css'
-
+	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css',
+	'src/bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css',
 ];
 var styles = [
     'src/less/dashboard/variables.less',
