@@ -138,7 +138,7 @@ $.widget("ui.soneHeader", {
 				});
 		$.each(notices, function(k, v) {
                     if(k==0){
-					   tpl.find(".navbar-right .fore2 ").append('<li class="header"> <span>营销体系通知:</span></li>');
+					   tpl.find(".navbar-right .fore1 ").append('<li class="header"> <span>营销体系通知:</span></li>');
 					}
 
 					var item='<li><a href="" class="line"> '+
