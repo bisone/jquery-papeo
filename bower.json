@@ -27,7 +27,7 @@
     "echarts": "https://github.com/ecomfe/echarts.git#~2.0.4",
     "highcharts": "~4.0.4",
     "raphael": "~2.1.2",
-    "bootstrap3-typeahead": "~3.0.5",
+    "bootstrap3-typeahead": "https://github.com/bassjobsen/Bootstrap-3-Typeahead.git#master",
     "jquery-ui-bootstrap": "https://github.com/jquery-ui-bootstrap/jquery-ui-bootstrap.git",
     "backbone": "~1.1.2",
     "metisMenu": "https://github.com/onokumus/metisMenu.git#~1.1.3",

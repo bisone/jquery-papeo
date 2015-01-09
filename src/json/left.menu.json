@@ -118,7 +118,7 @@
 		"level" : 1,
 		"project" : "",
 		"iconClass": "fa fa-bar-chart-o ",
-		"infoUrl": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
+		"infoUrl":[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
 		"type": "",
 		"position": ""
 	},{
@@ -210,7 +210,7 @@
 		"level" : 1,
 		"project" : "",
 		"iconClass": "fa fa-line-chart",
-		"infoUrl": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
+		"infoUrl":[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
 		"type": "",
 		"position": ""
 	},{
@@ -272,7 +272,7 @@
 		"level" : 1,
 		"project" : "",
 		"iconClass": "fa fa-area-chart",
-		"infoUrl": [[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}],
+		"infoUrl":[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
 		"type": "",
 		"position": ""
 	}

@@ -1,7 +1,7 @@
 $.widget("ui.soneHeader", {
 	options : {
 		//modelNames : ['UI标准化模板'],
-		/*notices : [{
+		notices : [{
 					noticeId : '01',
 					noticeTitle : '通知一',
 					noticeTime : '2010-10-11'
@@ -26,10 +26,14 @@ $.widget("ui.soneHeader", {
 					taskId : '03',
 					taskTitle : '任务三',
 					taskTime : '2010-10-11'
-				}],*/
+				}],
+		showSearch:true,
+		showNotices:true,
+		showTasks:true,
 		userImg : './img/avatar3.png',
 		userInfo:{},
 		logoUrl:'',
+		logoText:'UI标准化模板',
 		logoutUrl:'javascript:;;'
 	},
 
@@ -58,17 +62,16 @@ $.widget("ui.soneHeader", {
 		
 	},
 	createTemplate:function(mydata){
-	    var logoText='';
+	    var logoText=this.options.logoText;
 		var logoStyle='';
-		if(this.options.logoUrl==''){
-		    logoText='UI标准化模版';
-		}else{
+		if(this.options.logoUrl!=''){
 		    logoStyle='style="background:url('+this.options.logoUrl+') no-repeat"';
+			logoText='';
 		}
 		var userName=this.options.userInfo.userName||'';
 		var notices=this.options.notices || [];
 		var tasks=this.options.tasks || [];
-	    var tpl = $('<div class="header-main"> '
+	    var tplStr ='<div class="header-main"> '
 				+ '<div class="logo"'+logoStyle+'>'+logoText+'</div>'
 				+ '<div  class="nav" id="navlist">'
 				+ '<ul id="navfouce"></ul>'
@@ -77,32 +80,40 @@ $.widget("ui.soneHeader", {
 				+ '<a href="javascript:;" class="prev">&lt;</a>'
 				+ ' <a href="javascript:;" class="next">&gt;</a>'
 				+ ' </div>'
-
-				+ ' <div class="navbar-right">'
-				+ '<form class="navbar-form navbar-left search-bar " role="search">'
-				+ '	<div class="form-group">'
-				+ '	<input  id="search" class="form-control" type="text" placeholder="Search...">'
-				+ '	</div>'
-				+ '	<button class="btn btn-default" type="submit" data-original-title="Search"><span class="glyphicon glyphicon-search"></span></button>'
-				+ '</form>'
-				+ ' <ul class=" navbar-nav">'
-				+ ' <li class="dropdown  messages-menu">'
+				+ ' <div class="navbar-right">';
+				if(this.options.showSearch){
+				   tplStr+='<form onsubmit="return false;" class="navbar-form navbar-left search-bar " role="search">'
+				    +'<div class="form-group">'
+					+ '	<input  id="search" class="form-control" type="text" placeholder="Search...">'
+					+ '	</div>'
+					+ '	<button id="serachButton" class="btn btn-default" type="submit" data-original-title="Search"><span class="glyphicon glyphicon-search"></span></button>'
+					+ '</form>';
+				 
+				}
+				tplStr+= ' <ul class=" navbar-nav">';
+				if(this.options.showNotices){
+				   tplStr+=' <li class="dropdown  messages-menu">'
 					+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-envelope"></i>'
 					+ '<span class="label  label-success">4</span></a>'
 					+'<ul class="dropdown-menu fore1 " role="menu">'
 					+'</ul>'
-				+ ' </li>'
-				+ ' <li class="dropdown projects-menu">'
-				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i>'
-				    +'<span class="label  label-success">4</span></a>'
-					+'  <ul class="dropdown-menu fore2 " role="menu"></ul>'
-				+ ' </li>'
-				+ ' <li class="dropdown user-menu">'
+				    + ' </li>';
+				}
+				if(this.options.showTasks){
+				    tplStr+= ' <li class="dropdown projects-menu">'
+					+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-list"></i>'
+						+'<span class="label  label-success">4</span></a>'
+						+'  <ul class="dropdown-menu fore2 " role="menu"></ul>'
+					+ ' </li>';
+				
+				}
+				tplStr+=' <li class="dropdown user-menu">'
 				+ '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i style="font-style:normal ">'+userName+'</i>  <i class="caret"></i></a>  <ul class="dropdown-menu fore3 " role="menu"></ul>'
 				+ ' </li>' + ' </ul>' + '</div>'
 				//二级菜单
 				+'<div class="box" id="navbox" style="height:0px;opacity:0;overflow:hidden;"></div>'
-				+' </div>');
+				+' </div>';
+				var tpl=$(tplStr);
 
 		$.each(mydata, function(k, v) {
 					var tmp = '';
@@ -177,7 +188,7 @@ $.widget("ui.soneHeader", {
 				+ userInfo.logonTime
 				+ '</p>'
 				+ '</li>'
-				+ '<li class="user-footer"><div class="pull-right"><a class="btn btn-default btn-flat" href="'+logoutUrl+'">Sign out</a></div></li>';
+				+ '<li class="user-footer"><div class="pull-right"><a class="btn btn-default btn-flat" href="'+logoutUrl+'">注销</a></div></li>';
 		tpl.find(".navbar-right  .fore3").append(item);
 		
 
@@ -199,6 +210,7 @@ $.widget("ui.soneHeader", {
 	},
 
 	_initEvents : function(element) {
+	    var scope=this;
 		var _ele = element || this.element;
 		$(window).bind("load resize", function() {
 			var topOffset = 50;
@@ -274,15 +286,66 @@ $.widget("ui.soneHeader", {
 						}
 					});
 		};
+        
+		
+		//添加搜索菜单
+		$.ajax({
+				 url: "json/left.menu.json",
+				 type: "GET",
+				 success:function(mydata) {
+					try{
+						//mydata = $.parseJSON(mydata);
+						mydata = eval(mydata);
+					}catch(e){
+					    mydata=[];
+					}
+					var mapStructure={map:{},names:[]};
+					scope.genMap('',mydata,mapStructure);
+					$('#search', _ele).typeahead({
+						/*source : ['Dashboard', 'Form elements', 'Common Elements',
+								'Validation', 'Wizard', 'Buttons', 'Icons',
+								'Interface elements', 'Support', 'Calendar', 'Gallery',
+								'Reports', 'Charts', 'Graphs', 'Widgets'],*/
+						source:mapStructure.names,
+						items : 4,
+						afterSelect:function (item) {
+                            var value=$("#search").val();
+							 if(value==''){
+								 return false;
+							 }
+							 var href=mapStructure.map[value];
+							 if(href==null){
+							    return false;
+							 }
+							 $(".itm-lv2 a[href='"+href+"']").trigger("click");
+							 //window.location.href=href;
+							 return false;
+						 },
+						 
+						
 
-		$('#search', _ele).typeahead({
-			source : ['Dashboard', 'Form elements', 'Common Elements',
-					'Validation', 'Wizard', 'Buttons', 'Icons',
-					'Interface elements', 'Support', 'Calendar', 'Gallery',
-					'Reports', 'Charts', 'Graphs', 'Widgets'],
-			items : 4
-
-		});
+					});
+					//$('#search').bind('typeahead:selected',function (obj,datum,name) {
+						 //console.log(datum);
+					//});
+					/*$("#serachButton").click(function(){
+						 var value=$("#search").val();
+						 if(value==''){
+						     return false;
+						 }
+						 var href=mapStructure.map[value];
+						 $(".itm-lv2 a[href='"+href+"']").trigger("click");
+                         //window.location.href=href;
+						 return false;
+					
+					});*/
+					
+				},
+				error:function(data){
+					alert(data);
+				}
+			 });
+		
 
 		this.addFirstMenuEvent();
 		this.addSecondMenuEvent();
@@ -417,5 +480,29 @@ $.widget("ui.soneHeader", {
 		}
 		//iFrameResize();
 		 
+	},
+	genMap:function(path,menu,mapStructure){
+	    var scope=this;
+	    if(menu==null ||menu.length==0){
+		    return ;
+		}
+		for(var i=0;i<menu.length;i++){
+		    var m=menu[i];
+			if(m.url!=null && m.url!=''&& m.name!=null && m.name!=''){
+			    mapStructure.map[path+'-'+m.name]=m.url;
+				mapStructure.names.push(path+'-'+m.name)
+			}
+			if(m.children !=null && m.children.length!=0){
+			    var p=path;
+			    if(path!=''){
+				   p+='-';
+				}
+				scope.genMap(p+m.name,m.children,mapStructure);
+			}
+		
+		}
+	
 	}
+	
+	
 });

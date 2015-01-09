@@ -5,7 +5,10 @@ $.widget("ui.soneLeftMenu", {
 		value : 0,
 		jsonUrl : 'json/left.menu.json',
 		//以后要给成从url获取
-		defaultMenuInfo:[[{"lable":"控件", "value": 100},{"lable":"种类","value":10}],{"lable":"**","value":1200}]
+		defaultMenuInfo:[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
+		listeners:[],
+		targetType:'iframe',
+		targetDomId:'ifm'
 	},
 	_create : function() {
 		this.element.addClass("wrap");
@@ -39,6 +42,19 @@ $.widget("ui.soneLeftMenu", {
 		} else {
 			scope.createTemplate(this.options.data);
 		}
+		//add listeners
+		/*$.each(this.options.listeners, function(k, v) {
+			var eventName=null;
+			var eventFun=function(){};
+			for(var ln in v){
+				if(typeof v[ln]==='function'){
+					eventName=ln;
+					eventFun=v[ln];
+					break;
+				}
+			}
+			scope.element.bind(eventName,eventFun);
+		});*/
 
 	},
 	_init : function() {
@@ -61,9 +77,14 @@ $.widget("ui.soneLeftMenu", {
 						menuInfo=item.infoUrl;
 		            }
 					if (item.type == "high" || item.type == "") {
-
+                        var radioDiffFlag='↓';
+						var spanColor='green';
+						if(menuInfo[2].value >0){
+						    radioDiffFlag='↑';
+						    spanColor='red';
+						}
                         tpl.find('.sone-left-menu').append('<li class="sidebar-menu item" ></li>');
-
+						
 						tpl.find('.sone-left-menu > li:last').append(
 						   '<div class="itm-lv1" url="' + item.url + '">'+
 							'<div class="tit">'+
@@ -71,17 +92,20 @@ $.widget("ui.soneLeftMenu", {
 								 '<span class="text-center">'+item.name+'</span><s>3</s>'+
 							'</div>'+
 							'<div class="con">'+
-								'<div class="info">'+
-								'</div>'+
-								'<div class="price">'+
-									'<strong>'+menuInfo[1].value+'</strong>'+menuInfo[1].lable+
-								'</div>'+
+								'<div class="theme-one">'+menuInfo[0].label+'</div>'+
+			 				    '<div id="'+item.id+'Measure'+'" class="theme-two">'+menuInfo[1].value+menuInfo[1].label+'</div>'+
+			                    '<div class="theme-three">'+
+								    '<span style="font-family: \'华文琥珀 Bold\', \'华文琥珀\';width: 10px;color:'+spanColor+'">'+radioDiffFlag+'</span>'+
+								    '<span id="'+item.id+'Radio" style="font-size:10px;margin-left: 0px;color:'+spanColor+'">'+menuInfo[2].value+menuInfo[2].label+'</span>'+
+								    '<span id="'+item.id+'Diff" style="font-size:10px;margin-left: 8px;color:'+spanColor+'">'+menuInfo[3].value+menuInfo[3].label+'</span>'+
+			                    '</div>'+
 							'</div>'+
 						'</div>');
+					
 						//add info
-						$.each(menuInfo[0], function (n,i) {
-							tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
-						});
+						//$.each(menuInfo[0], function (n,i) {
+							//tpl.find('.sone-left-menu > li:last .info').append('<span><b>'+i.value+'</b>'+i.lable+'</span>&nbsp;&nbsp;');
+						//});
 				 	} else {
 
 					    tpl.find('.sone-left-menu').append('<li class="sidebar-menu  item itm-one"></li>');
@@ -104,8 +128,11 @@ $.widget("ui.soneLeftMenu", {
 		tpl.find('.sone-left-menu').append('<div class="resizer"><b></b></div>');
 
 		$(scope.element).append(tpl);
+		
 
 		scope._update(mydata);
+
+		this._trigger( "afterrender", null);
 
 	},
 
@@ -119,6 +146,7 @@ $.widget("ui.soneLeftMenu", {
 	},
 
 	_initEvents : function(element) {
+	    var scope=this;
 		var _ele = element || this.element;
 
 		//菜单折叠
@@ -166,7 +194,12 @@ $.widget("ui.soneLeftMenu", {
 		// 菜单添加点击事件a
 		$("#left-menu a").click(function(o) {
 					var link = $(this).attr("href");
-					$("#ifm").attr('src', link);
+					if(scope.options.targetType=='iframe'){
+					    $("#"+scope.options.targetDomId).attr('src', link);
+					}else if(scope.options.targetType=='href'){
+					    window.location.href=link;
+					}
+					
 					return false;
 				});
 		//一级菜单点击
@@ -175,7 +208,11 @@ $.widget("ui.soneLeftMenu", {
 					if(link==""){
 					    return false;
 					}
-					$("#ifm").attr('src', link);
+					if(scope.options.targetType=='iframe'){
+					    $("#"+scope.options.targetDomId).attr('src', link);
+					}else if(scope.options.targetType=='href'){
+					    window.location.href=link;
+					}
 					return false;
 				});
 
