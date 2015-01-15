@@ -29,9 +29,8 @@ $('#left-menu').soneLeftMenu({
 
 $(function() {
 			var width = window.screen.width-17;
-		  $("body").css("width",width);
-
-          
+		  $("body").css("min-width",width);
+        
 });
 
 

@@ -633,7 +633,7 @@ div.DTFC_LeftFootWrapper table {
     transition: all 0.25s ease 0s;
 }
 .checkbox:hover, .radio:hover {
-    color: #54ade5;
+    color: #2dc3e8;
 }
 .checkbox input, .radio input {
     opacity: 0;
@@ -792,7 +792,7 @@ div.DTFC_LeftFootWrapper table {
  border-width:3px 1px 1px 1px;
  border-style: solid;
  border-radius:0;
- border-color: #54ade5 #ddd transparent;
+ border-color: #2dc3e8 #ddd transparent;
  margin-right: -1px;
 }
 }
@@ -846,10 +846,12 @@ li.active {
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
  .tab-content {
  padding:10px;
+ background-color:#fff;
 }
 .nav-tabs {
-	background-color: rgba(233,233,233,.1);
-	border-bottom: 3px solid #54ade5;
+	background-color: rgba(255,255,255,1);
+	border-bottom: 3px solid #2dc3e8;
+	
  li {
  a {
  border-radius:0;
@@ -872,7 +874,7 @@ li.active {
 }
 }
 .tabthree {
-	background: #54ade5;
+	background: #2dc3e8;
 	color: #fff;
 }
 .tabBlock .tabBlock-tabs {
@@ -953,4 +955,39 @@ li.active {
 
 input:not([type=button]):disabled, input:not([type=button])[readonly], select:disabled, select[readonly], textarea:disabled, textarea[readonly] {
    background-color:#fff;
+}
+/************panel**************/
+.panel {
+	border: none;
+}
+.bordered-blue {
+	border-bottom: 3px solid #2dc3e8 !important;
+}
+.panel-default > .panel-heading {
+	background-color: #fff;
+	border-color: transparent;
+}
+.panel-heading {
+	position: relative;
+	background-color: #fff;
+	border: none;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+	border-bottom: 3px solid #fff;
+}
+.panel-body {
+	background-color: #fff;
+	box-shadow: 1px 0 10px 1px rgba(0,0,0,.3);
+}
+.panel-title {
+	font-size: 14px;
+	color: #2dc3e8 !important;
+}
+.btn-primary {
+	background-color: #2dc3e8;
+	border-color: #28afd0;
+}
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
+    background-color: #28afd0;
+    border-color: #1fa3c3;
+    color: #fff;
 }

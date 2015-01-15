@@ -2,14 +2,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
- 
 <meta name="description" content="">
 <meta name="author" content="">
 <title>UI标准化模版</title>
 <link rel="stylesheet" type="text/css" href="../../../css/third-party.min.css">
 <link rel="stylesheet" type="text/css" href="../../../css/sone-ui.min.css">
 <!-- ECharts单文件引入 -->
- 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -18,9 +16,9 @@
     <![endif]-->
 
 </head>
-<body>
+<body style="background-color:#eee; padding:0px 20px;">
 <div class="row">
-    <div class="col-xs-12 rightcontent"><br/>
+    <div class="col-xs-12 rightcontent" style="background-color:#fbfbfb;"><br/>
         <div class="panel-group" id="accordion">
             <div id="collapseOne" class="panel-collapse collapse in"> </div>
             <h3>tab.js</h3>
@@ -28,28 +26,24 @@
             <p>使用说明：<a href="http://v3.bootcss.com/javascript/#tabs" target="_blank">http://v3.bootcss.com/javascript/#tabs</a></p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="panel panel-primary ">
-                        <div class="panel-heading"> 默认UI </div>
-                        <div class="panel-body">
-                            <div class="example-tab-one">
-                                <ul class="nav nav-tabs" >
-                                    <li class="active"><a href="#home1" data-toggle="tab" >Home</a></li>
-                                    <li ><a href="#profile1"  data-toggle="tab" >Profile</a></li>
-                                    <li><a href="#Themes1"  data-toggle="tab">Themes</a></li>
-                                </ul>
-                                <div  class="tab-content">
-                                    <div  class="tab-pane  active" id="home1">
-                                        <p>Raw............ </p>
-                                    </div>
-                                    <div  class="tab-pane " id="profile1">
-                                        <p>Food ...........</p>
-                                    </div>
-                                    <div class="tab-pane " id="Themes1" >
-                                        <p>Etsy............ </p>
-                                    </div>
-                                </div>
+                    <div class="example-tab-one">
+                        <ul class="nav nav-tabs" >
+                            <li class="active"><a href="#home1" data-toggle="tab" >Home</a></li>
+                            <li ><a href="#profile1"  data-toggle="tab" >Profile</a></li>
+                            <li><a href="#Themes1"  data-toggle="tab">Themes</a></li>
+                        </ul>
+                        <div  class="tab-content">
+                            <div  class="tab-pane  active" id="home1">
+                                <p>Raw............ </p>
+                            </div>
+                            <div  class="tab-pane " id="profile1">
+                                <p>Food ...........</p>
+                            </div>
+                            <div class="tab-pane " id="Themes1" >
+                                <p>Etsy............ </p>
                             </div>
                         </div>
+                        
                         <!-- /example --> 
                         
                     </div>
@@ -126,10 +120,9 @@
                     </div>
                 </div>
             </div>
-            
         </div>
-       <div class="highlight">
-<pre>
+        <div class="highlight">
+            <pre>
 1.html代码
   &lt;ul class="nav nav-tabs" role="tablist"&gt;
   &lt;li role="presentation" class="active"&gt;&lt;a href="#home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -146,14 +139,11 @@
 &lt;/div&gt;
 
 </pre>
-        </div>      
-        
-      
-
-
+        </div>
     </div>
 </div>
-<script type="text/javascript" src="../../../js/vendors.min.js"></script> 
- <script type="text/javascript" src="../../../widget/dashboard-widget.min.js"></script>
+<script type="text/javascript" src="../../../js/third-party/vendors.min.js"></script> 
+<script type="text/javascript" src="../../../js/sone-ui/sone-ui.min.js"></script> 
+<script type="text/javascript" src="../../../js/sone-widget/sone-widget.min.js"></script>
 </body>
 </html>
