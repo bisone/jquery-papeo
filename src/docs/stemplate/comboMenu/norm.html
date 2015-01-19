@@ -18,7 +18,7 @@
     <![endif]-->
 
 </head>
-<body>
+<body style="background-color:#eee; padding:0px 20px;">
 <div class="row">
     <div class="col-xs-12 rightcontent"><br/>
         <div class="panel-group" id="accordion">
@@ -43,29 +43,15 @@
             <p> gulpfile.js是标准化UI引用的所有JS文件和css文件（函数调用文件除外），可根据自己的需求引用；</p>
             <pre>
 js文件
-    'src/bower_components/jquery/dist/jquery.js',
-    'src/bower_components/bootstrap/dist/js/bootstrap.js',
-    'src/widget/jquery.sone.header.js',
-    'src/widget/jquery.menu.js',
+"js/third-party/vendors.min.js"
+"js/sone-ui/sone-ui.min.js"
+"js/sone-widget/sone-widget.min.js"
 css文件
-    'src/bower_components/bootstrap/dist/css/bootstrap.css',
-    'src/bower_components/font-awesome/css/font-awesome.css',
-less文件
-  'src/less/dashboard/variables.less',
-    'src/less/dashboard/mixins.less',
-    'src/less/dashboard/main.less',
-    'src/less/dashboard/loading.less',
-    'src/less/dashboard/content.less',
-    'src/less/dashboard/header.less',
-    'src/less/dashboard/sidebar.less',
-    'src/less/dashboard/widgets.less',
-    'src/less/dashboard/hamburg.less',
-    'src/less/reset.less',
-    'src/less/index.less',
-    'src/less/sb-admin-2.less',
-    'src/less/top.less',
-    'src/less/combo.less',
-	'src/less/w2ui.less'
+&lt;!--第三方css，包括bootstrap、highcharts、echarts等--&gt;
+"css/third-party.min.css"
+&lt;!--ui标准化组件样式--&gt;
+"css/sone-ui.min.css"
+
             </pre>
         </div>
     </div>

@@ -437,6 +437,11 @@ $(document).ready(function() {
 		}
 	} );
 	
+	  $('#example tbody').on( 'click', 'tr', function () {
+        $(this).toggleClass('selected');
+    } );
+	
+	
 	
 	$('#example1 tbody').on('click', 'tr.group',
     function() {
