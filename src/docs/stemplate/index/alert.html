@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>UI标准化模版</title>
+
+<link rel="stylesheet" type="text/css" href="../../../css/third-party.min.css">
+<link rel="stylesheet" type="text/css" href="../../../css/sone-ui.min.css">
+<!-- ECharts单文件引入 -->
+ 
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="p20">
+<div>
+  
+   <h3> alert/confirm 消息窗口</h3> 
+     <div class="bs-example">
+        <p>实例：</p>
+        <div  style="height:100px;">
+          <button type="button" class="btn btn-primary " id="del">确定删除</button>
+        
+        
+        <div id="ycf-alert" class="modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> [Title]</h5>
+          </div>
+          <div class="modal-body small">
+            <p>[Message]</p>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+            <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+    </div>
+        <div class="highlight">
+        <pre>
+            </pre>
+    </div>
+</div>
+<script type="text/javascript" src="../../../js/third-party/vendors.min.js"></script> 
+<script type="text/javascript" src="../../../js/sone-ui/sone-ui.min.js"></script> 
+<script type="text/javascript" src="../../../js/sone-widget/sone-widget.min.js"></script> 
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript">
+$(function () {
+
+// 四个选项都是可选参数
+Modal.alert(
+  {
+    msg: '内容',
+    title: '标题',
+    btnok: '确定',
+    btncl:'取消'
+  });
+
+// 如需增加回调函数，后面直接加 .on( function(e){} );
+// 点击“确定” e: true
+// 点击“取消” e: false
+Modal.confirm(
+  {
+    msg: "是否删除角色？"
+  })
+  .on( function (e) {
+    alert("返回结果：" + e);
+  });
+
+	
+});
+
+</script>
+</body>
+</html>

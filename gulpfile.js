@@ -54,13 +54,19 @@ var vendors = [
 
 var thirdparty_styles=[
     'src/bower_components/w2ui/dist/w2ui.min.css',
+	'src/bower_components/jquery-treetable/css/jquery.treetable.css',
+	'src/bower_components/jquery-treetable/css/jquery.treetable.theme.default.css',
+	
     'src/bower_components/bootstrap/dist/css/bootstrap.css',
     'src/bower_components/font-awesome/css/font-awesome.css',
 	'src/bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css',
 	'src/bower_components/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.0.custom.css',
 	'src/bower_components/jquery-treetable/css/jquery.treetable.css',
 	'src/bower_components/jquery-treetable/css/jquery.treetable.theme.default.css',
-	//'src/bower_components/datatables/media/css/jquery.dataTables.css',
+	/*'src/bower_components/datatables/media/css/jquery.dataTables.css',*/
+	
+	/*'src/less/datatables/dataTables.bootstrap.css',*/
+	
 	'src/bower_components/metisMenu/dist/metisMenu.css',
 	'src/bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css',
 	'src/bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css',
