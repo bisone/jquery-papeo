@@ -86,7 +86,8 @@ var styles = [
     'src/less/reset.less',
     'src/less/index.less',
     'src/less/sb-admin-2.less',
-    'src/less/top.less'
+    'src/less/top.less',
+	'src/less/demandDegree/demandTable.less'
    
 ];
 
@@ -99,7 +100,8 @@ var widget=[
 
 	 'src/js/sone-widget/jquery.sone.combomenu.js',
 	 'src/js/sone-widget/jquery.sone.demandgraph.js',
-	 'src/js/sone-widget/jquery.sone.provincepicker.js'
+	 'src/js/sone-widget/jquery.sone.provincepicker.js',
+	 'src/js/sone-widget/jquery.sone.demandTable.js'
 
 ];
 
@@ -113,6 +115,10 @@ var example=[
 	'src/js/sone-example/center-init.js'
 ];
 
+var additionalJs=[
+   // 'src/bower_components/iframe-resizer/src/iframeResizer.contentWindow.js',
+    //'src/bower_components/iframe-resizer/src/iframeResizer.js'
+];
 var paths = {
 	widget:widget,
     files: ['src/index.html','src/index-debug.html'],
@@ -230,7 +236,11 @@ gulp.task('copy-html5', function(){
     return gulp.src(paths.html5Patch)
         .pipe(gulp.dest('dist/js/third-party/html5patch'));
 });
-
+//copy the additional Js 
+gulp.task('copy-additionaljs', function(){
+    return gulp.src(additionalJs)
+        .pipe(gulp.dest('dist/js/third-party'));
+});
 
 /**
  * Watch src
@@ -246,6 +256,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.styles, ['compile-less']);
 	gulp.watch(paths.docs, ['copy-docs']);
 	gulp.watch(paths.docs, ['copy-html5']);
+	gulp.watch(paths.docs, ['copy-additionaljs']);
 });
 
 gulp.task('webserver', function() {
@@ -270,7 +281,8 @@ gulp.task('webserver', function() {
     });
 });
 
-gulp.task('build', ['copy-vendors','copy-soneui', 'copy-widget', 'copy-example', 'copy-templates', 'copy-files','copy-json', 'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs', 'copy-html5']);
+gulp.task('build', ['copy-vendors','copy-soneui', 'copy-widget', 'copy-example', 'copy-templates', 'copy-files','copy-json', 
+    'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs', 'copy-html5']);
 
 //gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
  gulp.task('default', ['build', 'webserver']);
