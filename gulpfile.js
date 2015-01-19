@@ -36,8 +36,8 @@ var vendors = [
     'src/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
 	'src/bower_components/bootstrap-select/js/bootstrap-select.js', 
 	'src/bower_components/metisMenu/dist/metisMenu.js',
-	//'src/bower_components/iframe-resizer/src/iframeResizer.contentWindow.js',
-   // 'src/bower_components/iframe-resizer/src/iframeResizer.js',
+	'src/bower_components/iframe-resizer/src/iframeResizer.contentWindow.js',
+    'src/bower_components/iframe-resizer/src/iframeResizer.js',
 	'src/bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
 	'src/bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js',
 	'src/bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
@@ -110,8 +110,8 @@ var example=[
 ];
 
 var additionalJs=[
-    'src/bower_components/iframe-resizer/src/iframeResizer.contentWindow.js',
-    'src/bower_components/iframe-resizer/src/iframeResizer.js'
+   // 'src/bower_components/iframe-resizer/src/iframeResizer.contentWindow.js',
+    //'src/bower_components/iframe-resizer/src/iframeResizer.js'
 ];
 var paths = {
 	widget:widget,
@@ -276,7 +276,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('build', ['copy-vendors','copy-soneui', 'copy-widget', 'copy-example', 'copy-templates', 'copy-files','copy-json', 
-    'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs', 'copy-html5', 'copy-additionaljs']);
+    'copy-images', 'copy-fonts', 'compile-thirdparty-less','compile-less', 'copy-docs', 'copy-html5']);
 
 //gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
  gulp.task('default', ['build', 'webserver']);
