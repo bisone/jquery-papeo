@@ -1,0 +1,115 @@
+/*tabConts 
+
+hotWords  tabCont gColor0
+
+rank
+
+mhref toe
+
+hotWord icons search psBox psBar listN1 mhref   */
+
+body,table {
+    font: normal 12px/1.5 Arial,'\5b8b\4f53';
+    color: #444;
+    font-family: Arial,'Microsoft Yahei'
+}
+.tabConts {
+	position: relative;
+	clear: both
+}
+
+.hotWords .search {
+	margin-left: 10px;
+	cursor: pointer;
+	opacity: .5;
+	filter:~"alpha(opacity= 50)";
+	_background-position: -220px -140px
+}
+
+.hotWords .search:hover {
+	opacity: 1;
+	filter:~"alpha(opacity= 100)";
+}
+
+.hotWords .mhref:hover .search {
+	background-position: -220px -140px
+}
+
+.listN1 {
+	width: 100%;
+	table-layout: fixed;
+	color: #858585
+}
+
+.listN1 .rank {
+	width: 30px;
+	text-align: center;
+	color: #666
+}
+
+.listN1 tr {
+	height: 30px
+}
+
+.listN1 tr:hover {
+	background-color: #f6f6f6
+}
+
+.listN1 .mhref {
+	padding-right: 10px
+}
+
+.listN1 .mhref a {
+	text-decoration: none;
+	color: #444
+}
+
+.listN1 .fhref {
+	display: inline-block;
+	width: 100px;
+	margin-right: 20px
+}
+
+.listN1 .fhref a {
+	color: #858585
+}
+
+.listN1 .psBox {
+	height: 10px;
+	background-color: #f1f1f1;
+	*width: 110px;
+	_font-size: 0
+}
+
+.listN1 .psBar {
+	height: 10px;
+	width: 50%
+}
+.gColor0 .listN1 .psBar {
+	background-color: #6e87d7
+}
+
+.gColor1 .listN1 .psBar {
+	background-color: #11c897
+}
+
+.gColor2 .listN1 .psBar {
+	background-color: #fa7256
+}
+
+.gColor3 .listN1 .psBar {
+	background-color: #b172c5
+}
+
+.gColor4 .listN1 .psBar {
+	background-color: #f367a7
+}
+
+.toe {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+a.hotWord:hover{
+	color: #4284e2;
+}

@@ -1,3 +1,4 @@
+<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../../../css/third-party.min.css">
 <link rel="stylesheet" type="text/css" href="../../../css/sone-ui.min.css">
 <!-- ECharts单文件引入 -->
- <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
 <!-- HighCharts单文件引入 -->
 <script src="http://cdn.hcharts.cn/highcharts/4.0.3/highcharts-all.js"></script>
 
@@ -142,6 +143,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+			
+			  <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"> <a data-toggle="collapse" href="#">市场需求表格</a> </h4>
+                </div>
+                <div id="demandTable" class="panel-body">
+                   
                 </div>
             </div>
             <div class="panel panel-default">
@@ -586,7 +596,8 @@
 <!--ui标准化组件core  包括leftMenu、Header-->
 <script type="text/javascript" src="../../../js/sone-ui/sone-ui.min.js"></script> 
 <!--ui标准化 通用插件 包括daterangepicker、combo等插件-->
-<script type="text/javascript" src="../../../js/sone-widget/sone-widget.min.js"></script> 
+<script type="text/javascript" src="../../../js/sone-widget/sone-widget.min.js"></script>  
+<script type="text/javascript" src="../../../js/third-party/iframeResizer.contentWindow.js"></script>
 <!--ui标准化组件 example等-->
 <script type="text/javascript" src="../../../js/sone-example/center-init.js"></script> 
 </body>

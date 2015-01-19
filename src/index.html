@@ -1,3 +1,4 @@
+<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="utf-8">
@@ -14,6 +15,16 @@
 <!-- HighCharts单文件引入 -->
 <script src="http://cdn.hcharts.cn/highcharts/4.0.3/highcharts-all.js"></script>
 
+<!-- third party--> 
+<script type="text/javascript" src="js/third-party/vendors.min.js"></script> 
+<!--ui标准化组件core  包括leftMenu、Header-->
+<script type="text/javascript" src="js/sone-ui/sone-ui.min.js"></script> 
+<!--ui标准化 通用插件 包括daterangepicker、combo等插件-->
+<script type="text/javascript" src="js/sone-widget/sone-widget.min.js"></script> 
+<script type="text/javascript" src="js/third-party/iframeResizer.js"></script> 
+<!--ui标准化组件 example等-->
+<script type="text/javascript" src="js/sone-example/common-init.js"></script> 
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	<script src="js/third-party/html5patch/html5shiv.js"></script>
@@ -21,7 +32,7 @@
 <![endif]-->
 
 </head>
-<body>
+<body style="min-width:1300px;">
 <div id="wrapper"> 
     <!-- header-->
     <div id="header"></div>
@@ -29,32 +40,12 @@
     
     <div id="left-menu"> </div>
     
-    <!-- third party--> 
-	<script type="text/javascript" src="js/third-party/vendors.min.js"></script> 
-	<!--ui标准化组件core  包括leftMenu、Header-->
-	<script type="text/javascript" src="js/sone-ui/sone-ui.min.js"></script> 
-	<!--ui标准化 通用插件 包括daterangepicker、combo等插件-->
-    <script type="text/javascript" src="js/sone-widget/sone-widget.min.js"></script> 
-	<!--ui标准化组件 example等-->
-    <script type="text/javascript" src="js/sone-example/common-init.js"></script> 
-    
     <!-- center iframe-->
     <div id="page-wrapper"> 
-        <iframe style="padding:0 15px;" frameborder=no  width="100%" scrolling="no" height="100%"
-     src ="docs/stemplate/index/index.html"   scrolling="auto" id="ifm" name="ifm"   onLoad="autoHeight();"  >
-        </iframe>
+        <iframe style="padding:0 15px;" frameborder=no  width="100%" scrolling="no" 
+		  src ="docs/stemplate/index/index.html"    id="ifm" name="ifm">
+		</iframe>
     </div>
 </div>
-<script type="text/javascript" language="javascript">	
-		function autoHeight(){
-        var iframe = document.getElementById("ifm");
-        if(iframe.Document){//ie自有属性
-            iframe.style.height = iframe.Document.documentElement.scrollHeight;
-        }else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
-            iframe.height = iframe.contentDocument.body.offsetHeight ;
-        }
-    }
-	
-	</script>
 </body>
 </html>

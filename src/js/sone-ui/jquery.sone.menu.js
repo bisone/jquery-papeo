@@ -79,9 +79,12 @@ $.widget("ui.soneLeftMenu", {
 					if (item.type == "high" || item.type == "") {
                         var radioDiffFlag='↓';
 						var spanColor='green';
-						if(menuInfo[2].value >0){
+						if(parseInt(menuInfo[2].value) >0){
 						    radioDiffFlag='↑';
 						    spanColor='red';
+						}else if(parseInt(menuInfo[2].value) ==0){
+						    radioDiffFlag='<br>';
+						    spanColor='white';
 						}
                         tpl.find('.sone-left-menu').append('<li class="sidebar-menu item" ></li>');
 						

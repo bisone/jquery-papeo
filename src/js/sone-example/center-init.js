@@ -213,6 +213,7 @@ var panel=$("#raphael").demandGraph({divID : "raphael"});
 	panel.setData(mockData);
 	panel.drawBg("#ffb049");
 	panel.drawCircle("#4284e2");
+	$("#demandTable").demandTable();
 
 });
 // 折叠
