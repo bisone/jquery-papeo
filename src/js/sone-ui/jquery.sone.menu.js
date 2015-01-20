@@ -188,11 +188,11 @@ $.widget("ui.soneLeftMenu", {
 					}
 				});
 		//二级菜单a 标签点击
+
 		$(".itm-lv2 a", _ele).click(function() {
 					$(this).parents(".sone-left-menu").find(".itm-lv2 li").removeClass("curr");
 					$(this).closest("li").addClass("curr");
 				});
-
 		// 菜单添加点击事件a
 		$("#left-menu a").click(function(o) {
 					var link = $(this).attr("href");
