@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -26,26 +27,8 @@
      <div class="bs-example">
         <p>实例：</p>
         <div  style="height:100px;">
-          <button type="button" class="btn btn-primary " id="del">确定删除</button>
-        
-        
-        <div id="ycf-alert" class="modal">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-            <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> [Title]</h5>
-          </div>
-          <div class="modal-body small">
-            <p>[Message]</p>
-          </div>
-          <div class="modal-footer" >
-            <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
-            <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          <button id="alertMessageBox" type="button" class="btn btn-primary " id="del">提示框</button>
+		  <button id="promptMessageBox" type="button" class="btn btn-primary " id="del">确认框</button>
         </div>
     </div>
         <div class="highlight">
@@ -56,33 +39,23 @@
 <script type="text/javascript" src="../../../js/third-party/vendors.min.js"></script> 
 <script type="text/javascript" src="../../../js/sone-ui/sone-ui.min.js"></script> 
 <script type="text/javascript" src="../../../js/sone-widget/sone-widget.min.js"></script> 
-<script type="text/javascript" src="js/alert.js"></script>
 <script type="text/javascript">
 $(function () {
 
-// 四个选项都是可选参数
-Modal.alert(
-  {
-    msg: '内容',
-    title: '标题',
-    btnok: '确定',
-    btncl:'取消'
-  });
+	// 四个选项都是可选参数
+	$("#alertMessageBox").click(function(){
+		$.alert('提示','你的输入时错误的!',function(btn){alert(btn)});
+	});
 
-// 如需增加回调函数，后面直接加 .on( function(e){} );
-// 点击“确定” e: true
-// 点击“取消” e: false
-Modal.confirm(
-  {
-    msg: "是否删除角色？"
-  })
-  .on( function (e) {
-    alert("返回结果：" + e);
-  });
-
+	// 如需增加回调函数，后面直接加 .on( function(e){} );
+	// 点击“确定” e: true
+	// 点击“取消” e: false
+	$("#promptMessageBox").click(function(){
+		$.confirm("提示","是否删除角色？",function (e) {alert("返回结果：" + e)});
+		  
+	});
 	
 });
-
 </script>
 </body>
 </html>

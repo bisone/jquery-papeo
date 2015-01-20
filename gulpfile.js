@@ -101,7 +101,8 @@ var widget=[
 	 'src/js/sone-widget/jquery.sone.combomenu.js',
 	 'src/js/sone-widget/jquery.sone.demandgraph.js',
 	 'src/js/sone-widget/jquery.sone.provincepicker.js',
-	 'src/js/sone-widget/jquery.sone.demandTable.js'
+	 'src/js/sone-widget/jquery.sone.demandTable.js',
+	 'src/js/sone-widget/jquery.sone.messagebox.js'
 
 ];
 
