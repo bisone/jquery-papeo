@@ -132,7 +132,7 @@
 		"sonMenuNum" : 3,
 		"level" : 1,
 		"project" : "",
-		"iconClass": "fa fa-bar-chart-o ",
+		"iconClass": "menuicon1",
 		"infoUrl":[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
 		"type": "",
 		"position": ""
@@ -224,7 +224,7 @@
 		"sonMenuNum" : 3,
 		"level" : 1,
 		"project" : "",
-		"iconClass": "fa fa-line-chart",
+		"iconClass": "menuicon2",
 		"infoUrl":[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
 		"type": "",
 		"position": ""
@@ -286,7 +286,7 @@
 		"sonMenuNum" : 3,
 		"level" : 1,
 		"project" : "",
-		"iconClass": "fa fa-area-chart",
+		"iconClass": "menuicon3",
 		"infoUrl":[{"label":"PV", "value": ""},{"label":"万","value":1260},{"label":"%","value":4.97},{"label":"","value":12345}],
 		"type": "",
 		"position": ""

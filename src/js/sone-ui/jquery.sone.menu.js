@@ -91,7 +91,7 @@ $.widget("ui.soneLeftMenu", {
 						tpl.find('.sone-left-menu > li:last').append(
 						   '<div class="itm-lv1" url="' + item.url + '">'+
 							'<div class="tit">'+
-								 '<span class="'+item.iconClass+' text-center"></span><br/>'+
+								 '<div class="'+item.iconClass+'"></div>'+
 								 '<span class="text-center">'+item.name+'</span><s>3</s>'+
 							'</div>'+
 							'<div class="con">'+
