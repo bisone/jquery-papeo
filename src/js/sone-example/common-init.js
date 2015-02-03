@@ -1,8 +1,10 @@
 
 $(function() {
-	$('#ifm').iFrameResize({
+	//IFrame高度
+	//$('#ifm').iFrameResize({
 	    //log : true
-	});
+	//});
+	
 	$('#header').soneHeader({
 	   userInfo:{
 			userName:'张三',

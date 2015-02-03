@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -7,11 +7,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>UI标准化模版</title>
-
 <link rel="stylesheet" type="text/css" href="../../../css/third-party.min.css">
 <link rel="stylesheet" type="text/css" href="../../../css/sone-ui.min.css">
 <!-- ECharts单文件引入 -->
- 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -22,24 +20,60 @@
 </head>
 <body class="p20">
 <div>
-  
-   <h3> alert/confirm 消息窗口</h3> 
-     <div class="bs-example">
+    <h3> alert/confirm 消息窗口</h3>
+    <div class="bs-example">
         <p>实例：</p>
         <div  style="height:100px;">
-          <button id="alertMessageBox" type="button" class="btn btn-primary " id="del">提示框</button>
-		  <button id="promptMessageBox" type="button" class="btn btn-primary " id="del">确认框</button>
+            <button id="alertMessageBox" type="button" class="btn btn-primary ">提示框</button>
+            <button id="promptMessageBox" type="button" class="btn btn-primary " >确认框</button>
         </div>
     </div>
-        <div class="highlight">
+    <div class="highlight">
         <pre>
             </pre>
     </div>
+</div>
+<br/>
+<h3>jQuery UI dialog窗口</h3>
+<p>jQuery UI dialog官网地址：http://jqueryui.com/dialog/</p>
+<div class="bs-example">
+    <p>实例：</p>
+    <div id="dialog" title="Basic dialog">
+        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    </div>
+    <button id="opener"  class="btn btn-primary">Open Dialog</button>
+</div>
+<div class="highlight">
+    <pre>
+ 1.js文件
+ jquery-ui.js
+ 2.函数调用：
+            $( "#dialog" ).dialog({
+      			autoOpen: false,
+     
+   			 });
+ 
+            $( "#opener" ).click(function() {
+              $( "#dialog" ).dialog( "open" );
+            });
+  </pre>
+  
 </div>
 <script type="text/javascript" src="../../../js/third-party/vendors.min.js"></script> 
 <script type="text/javascript" src="../../../js/sone-ui/sone-ui.min.js"></script> 
 <script type="text/javascript" src="../../../js/sone-widget/sone-widget.min.js"></script> 
 <script type="text/javascript">
+$(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+     
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  });
+  
 $(function () {
 
 	// 四个选项都是可选参数

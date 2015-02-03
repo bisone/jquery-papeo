@@ -78,7 +78,7 @@ $(function() {
 
 			$.extend(ops, options);
 
-			console.log(alr);
+		
 
 			var html = alr.html().replace(reg, function(node, key) {
 						return {
